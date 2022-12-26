@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+}
+
+/*滚动条*/
+::-webkit-scrollbar {
+  /* display: none; */
+  width: 4px;
+  height: 4px;
+  background-color: #00000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 10px;
+}
+
+.scroll-y {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+  overflow-y: overlay;
+  touch-action: pan-y;
+}
+
+.scrollbar::-webkit-scrollbar {
+  display: block !important;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}

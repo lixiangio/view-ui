@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>View UI</title>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width,minimal-ui,viewport-fit=cover,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="icon" href="/demo/favicon.ico" />
+  <link rel="mask-icon" href="/demo/favicon.ico" color="#ffffff">
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/demo/favicon.ico">
+  <link rel="manifest" href="/demo/manifest.webmanifest">
+  
+  <link rel="stylesheet" type="text/css" href="/demo/iconfont/iconfont.css">
+
+  <!-- <script href="/iconfont/iconfont.js"></script> -->
+
+  <script>
+    const languages = [
+      {
+        name: "English",
+        code: "en",
+      },
+      {
+        name: "简体中文",
+        code: "zh",
+      },
+      // {
+      //   name: "繁體中文",
+      //   code: "zh-hk",
+      // },
+      // {
+      //   name: "やまと",
+      //   code: "ja",
+      // },
+    ];
+    let language = 'en';
+    if (localStorage.lang) {
+      language = localStorage.lang;
+    } else {
+      const [lang] = navigator.language.split('-');
+      for (const item of languages) {
+        if (item.code === lang) {
+          language = item.code;
+          break;
+        }
+      }
+    }
+    window.VIEW = {
+      language,
+      languages,
+      dataSource: `api/apps/${language}.json`, // 数据源
+    };
+  </script>
+
+  
+
+  <script type="module" crossorigin src="/demo/platform/index.js"></script>
+  <link rel="stylesheet" href="/demo/style.css">
+  <base href="/demo/" target="_blank">
+  <link rel="stylesheet" href="/demo/libs/components.css">
+  <link rel="modulepreload" href="/demo/libs/components.js">
+  <link rel="modulepreload" href="/demo/libs/dayjs.js">
+  <link rel="modulepreload" href="/demo/libs/navigator.js">
+  <link rel="modulepreload" href="/demo/libs/network.js">
+  <link rel="modulepreload" href="/demo/libs/pointer.js">
+  <link rel="modulepreload" href="/demo/libs/router.js">
+  <link rel="modulepreload" href="/demo/libs/state.js">
+  <link rel="modulepreload" href="/demo/libs/swiper.js">
+  <link rel="modulepreload" href="/demo/libs/view.js">
+  <link rel="stylesheet" href="/demo/libs/viewui.css">
+  <link rel="modulepreload" href="/demo/libs/viewui.js">
+  <link rel="modulepreload" href="/demo/libs/vue.js">
+</head>
+
+<body></body>
+
+</html>

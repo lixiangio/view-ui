@@ -1,0 +1,28 @@
+{
+  "name": "View UI",
+  "short_name": "View UI",
+  "description": "轻量级的跨端、多应用、响应式微前端 UI 框架",
+  "display_override": [
+    "window-controls-overlay"
+  ],
+  "display": "minimal-ui",
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "./image/logo-svg.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./image/logo-svg.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#eee",
+  "gcm_user_visible_only": true,
+  "capture_links": "none"
+}
