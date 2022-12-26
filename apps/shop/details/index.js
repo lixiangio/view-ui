@@ -1,4 +1,4 @@
-import { resolveComponent as c, openBlock as s, createElementBlock as l, Fragment as _, createVNode as d, createElementVNode as i, toDisplayString as p } from "/demo/libs/vue.js";
+import { resolveComponent as c, openBlock as s, createElementBlock as l, Fragment as _, createVNode as d, createElementVNode as i, toDisplayString as p } from "/view-ui/libs/vue.js";
 const m = "", u = (e, t) => {
   const o = e.__vccOpts || e;
   for (const [r, n] of t)

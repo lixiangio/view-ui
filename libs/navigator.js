@@ -1,5 +1,5 @@
-import a, { instances as s, UrlParse as c, getAppOptions as r, events as i } from "/demo/libs/view.js";
-import { openApp as f, openMask as l } from "/demo/libs/state.js";
+import a, { instances as s, UrlParse as c, getAppOptions as r, events as i } from "/dist/libs/view.js";
+import { openApp as f, openMask as l } from "/dist/libs/state.js";
 function u(n) {
   n = `#${n}`, window.open(n, "_blank");
 }

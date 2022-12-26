@@ -1,4 +1,4 @@
-import { defineAsyncComponent as O } from "/demo/libs/vue.js";
+import { defineAsyncComponent as O } from "/dist/libs/vue.js";
 const $ = window.innerWidth < 850 ? "single" : "split", { language: v, languages: W } = window.VIEW, I = 16, c = 390;
 function L(t) {
   return t[v] || t.en;
@@ -21,7 +21,7 @@ const p = {
   400: c * 4,
   450: c * 4.5,
   500: c * 5
-}, d = location.hash || "/", N = `${location.origin}`, x = "/demo/apps/", { path: b, query: j } = q(`${d}${location.search}`), l = {}, P = {}, m = sessionStorage[d], V = m ? m.split(",") : void 0, { userAgent: f } = navigator;
+}, d = location.hash || "/", N = `${location.origin}`, w = "/view-ui/apps/", { path: b, query: j } = q(`${d}${location.search}`), l = {}, P = {}, m = sessionStorage[d], V = m ? m.split(",") : void 0, { userAgent: f } = navigator;
 let u;
 f.indexOf("Chrome") > -1 ? u = "Chrome" : f.indexOf("Safari") > -1 ? u = "Safari" : f.indexOf("Firefox") > -1 ? u = "Firefox" : f.indexOf("MSIE") > -1 && (u = "IE");
 const h = document.querySelector('meta[name="theme-color"]');
@@ -127,15 +127,15 @@ function y(t) {
     }
   }
 }
-const w = () => import(
+const x = () => import(
   /* @vite-ignore */
-  `${x}404.js`
-), R = O(w);
+  `${w}404.js`
+), R = O(x);
 async function _(t) {
   return t.endsWith("*") && (t = t.slice(0, -1) + $), import(
     /* @vite-ignore */
-    `${x}${t}.js`
-  ).catch((n) => (console.error(n, t), w())).then(({ default: n }) => {
+    `${w}${t}.js`
+  ).catch((n) => (console.error(n, t), x())).then(({ default: n }) => {
     {
       y(n);
       const { components: e } = n;
@@ -183,7 +183,7 @@ export {
   u as UA,
   q as UrlParse,
   y as addStyle,
-  x as appPath,
+  w as appPath,
   R as asyncComponent_404,
   N as baseURL,
   M as default,

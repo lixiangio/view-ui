@@ -1,5 +1,5 @@
-import { openBlock as t, createElementBlock as e, createStaticVNode as o } from "/demo/libs/vue.js";
-import "/demo/libs/state.js";
+import { openBlock as t, createElementBlock as e, createStaticVNode as o } from "/view-ui/libs/vue.js";
+import "/view-ui/libs/state.js";
 const s = `.shop[data-v-0787cd1c]{color:#fff}
 `, _ = (d, c) => {
   const v = d.__vccOpts || d;

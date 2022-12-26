@@ -1,14 +1,14 @@
-import { defineComponent as j, ref as A, onMounted as D, resolveComponent as U, openBlock as s, createElementBlock as c, withModifiers as _, unref as n, createVNode as y, Transition as V, withCtx as g, withDirectives as k, createElementVNode as e, toDisplayString as r, Fragment as b, renderList as w, normalizeStyle as C, normalizeClass as z, vShow as S, createTextVNode as P, pushScopeId as N, popScopeId as T } from "/demo/libs/vue.js";
-import $, { urls as B, Langs as L } from "/demo/libs/view.js";
-import M from "/demo/libs/pointer.js";
-import { open as W } from "/demo/libs/navigator.js";
-import { notification as O } from "/demo/libs/viewui.js";
-import R from "/demo/libs/network.js";
-import { menu as m, appsState as x, controllerSwitch as E, historys as I } from "/demo/libs/state.js";
+import { defineComponent as j, ref as A, onMounted as D, resolveComponent as U, openBlock as s, createElementBlock as c, withModifiers as _, unref as n, createVNode as y, Transition as V, withCtx as g, withDirectives as k, createElementVNode as e, toDisplayString as r, Fragment as w, renderList as b, normalizeStyle as C, normalizeClass as z, vShow as S, createTextVNode as P, pushScopeId as N, popScopeId as T } from "/view-ui/libs/vue.js";
+import $, { urls as B, Langs as L } from "/view-ui/libs/view.js";
+import M from "/view-ui/libs/pointer.js";
+import { open as W } from "/view-ui/libs/navigator.js";
+import { notification as O } from "/view-ui/libs/viewui.js";
+import R from "/view-ui/libs/network.js";
+import { menu as m, appsState as x, controllerSwitch as E, historys as I } from "/view-ui/libs/state.js";
 const X = (i) => (N("data-v-87e7e97a"), i = i(), T(), i), Y = { class: "all-menu" }, q = { class: "center" }, G = { class: "apps-center scroll-y" }, H = { class: "historys" }, J = { class: "title" }, K = ["href", "onClick"], Q = { class: "name" }, Z = { class: "all-apps" }, ee = { class: "title" }, te = /* @__PURE__ */ X(() => /* @__PURE__ */ e("i", { class: "icon ficon-fenlei" }, null, -1)), ae = { class: "all-items" }, ne = ["href", "onClick"], ie = { class: "name" }, oe = /* @__PURE__ */ j({
   __name: "default",
   setup(i) {
-    m.lock === void 0 && (m.lock = !0, R.get("/demo/api/menu.json").then((t) => {
+    m.lock === void 0 && (m.lock = !0, R.get("/view-ui/api/menu.json").then((t) => {
       for (const d of t) {
         const f = B[d];
         f && m.push(f);
@@ -62,7 +62,7 @@ const X = (i) => (N("data-v-87e7e97a"), i = i(), T(), i), Y = { class: "all-menu
                   e("div", J, r(n(o).recentlyUsed), 1),
                   y(f, { class: "all-items" }, {
                     default: g(() => [
-                      (s(!0), c(b, null, w(n(I), ({ url: a, name: u, icon: v, color: h }) => (s(), c("div", {
+                      (s(!0), c(w, null, b(n(I), ({ url: a, name: u, icon: v, color: h }) => (s(), c("div", {
                         key: a,
                         class: "item col4"
                       }, [
@@ -94,7 +94,7 @@ const X = (i) => (N("data-v-87e7e97a"), i = i(), T(), i), Y = { class: "all-menu
                     P(" " + r(n(o).allApplications), 1)
                   ]),
                   e("div", ae, [
-                    (s(!0), c(b, null, w(n(m), ({ url: a, name: u, icon: v, color: h }) => (s(), c("div", {
+                    (s(!0), c(w, null, b(n(m), ({ url: a, name: u, icon: v, color: h }) => (s(), c("div", {
                       key: a,
                       class: "item col4"
                     }, [

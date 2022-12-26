@@ -1,4 +1,4 @@
-import { ref as O, onMounted as S, openBlock as H, createElementBlock as U, unref as k, createElementVNode as x, toDisplayString as F } from "/demo/libs/vue.js";
+import { ref as O, onMounted as S, openBlock as H, createElementBlock as U, unref as k, createElementVNode as x, toDisplayString as F } from "/view-ui/libs/vue.js";
 var B;
 function I(t) {
   this.mode = p.MODE_8BIT_BYTE, this.data = t, this.parsedData = [];

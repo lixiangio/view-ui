@@ -1,8 +1,8 @@
-import { Input as x, Select as $, Form as N, Tag as S, Switch as y, Slider as I } from "/demo/libs/viewui.js";
-import { resolveComponent as o, openBlock as i, createElementBlock as p, createVNode as t, createElementVNode as n, pushScopeId as g, popScopeId as w, unref as m, withCtx as l, createTextVNode as r, Fragment as v, toDisplayString as C, ref as T } from "/demo/libs/vue.js";
+import { Input as x, Select as $, Form as N, Tag as S, Switch as y, Slider as I } from "/view-ui/libs/viewui.js";
+import { resolveComponent as o, openBlock as i, createElementBlock as p, createVNode as t, createElementVNode as n, pushScopeId as g, popScopeId as w, unref as m, withCtx as l, createTextVNode as r, Fragment as v, toDisplayString as C, ref as T } from "/view-ui/libs/vue.js";
 import { _ as h } from "../index2.js";
-import "/demo/libs/view.js";
-import "/demo/libs/navigator.js";
+import "/view-ui/libs/view.js";
+import "/view-ui/libs/navigator.js";
 const F = `.input[data-v-a84e1739]{padding:10px}.input .name[data-v-a84e1739]{padding:10px 5px}.input input[data-v-a84e1739]{border:1px solid #eaeaea}
 `, A = {
   components: { Input: x }

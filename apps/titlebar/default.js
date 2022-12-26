@@ -1,7 +1,7 @@
-import { defineComponent as z, ref as I, reactive as E, openBlock as r, createElementBlock as l, normalizeStyle as b, unref as c, createElementVNode as o, Fragment as m, renderList as h, normalizeClass as x, createCommentVNode as O, pushScopeId as S, popScopeId as V } from "/demo/libs/vue.js";
-import B, { urls as g, getParentOptions as L } from "/demo/libs/view.js";
-import { historys as N } from "/demo/libs/state.js";
-import { open as y } from "/demo/libs/navigator.js";
+import { defineComponent as z, ref as I, reactive as E, openBlock as r, createElementBlock as l, normalizeStyle as b, unref as c, createElementVNode as o, Fragment as m, renderList as h, normalizeClass as x, createCommentVNode as O, pushScopeId as S, popScopeId as V } from "/view-ui/libs/vue.js";
+import B, { urls as g, getParentOptions as L } from "/view-ui/libs/view.js";
+import { historys as N } from "/view-ui/libs/state.js";
+import { open as y } from "/view-ui/libs/navigator.js";
 const k = (e) => (S("data-v-45a2a563"), e = e(), V(), e), R = { class: "left" }, $ = ["title", "onClick"], F = /* @__PURE__ */ k(() => /* @__PURE__ */ o("div", { class: "drag" }, null, -1)), P = { class: "right" }, U = ["title", "onClick"], W = /* @__PURE__ */ k(() => /* @__PURE__ */ o("i", { class: "ficon-reload" }, null, -1)), j = [
   W
 ], q = /* @__PURE__ */ z({

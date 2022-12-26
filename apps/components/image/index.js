@@ -1,8 +1,8 @@
-import { defineComponent as h, resolveComponent as t, openBlock as c, createElementBlock as _, Fragment as r, createVNode as e, createElementVNode as s, unref as v, withCtx as g, createTextVNode as u } from "/demo/libs/vue.js";
-import { Image as $, Images as I } from "/demo/libs/viewui.js";
+import { defineComponent as h, resolveComponent as t, openBlock as c, createElementBlock as _, Fragment as r, createVNode as e, createElementVNode as s, unref as v, withCtx as g, createTextVNode as u } from "/view-ui/libs/vue.js";
+import { Image as $, Images as I } from "/view-ui/libs/viewui.js";
 import { _ as i } from "../index2.js";
-import "/demo/libs/view.js";
-import "/demo/libs/navigator.js";
+import "/view-ui/libs/view.js";
+import "/view-ui/libs/navigator.js";
 const N = { class: "image p10" }, x = /* @__PURE__ */ h({
   __name: "image",
   setup(m) {

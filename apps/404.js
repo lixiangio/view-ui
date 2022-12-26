@@ -1,5 +1,5 @@
-import { Lang as r } from "/demo/libs/view.js";
-import { openBlock as i, createElementBlock as p, createElementVNode as c, toDisplayString as _ } from "/demo/libs/vue.js";
+import { Lang as r } from "/view-ui/libs/view.js";
+import { openBlock as i, createElementBlock as p, createElementVNode as c, toDisplayString as _ } from "/view-ui/libs/vue.js";
 const l = `._404{display:flex;align-items:center;justify-content:center;flex-direction:column;height:100%;background:#fff}._404 i{font-size:111px;color:#333}._404 .prompt{margin-top:30px;font-size:14px;color:#333}
 `, a = (t, n) => {
   const o = t.__vccOpts || t;

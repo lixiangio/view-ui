@@ -1,6 +1,6 @@
-import { Langs as k } from "/demo/libs/view.js";
-import { resolveComponent as _, openBlock as a, createElementBlock as o, Fragment as h, createVNode as t, withCtx as s, renderList as g, toDisplayString as $, createStaticVNode as A, pushScopeId as S, popScopeId as N, createElementVNode as e, createTextVNode as c, defineAsyncComponent as b } from "/demo/libs/vue.js";
-import { open as X } from "/demo/libs/navigator.js";
+import { Langs as k } from "/view-ui/libs/view.js";
+import { resolveComponent as _, openBlock as a, createElementBlock as o, Fragment as h, createVNode as t, withCtx as s, renderList as g, toDisplayString as $, createStaticVNode as A, pushScopeId as S, popScopeId as N, createElementVNode as e, createTextVNode as c, defineAsyncComponent as b } from "/view-ui/libs/vue.js";
+import { open as X } from "/view-ui/libs/navigator.js";
 const Y = `h3[data-v-3385ce95]{padding:14px}.X[data-v-3385ce95]{flex:none;display:flex}.X .itemX[data-v-3385ce95]{display:flex;justify-content:center;align-items:center;flex:none;width:120px;height:200px;margin:0 4px;background:#f3f3f3;border:1px solid #eaeaea;border-radius:6px;font-size:16px}.Y[data-v-3385ce95]{display:flex;flex-direction:column;height:420px}.Y .itemY[data-v-3385ce95]{display:flex;justify-content:center;align-items:center;flex:none;height:120px;margin:5px;background:#f3f3f3;border:1px solid #eaeaea;border-radius:6px;font-size:16px}
 `, u = (d, p) => {
   const f = d.__vccOpts || d;

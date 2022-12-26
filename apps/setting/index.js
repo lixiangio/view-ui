@@ -1,7 +1,7 @@
-import { defineComponent as v, resolveComponent as m, openBlock as i, createElementBlock as l, createVNode as a, createElementVNode as e, Fragment as f, renderList as F, unref as n, normalizeClass as k, normalizeStyle as x, createTextVNode as u, toDisplayString as c, createCommentVNode as z, pushScopeId as b, popScopeId as $, withCtx as p } from "/demo/libs/vue.js";
-import { urls as A, languages as E, language as I, Langs as N } from "/demo/libs/view.js";
-import { open as S, pushState as B } from "/demo/libs/navigator.js";
-import { confirm as w } from "/demo/libs/viewui.js";
+import { defineComponent as v, resolveComponent as m, openBlock as i, createElementBlock as l, createVNode as a, createElementVNode as e, Fragment as f, renderList as F, unref as n, normalizeClass as k, normalizeStyle as x, createTextVNode as u, toDisplayString as c, createCommentVNode as z, pushScopeId as b, popScopeId as $, withCtx as p } from "/view-ui/libs/vue.js";
+import { urls as A, languages as E, language as I, Langs as N } from "/view-ui/libs/view.js";
+import { open as S, pushState as B } from "/view-ui/libs/navigator.js";
+import { confirm as w } from "/view-ui/libs/viewui.js";
 const V = (t) => (b("data-v-76682b0c"), t = t(), $(), t), L = { class: "apps" }, U = { class: "items" }, P = {
   key: 0,
   class: "item",

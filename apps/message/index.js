@@ -1,5 +1,5 @@
-import { Lang as b, Langs as $ } from "/demo/libs/view.js";
-import { resolveComponent as l, openBlock as f, createElementBlock as m, Fragment as v, createVNode as e, createElementVNode as s, withCtx as a, createTextVNode as o, toDisplayString as y, pushScopeId as k, popScopeId as N } from "/demo/libs/vue.js";
+import { Lang as b, Langs as $ } from "/view-ui/libs/view.js";
+import { resolveComponent as l, openBlock as f, createElementBlock as m, Fragment as v, createVNode as e, createElementVNode as s, withCtx as a, createTextVNode as o, toDisplayString as y, pushScopeId as k, popScopeId as N } from "/view-ui/libs/vue.js";
 const g = (i, r) => {
   const d = i.__vccOpts || i;
   for (const [_, n] of r)

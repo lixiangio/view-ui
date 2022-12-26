@@ -1,5 +1,5 @@
-import { Langs as a } from "/demo/libs/view.js";
-import { resolveComponent as l, openBlock as _, createElementBlock as m, Fragment as p, createVNode as i, createElementVNode as d } from "/demo/libs/vue.js";
+import { Langs as a } from "/view-ui/libs/view.js";
+import { resolveComponent as l, openBlock as _, createElementBlock as m, Fragment as p, createVNode as i, createElementVNode as d } from "/view-ui/libs/vue.js";
 const f = "", u = (e, o) => {
   const t = e.__vccOpts || e;
   for (const [n, r] of o)

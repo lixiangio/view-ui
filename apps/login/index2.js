@@ -1,9 +1,9 @@
-import B from "/demo/libs/network.js";
-import E, { Langs as K, extendsOptions as Q, urls as X, events as Z } from "/demo/libs/view.js";
-import { openBlock as r, createElementBlock as c, toDisplayString as u, createCommentVNode as g, renderSlot as D, resolveComponent as b, createBlock as x, withCtx as y, createElementVNode as i, withDirectives as k, mergeProps as N, vModelDynamic as I, normalizeClass as f, withModifiers as L, Fragment as $, renderList as F, normalizeStyle as U, vModelText as V, createVNode as v, h as ee, defineAsyncComponent as te, vShow as ne, createTextVNode as C, pushScopeId as oe, popScopeId as ie } from "/demo/libs/vue.js";
-import { Input as se, Button as le, DialogPage as re } from "/demo/libs/viewui.js";
-import { open as ae } from "/demo/libs/navigator.js";
-import ce from "/demo/libs/dayjs.js";
+import B from "/view-ui/libs/network.js";
+import E, { Langs as K, extendsOptions as Q, urls as X, events as Z } from "/view-ui/libs/view.js";
+import { openBlock as r, createElementBlock as c, toDisplayString as u, createCommentVNode as g, renderSlot as D, resolveComponent as b, createBlock as x, withCtx as y, createElementVNode as i, withDirectives as k, mergeProps as N, vModelDynamic as I, normalizeClass as f, withModifiers as L, Fragment as $, renderList as F, normalizeStyle as U, vModelText as V, createVNode as v, h as ee, defineAsyncComponent as te, vShow as ne, createTextVNode as C, pushScopeId as oe, popScopeId as ie } from "/view-ui/libs/vue.js";
+import { Input as se, Button as le, DialogPage as re } from "/view-ui/libs/viewui.js";
+import { open as ae } from "/view-ui/libs/navigator.js";
+import ce from "/view-ui/libs/dayjs.js";
 const de = `.v-form-box{position:relative}.v-form-box .v-form-box-header{padding:10px 0 5px 2px;display:block}.v-form-box .v-form-box-header .v-form-box-error{float:right;color:red}
 `, _ = (e, t) => {
   const n = e.__vccOpts || e;

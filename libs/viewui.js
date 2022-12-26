@@ -1,5 +1,5 @@
-import { openBlock as o, createElementBlock as c, normalizeClass as v, withModifiers as b, renderSlot as y, normalizeStyle as W, createElementVNode as a, resolveComponent as $, createBlock as g, Transition as S, withCtx as _, KeepAlive as G, mergeProps as j, createCommentVNode as m, toDisplayString as h, createTextVNode as B, withDirectives as w, vModelDynamic as z, Fragment as x, renderList as C, vModelText as I, createVNode as D, h as U, pushScopeId as X, popScopeId as q, vShow as Y, TransitionGroup as J, withKeys as ae, createApp as re, markRaw as ce, resolveDynamicComponent as ue } from "/demo/libs/vue.js";
-import de from "/demo/libs/dayjs.js";
+import { openBlock as o, createElementBlock as c, normalizeClass as v, withModifiers as b, renderSlot as y, normalizeStyle as W, createElementVNode as a, resolveComponent as $, createBlock as g, Transition as S, withCtx as _, KeepAlive as G, mergeProps as j, createCommentVNode as m, toDisplayString as h, createTextVNode as B, withDirectives as w, vModelDynamic as z, Fragment as x, renderList as C, vModelText as I, createVNode as D, h as U, pushScopeId as X, popScopeId as q, vShow as Y, TransitionGroup as J, withKeys as ae, createApp as re, markRaw as ce, resolveDynamicComponent as ue } from "/dist/libs/vue.js";
+import de from "/dist/libs/dayjs.js";
 const p = (e, t) => {
   const s = e.__vccOpts || e;
   for (const [l, n] of t)
@@ -1172,7 +1172,7 @@ const as = {
   },
   data() {
     let { src: e, read: t } = this;
-    return e && (e = "/demo/" + e), {
+    return e && (e = "/view-ui/" + e), {
       image: { src: e },
       edit: !t
     };

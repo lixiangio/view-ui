@@ -1,9 +1,9 @@
-import { ref as V, reactive as j, defineComponent as D, resolveComponent as M, openBlock as c, createElementBlock as d, Fragment as E, createElementVNode as i, normalizeClass as a, normalizeStyle as f, withModifiers as $, createVNode as v, TransitionGroup as F, withCtx as h, renderList as K, toDisplayString as m, createTextVNode as L, createCommentVNode as P, pushScopeId as G, popScopeId as U } from "/demo/libs/vue.js";
-import u, { Langs as W, urls as X, events as B } from "/demo/libs/view.js";
-import { appsState as l } from "/demo/libs/state.js";
-import { close as q, openBlank as A, open as H } from "/demo/libs/navigator.js";
-import J from "/demo/libs/pointer.js";
-import { Tip as Q } from "/demo/libs/viewui.js";
+import { ref as V, reactive as j, defineComponent as D, resolveComponent as M, openBlock as c, createElementBlock as d, Fragment as E, createElementVNode as i, normalizeClass as a, normalizeStyle as f, withModifiers as $, createVNode as v, TransitionGroup as F, withCtx as h, renderList as K, toDisplayString as m, createTextVNode as L, createCommentVNode as P, pushScopeId as G, popScopeId as U } from "/view-ui/libs/vue.js";
+import u, { Langs as W, urls as X, events as B } from "/view-ui/libs/view.js";
+import { appsState as l } from "/view-ui/libs/state.js";
+import { close as q, openBlank as A, open as H } from "/view-ui/libs/navigator.js";
+import J from "/view-ui/libs/pointer.js";
+import { Tip as Q } from "/view-ui/libs/viewui.js";
 const r = V(!0), n = j([]), R = W({
   appsMenu: {
     en: "Switch apps",

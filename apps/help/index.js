@@ -1,6 +1,6 @@
-import { defineComponent as a, openBlock as l, createElementBlock as _, createApp as u, resolveComponent as r, createVNode as c } from "/demo/libs/vue.js";
-import { Langs as d } from "/demo/libs/view.js";
-import f from "/demo/libs/components.js";
+import { defineComponent as a, openBlock as l, createElementBlock as _, createApp as u, resolveComponent as r, createVNode as c } from "/view-ui/libs/vue.js";
+import { Langs as d } from "/view-ui/libs/view.js";
+import f from "/view-ui/libs/components.js";
 const h = { class: "markdown-body" }, v = /* @__PURE__ */ a({
   __name: "test",
   setup(e, { expose: t }) {
