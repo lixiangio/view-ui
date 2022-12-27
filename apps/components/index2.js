@@ -1,326 +1,311 @@
-import { Langs as k } from "/view-ui/libs/view.js";
-import { resolveComponent as _, openBlock as a, createElementBlock as o, Fragment as h, createVNode as t, withCtx as s, renderList as g, toDisplayString as $, createStaticVNode as A, pushScopeId as S, popScopeId as N, createElementVNode as e, createTextVNode as c, defineAsyncComponent as b } from "/view-ui/libs/vue.js";
-import { open as X } from "/view-ui/libs/navigator.js";
-const Y = `h3[data-v-3385ce95]{padding:14px}.X[data-v-3385ce95]{flex:none;display:flex}.X .itemX[data-v-3385ce95]{display:flex;justify-content:center;align-items:center;flex:none;width:120px;height:200px;margin:0 4px;background:#f3f3f3;border:1px solid #eaeaea;border-radius:6px;font-size:16px}.Y[data-v-3385ce95]{display:flex;flex-direction:column;height:420px}.Y .itemY[data-v-3385ce95]{display:flex;justify-content:center;align-items:center;flex:none;height:120px;margin:5px;background:#f3f3f3;border:1px solid #eaeaea;border-radius:6px;font-size:16px}
-`, u = (d, p) => {
-  const f = d.__vccOpts || d;
-  for (const [v, r] of p)
-    f[v] = r;
+import { Langs as X } from "/view-ui/libs/view.js";
+import { resolveComponent as h, openBlock as e, createElementBlock as s, Fragment as _, createVNode as d, withCtx as a, renderList as $, toDisplayString as x, createStaticVNode as S, pushScopeId as N, popScopeId as I, createElementVNode as t, createTextVNode as v, defineAsyncComponent as b } from "/view-ui/libs/vue.js";
+import { open as Y } from "/view-ui/libs/navigator.js";
+const k = `h3[data-v-3385ce95]{padding:14px}.X[data-v-3385ce95]{flex:none;display:flex}.X .itemX[data-v-3385ce95]{display:flex;justify-content:center;align-items:center;flex:none;width:120px;height:200px;margin:0 4px;background:#f3f3f3;border:1px solid #eaeaea;border-radius:6px;font-size:16px}.Y[data-v-3385ce95]{display:flex;flex-direction:column;height:420px}.Y .itemY[data-v-3385ce95]{display:flex;justify-content:center;align-items:center;flex:none;height:120px;margin:5px;background:#f3f3f3;border:1px solid #eaeaea;border-radius:6px;font-size:16px}
+`, m = (c, u) => {
+  const f = c.__vccOpts || c;
+  for (const [p, l] of u)
+    f[p] = l;
   return f;
-}, I = {
+}, A = {
   data() {
     return {
       list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     };
   },
-  methods: { open: X }
-}, y = (d) => (S("data-v-3385ce95"), d = d(), N(), d), C = /* @__PURE__ */ y(() => /* @__PURE__ */ e("h3", null, "Scroll X", -1)), w = /* @__PURE__ */ y(() => /* @__PURE__ */ e("h3", null, "Scroll Y", -1)), E = /* @__PURE__ */ y(() => /* @__PURE__ */ e("h3", null, "Scroll X / Y", -1)), B = /* @__PURE__ */ A('<div class="padding" data-v-3385ce95><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div></div>', 1);
-function V(d, p, f, v, r, x) {
-  const m = _("Navbar"), i = _("Scroll", !0);
-  return a(), o(h, null, [
-    t(m, {
+  methods: { open: Y }
+}, y = (c) => (N("data-v-3385ce95"), c = c(), I(), c), w = /* @__PURE__ */ y(() => /* @__PURE__ */ t("h3", null, "Scroll X", -1)), C = /* @__PURE__ */ y(() => /* @__PURE__ */ t("h3", null, "Scroll Y", -1)), E = /* @__PURE__ */ y(() => /* @__PURE__ */ t("h3", null, "Scroll X / Y", -1)), z = /* @__PURE__ */ S('<div class="padding" data-v-3385ce95><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div><div data-v-3385ce95>-</div><div data-v-3385ce95>--</div></div>', 1);
+function B(c, u, f, p, l, g) {
+  const r = h("Navbar"), i = h("Scroll", !0);
+  return e(), s(_, null, [
+    d(r, {
       title: "Scroll",
       back: "/components"
     }),
-    C,
-    t(i, {
+    w,
+    d(i, {
       direction: "X",
       class: "X"
     }, {
-      default: s(() => [
-        (a(!0), o(h, null, g(r.list, (n) => (a(), o("div", {
-          key: n,
+      default: a(() => [
+        (e(!0), s(_, null, $(l.list, (o) => (e(), s("div", {
+          key: o,
           class: "itemX"
-        }, $(n), 1))), 128))
+        }, x(o), 1))), 128))
       ]),
       _: 1
     }),
-    w,
-    t(i, {
+    C,
+    d(i, {
       direction: "Y",
       class: "Y"
     }, {
-      default: s(() => [
-        (a(!0), o(h, null, g(r.list, (n) => (a(), o("div", {
-          key: n,
+      default: a(() => [
+        (e(!0), s(_, null, $(l.list, (o) => (e(), s("div", {
+          key: o,
           class: "itemY"
-        }, $(n), 1))), 128))
+        }, x(o), 1))), 128))
       ]),
       _: 1
     }),
     E,
-    t(i, {
+    d(i, {
       direction: "Y",
       class: "Y"
     }, {
-      default: s(() => [
-        t(i, {
+      default: a(() => [
+        d(i, {
           direction: "X",
           class: "X"
         }, {
-          default: s(() => [
-            (a(!0), o(h, null, g(r.list, (n) => (a(), o("div", {
-              key: n,
+          default: a(() => [
+            (e(!0), s(_, null, $(l.list, (o) => (e(), s("div", {
+              key: o,
               class: "itemX"
-            }, $(n), 1))), 128))
+            }, x(o), 1))), 128))
           ]),
           _: 1
         }),
-        (a(!0), o(h, null, g(r.list, (n) => (a(), o("div", {
-          key: n,
+        (e(!0), s(_, null, $(l.list, (o) => (e(), s("div", {
+          key: o,
           class: "itemY"
-        }, $(n), 1))), 128))
+        }, x(o), 1))), 128))
       ]),
       _: 1
     }),
-    B
+    z
   ], 64);
 }
-const z = /* @__PURE__ */ u(I, [["render", V], ["styles", [Y]], ["__scopeId", "data-v-3385ce95"]]), F = {}, R = { class: "items" }, T = { class: "item" }, j = /* @__PURE__ */ c("category?id=1"), L = { class: "item" }, D = /* @__PURE__ */ c("category?id=2"), O = { class: "item" }, q = /* @__PURE__ */ c("Shop");
-function G(d, p) {
-  const f = _("Navbar"), v = _("A");
-  return a(), o(h, null, [
-    t(f, { title: "Router" }),
-    e("ul", R, [
-      e("li", T, [
-        t(v, {
-          class: "link",
-          href: "#/category/index?id=1"
-        }, {
-          default: s(() => [
-            j
-          ]),
-          _: 1
-        })
-      ]),
-      e("li", L, [
-        t(v, {
-          class: "link",
-          href: "#/category/index?id=2"
-        }, {
-          default: s(() => [
-            D
-          ]),
-          _: 1
-        })
-      ]),
-      e("li", O, [
-        t(v, {
-          class: "link",
-          href: "#/shop/details?id=123"
-        }, {
-          default: s(() => [
-            q
-          ]),
-          _: 1
-        })
-      ])
-    ])
+const R = /* @__PURE__ */ m(A, [["render", B], ["styles", [k]], ["__scopeId", "data-v-3385ce95"]]), V = `.test[data-v-550dc700]{font-size:15px}
+`, F = {}, T = /* @__PURE__ */ S("<div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div><div data-v-550dc700>-</div><div data-v-550dc700>--</div>", 106);
+function j(c, u, f, p, l, g) {
+  const r = h("Navbar");
+  return e(), s(_, null, [
+    d(r, { title: "Async Test" }),
+    T
   ], 64);
 }
-const H = /* @__PURE__ */ u(F, [["render", G]]), J = {
-  pages: { async: b(() => import("./base/child/async.js")) }
-}, K = { class: "items" }, M = /* @__PURE__ */ c("Async Test");
-function P(d, p, f, v, r, x) {
-  const m = _("Navbar"), i = _("A");
-  return a(), o(h, null, [
-    t(m, { title: "Child" }),
-    e("div", K, [
-      t(i, {
+const L = /* @__PURE__ */ m(F, [["render", j], ["styles", [V]], ["__scopeId", "data-v-550dc700"]]), D = {
+  pages: { async: L }
+}, O = { class: "items" }, q = /* @__PURE__ */ v("category?id=1"), G = /* @__PURE__ */ v("category?id=2"), H = /* @__PURE__ */ v("Shop"), J = /* @__PURE__ */ v(" Async Test "), K = /* @__PURE__ */ t("i", { class: "ficon-right" }, null, -1);
+function M(c, u, f, p, l, g) {
+  const r = h("Navbar"), i = h("A");
+  return e(), s(_, null, [
+    d(r, { title: "Router" }),
+    t("div", O, [
+      d(i, {
         class: "item",
-        href: "components/base/child/async"
+        href: "category/index?id=1"
       }, {
-        default: s(() => [
-          M
+        default: a(() => [
+          q
+        ]),
+        _: 1
+      }),
+      d(i, {
+        class: "item",
+        href: "category/index?id=2"
+      }, {
+        default: a(() => [
+          G
+        ]),
+        _: 1
+      }),
+      d(i, {
+        class: "item",
+        href: "shop/details?id=123"
+      }, {
+        default: a(() => [
+          H
+        ]),
+        _: 1
+      }),
+      d(i, {
+        class: "item",
+        href: "components/base/router/async"
+      }, {
+        default: a(() => [
+          J,
+          K
         ]),
         _: 1
       })
     ])
   ], 64);
 }
-const Q = /* @__PURE__ */ u(J, [["render", P]]), U = {
-  pages: { scroll: z, router: H, child: Q }
-}, W = { class: "items" }, Z = /* @__PURE__ */ c(" Scroll "), tt = /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1), et = /* @__PURE__ */ c(" Router "), it = /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1), st = /* @__PURE__ */ c(" Child "), ct = /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1);
-function dt(d, p, f, v, r, x) {
-  const m = _("Navbar"), i = _("A");
-  return a(), o(h, null, [
-    t(m, { title: "Base" }),
-    e("div", W, [
-      t(i, {
+const P = /* @__PURE__ */ m(D, [["render", M]]), Q = {
+  pages: { scroll: R, router: P }
+}, U = { class: "items" }, W = /* @__PURE__ */ v(" Scroll "), Z = /* @__PURE__ */ t("i", { class: "ficon-right" }, null, -1), dd = /* @__PURE__ */ v(" Router "), id = /* @__PURE__ */ t("i", { class: "ficon-right" }, null, -1);
+function td(c, u, f, p, l, g) {
+  const r = h("Navbar"), i = h("A");
+  return e(), s(_, null, [
+    d(r, { title: "Base" }),
+    t("div", U, [
+      d(i, {
         class: "item",
         href: "components/base/scroll"
       }, {
-        default: s(() => [
-          Z,
-          tt
+        default: a(() => [
+          W,
+          Z
         ]),
         _: 1
       }),
-      t(i, {
+      d(i, {
         class: "item",
         href: "components/base/router"
       }, {
-        default: s(() => [
-          et,
-          it
-        ]),
-        _: 1
-      }),
-      t(i, {
-        class: "item",
-        href: "components/base/child"
-      }, {
-        default: s(() => [
-          st,
-          ct
+        default: a(() => [
+          dd,
+          id
         ]),
         _: 1
       })
     ])
   ], 64);
 }
-const at = /* @__PURE__ */ u(U, [["render", dt]]), ot = k({
+const ad = /* @__PURE__ */ m(Q, [["render", td]]), vd = X({
   title: {
     en: "Components",
     zh: "\u7EC4\u4EF6\u5E93"
   }
-}), nt = {
+}), cd = {
   pages: {
-    base: at,
+    base: ad,
     form: b(() => import("./form/index.js")),
     image: b(() => import("./image/index.js"))
   },
   url: "form/select",
   setup() {
-    return { langs: ot };
+    return { langs: vd };
   }
-}, lt = "", l = (d) => (S("data-v-12fd64b0"), d = d(), N(), d), vt = { class: "items" }, _t = /* @__PURE__ */ c(" Base "), rt = /* @__PURE__ */ l(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), ht = /* @__PURE__ */ c(" Scroll "), ft = /* @__PURE__ */ l(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), mt = /* @__PURE__ */ c(" Router "), pt = /* @__PURE__ */ l(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), ut = /* @__PURE__ */ c(" Child -> Async Test "), gt = /* @__PURE__ */ l(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), $t = { class: "items" }, xt = /* @__PURE__ */ c("Form "), bt = /* @__PURE__ */ l(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), yt = /* @__PURE__ */ c(" Input "), St = /* @__PURE__ */ l(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), Nt = /* @__PURE__ */ c("Select "), kt = /* @__PURE__ */ l(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), At = /* @__PURE__ */ c(" Switch "), Xt = /* @__PURE__ */ l(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), Yt = { class: "items" }, It = /* @__PURE__ */ c(" Image "), Ct = /* @__PURE__ */ l(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), wt = /* @__PURE__ */ c(" Image "), Et = /* @__PURE__ */ l(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), Bt = /* @__PURE__ */ c(" Images "), Vt = /* @__PURE__ */ l(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1));
-function zt(d, p, f, v, r, x) {
-  const m = _("Navbar"), i = _("A");
-  return a(), o(h, null, [
-    t(m, {
-      title: v.langs.title
+}, ed = "", n = (c) => (N("data-v-fe45685b"), c = c(), I(), c), sd = { class: "items" }, od = /* @__PURE__ */ v(" Base "), nd = /* @__PURE__ */ n(() => /* @__PURE__ */ t("i", { class: "ficon-right" }, null, -1)), ld = /* @__PURE__ */ v(" Scroll "), rd = /* @__PURE__ */ n(() => /* @__PURE__ */ t("i", { class: "ficon-right" }, null, -1)), _d = /* @__PURE__ */ v(" Router "), hd = /* @__PURE__ */ n(() => /* @__PURE__ */ t("i", { class: "ficon-right" }, null, -1)), fd = /* @__PURE__ */ v(" Router -> Async "), pd = /* @__PURE__ */ n(() => /* @__PURE__ */ t("i", { class: "ficon-right" }, null, -1)), ud = { class: "items" }, md = /* @__PURE__ */ v("Form "), gd = /* @__PURE__ */ n(() => /* @__PURE__ */ t("i", { class: "ficon-right" }, null, -1)), $d = /* @__PURE__ */ v(" Input "), xd = /* @__PURE__ */ n(() => /* @__PURE__ */ t("i", { class: "ficon-right" }, null, -1)), yd = /* @__PURE__ */ v("Select "), bd = /* @__PURE__ */ n(() => /* @__PURE__ */ t("i", { class: "ficon-right" }, null, -1)), Sd = /* @__PURE__ */ v(" Switch "), Nd = /* @__PURE__ */ n(() => /* @__PURE__ */ t("i", { class: "ficon-right" }, null, -1)), Id = { class: "items" }, Xd = /* @__PURE__ */ v(" Image "), Yd = /* @__PURE__ */ n(() => /* @__PURE__ */ t("i", { class: "ficon-right" }, null, -1)), kd = /* @__PURE__ */ v(" Image "), Ad = /* @__PURE__ */ n(() => /* @__PURE__ */ t("i", { class: "ficon-right" }, null, -1)), wd = /* @__PURE__ */ v(" Images "), Cd = /* @__PURE__ */ n(() => /* @__PURE__ */ t("i", { class: "ficon-right" }, null, -1));
+function Ed(c, u, f, p, l, g) {
+  const r = h("Navbar"), i = h("A");
+  return e(), s(_, null, [
+    d(r, {
+      title: p.langs.title
     }, null, 8, ["title"]),
-    e("div", vt, [
-      t(i, {
+    t("div", sd, [
+      d(i, {
         class: "header item",
         href: "components/base"
       }, {
-        default: s(() => [
-          _t,
-          rt
+        default: a(() => [
+          od,
+          nd
         ]),
         _: 1
       }),
-      t(i, {
+      d(i, {
         class: "item",
         href: "components/base/scroll?a=1&b=2"
       }, {
-        default: s(() => [
-          ht,
-          ft
+        default: a(() => [
+          ld,
+          rd
         ]),
         _: 1
       }),
-      t(i, {
+      d(i, {
         class: "item",
         href: "components/base/router"
       }, {
-        default: s(() => [
-          mt,
-          pt
+        default: a(() => [
+          _d,
+          hd
         ]),
         _: 1
       }),
-      t(i, {
+      d(i, {
         class: "item",
-        href: "components/base/child/async"
+        href: "components/base/router/async"
       }, {
-        default: s(() => [
-          ut,
-          gt
+        default: a(() => [
+          fd,
+          pd
         ]),
         _: 1
       })
     ]),
-    e("div", $t, [
-      t(i, {
+    t("div", ud, [
+      d(i, {
         class: "header item",
         href: "components/form"
       }, {
-        default: s(() => [
-          xt,
-          bt
+        default: a(() => [
+          md,
+          gd
         ]),
         _: 1
       }),
-      t(i, {
+      d(i, {
         class: "item",
         href: "components/form/input"
       }, {
-        default: s(() => [
-          yt,
-          St
+        default: a(() => [
+          $d,
+          xd
         ]),
         _: 1
       }),
-      t(i, {
+      d(i, {
         class: "item",
         href: "components/form/select"
       }, {
-        default: s(() => [
-          Nt,
-          kt
+        default: a(() => [
+          yd,
+          bd
         ]),
         _: 1
       }),
-      t(i, {
+      d(i, {
         class: "item",
         href: "components/form/switch"
       }, {
-        default: s(() => [
-          At,
-          Xt
+        default: a(() => [
+          Sd,
+          Nd
         ]),
         _: 1
       })
     ]),
-    e("div", Yt, [
-      t(i, {
+    t("div", Id, [
+      d(i, {
         class: "header item",
         href: "components/image"
       }, {
-        default: s(() => [
-          It,
-          Ct
+        default: a(() => [
+          Xd,
+          Yd
         ]),
         _: 1
       }),
-      t(i, {
+      d(i, {
         class: "item",
         href: "components/image/image"
       }, {
-        default: s(() => [
-          wt,
-          Et
+        default: a(() => [
+          kd,
+          Ad
         ]),
         _: 1
       }),
-      t(i, {
+      d(i, {
         class: "item",
         href: "components/image/images"
       }, {
-        default: s(() => [
-          Bt,
-          Vt
+        default: a(() => [
+          wd,
+          Cd
         ]),
         _: 1
       })
     ])
   ], 64);
 }
-const jt = /* @__PURE__ */ u(nt, [["render", zt], ["styles", [lt]], ["__scopeId", "data-v-12fd64b0"]]);
+const Vd = /* @__PURE__ */ m(cd, [["render", Ed], ["styles", [ed]], ["__scopeId", "data-v-fe45685b"]]);
 export {
-  u as _,
-  jt as i
+  m as _,
+  Vd as i
 };
