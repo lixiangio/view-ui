@@ -1,4 +1,4 @@
-import { ref as s, reactive as t } from "/dist/libs/vue.js";
+import { ref as s, reactive as t } from "/view-ui/libs/vue.js";
 const u = s(!0), i = s(!1), f = t({});
 function l(e) {
   i.value = !0, Object.assign(f, e);

@@ -1,5 +1,5 @@
-import v, { instances as a, gap as E } from "/dist/libs/view.js";
-import { apps as L, appsState as m } from "/dist/libs/state.js";
+import v, { instances as a, gap as E } from "/view-ui/libs/view.js";
+import { apps as L, appsState as m } from "/view-ui/libs/state.js";
 const { MIN_SAFE_INTEGER: u, MAX_SAFE_INTEGER: c } = Number;
 function d() {
   return window.innerWidth - v.initOptions.apps.right;

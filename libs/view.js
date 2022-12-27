@@ -1,4 +1,4 @@
-import { defineAsyncComponent as O } from "/dist/libs/vue.js";
+import { defineAsyncComponent as O } from "/view-ui/libs/vue.js";
 const $ = window.innerWidth < 850 ? "single" : "split", { language: v, languages: W } = window.VIEW, I = 16, c = 390;
 function L(t) {
   return t[v] || t.en;

@@ -1,4 +1,4 @@
-import { UrlParse as h, instances as f } from "/dist/libs/view.js";
+import { UrlParse as h, instances as f } from "/view-ui/libs/view.js";
 function u(r) {
   let { parentElement: t } = r;
   if (t)

@@ -1,6 +1,6 @@
 import B from "/view-ui/libs/network.js";
-import E, { Langs as K, extendsOptions as Q, urls as X, events as Z } from "/view-ui/libs/view.js";
-import { openBlock as r, createElementBlock as c, toDisplayString as u, createCommentVNode as g, renderSlot as D, resolveComponent as b, createBlock as x, withCtx as y, createElementVNode as i, withDirectives as k, mergeProps as N, vModelDynamic as I, normalizeClass as f, withModifiers as L, Fragment as $, renderList as F, normalizeStyle as U, vModelText as V, createVNode as v, h as ee, defineAsyncComponent as te, vShow as ne, createTextVNode as C, pushScopeId as oe, popScopeId as ie } from "/view-ui/libs/vue.js";
+import W, { Langs as K, extendsOptions as Q, urls as X, events as Z } from "/view-ui/libs/view.js";
+import { openBlock as r, createElementBlock as d, toDisplayString as u, createCommentVNode as g, renderSlot as D, resolveComponent as b, createBlock as x, withCtx as y, createElementVNode as i, withDirectives as k, mergeProps as L, vModelDynamic as N, normalizeClass as f, withModifiers as I, Fragment as $, renderList as F, normalizeStyle as U, vModelText as V, createVNode as v, h as ee, defineAsyncComponent as te, vShow as ne, createTextVNode as C, pushScopeId as oe, popScopeId as ie } from "/view-ui/libs/vue.js";
 import { Input as se, Button as le, DialogPage as re } from "/view-ui/libs/viewui.js";
 import { open as ae } from "/view-ui/libs/navigator.js";
 import ce from "/view-ui/libs/dayjs.js";
@@ -21,8 +21,8 @@ const de = `.v-form-box{position:relative}.v-form-box .v-form-box-header{padding
   class: "v-form-box-header"
 };
 function me(e, t, n, s, o, l) {
-  return r(), c("div", he, [
-    n.label ? (r(), c("div", pe, u(n.label), 1)) : g("", !0),
+  return r(), d("div", he, [
+    n.label ? (r(), d("div", pe, u(n.label), 1)) : g("", !0),
     D(e.$slots, "default")
   ]);
 }
@@ -79,30 +79,30 @@ function De(e, t, n, s, o, l) {
         i("div", be, [
           D(e.$slots, "before")
         ]),
-        k(i("input", N({
-          "onUpdate:modelValue": t[0] || (t[0] = (d) => o.input = d)
+        k(i("input", L({
+          "onUpdate:modelValue": t[0] || (t[0] = (c) => o.input = c)
         }, e.$attrs), null, 16), [
-          [I, o.input]
+          [N, o.input]
         ]),
         i("div", fe, [
           D(e.$slots, "after", {}, () => [
-            n.icon ? (r(), c("i", {
+            n.icon ? (r(), d("i", {
               key: 0,
               class: f(n.icon)
             }, null, 2)) : g("", !0),
-            n.unit ? (r(), c("span", ye, u(n.unit), 1)) : g("", !0)
+            n.unit ? (r(), d("span", ye, u(n.unit), 1)) : g("", !0)
           ])
         ])
       ])
     ]),
     _: 3
-  }, 8, ["label", "error"])) : n.value ? (r(), c("div", _e, [
-    n.icon ? (r(), c("i", {
+  }, 8, ["label", "error"])) : n.value ? (r(), d("div", _e, [
+    n.icon ? (r(), d("i", {
       key: 0,
       class: f(n.icon)
-    }, null, 2)) : o.showLabel ? (r(), c("span", we, u(o.showLabel) + "\uFF1A", 1)) : g("", !0),
+    }, null, 2)) : o.showLabel ? (r(), d("span", we, u(o.showLabel) + "\uFF1A", 1)) : g("", !0),
     i("span", xe, u(n.value), 1),
-    n.unit ? (r(), c("span", ke, u(n.unit), 1)) : g("", !0)
+    n.unit ? (r(), d("span", ke, u(n.unit), 1)) : g("", !0)
   ])) : g("", !0);
 }
 const j = /* @__PURE__ */ _(ge, [["render", De]]), T = {
@@ -169,9 +169,9 @@ const Ce = `.v-date-show .vicon:hover,.v-date-days li:hover,.v-date-days li.v-da
     generate(e, t, n) {
       const s = new Date(), [o, l, a] = this.getYMD(s);
       e || (e = o, t = l, n = a, this.$emit("change", [e, t, n])), this.year = e, this.month = t;
-      const d = this.nweDate(e, t), p = d.getDay() || 7;
-      d.setMilliseconds(-1);
-      const w = d.getDate();
+      const c = this.nweDate(e, t), p = c.getDay() || 7;
+      c.setMilliseconds(-1);
+      const w = c.getDate();
       let M = 6;
       p !== 1 && (M = p - 2);
       const h = [];
@@ -187,19 +187,19 @@ const Ce = `.v-date-show .vicon:hover,.v-date-days li:hover,.v-date-days li.v-da
         const S = { date: m };
         m === a && e === o && t === l && (S.class = "v-date-select"), m === this.setDay && e === this.setYear && t === this.setMonth && (S.class = "v-date-prominent"), h.push(S);
       }
-      const Y = 42 - h.length;
-      if (Y)
-        for (let m = 1; m <= Y; m++)
+      const R = 42 - h.length;
+      if (R)
+        for (let m = 1; m <= R; m++)
           h.push({
             date: m,
             class: "v-date-next-month"
           });
-      const R = [];
+      const Y = [];
       for (let m = 0; m < h.length; m += 7) {
         const S = h.slice(m, m + 7);
-        R.push(S);
+        Y.push(S);
       }
-      this.dates = R;
+      this.dates = Y;
     },
     switchMonth(e) {
       this.monthDate || (this.monthDate = this.nweDate(this.year, this.month));
@@ -236,9 +236,9 @@ const Ce = `.v-date-show .vicon:hover,.v-date-days li:hover,.v-date-days li.v-da
   /* @__PURE__ */ i("span", null, "\u65E5")
 ], -1);
 function Pe(e, t, n, s, o, l) {
-  return r(), c("div", {
+  return r(), d("div", {
     class: "v-date",
-    onClick: t[3] || (t[3] = L(() => {
+    onClick: t[3] || (t[3] = I(() => {
     }, ["stop"]))
   }, [
     i("div", $e, [
@@ -257,11 +257,11 @@ function Pe(e, t, n, s, o, l) {
       class: "v-date-days",
       onClick: t[2] || (t[2] = (...a) => l.selectDate && l.selectDate(...a))
     }, [
-      (r(!0), c($, null, F(o.dates, (a, d) => (r(), c("ul", {
+      (r(!0), d($, null, F(o.dates, (a, c) => (r(), d("ul", {
         class: "v-date-line",
-        key: d
+        key: c
       }, [
-        (r(!0), c($, null, F(a, (p, w) => (r(), c("li", {
+        (r(!0), d($, null, F(a, (p, w) => (r(), d("li", {
           key: w,
           class: f(p.class)
         }, [
@@ -271,7 +271,7 @@ function Pe(e, t, n, s, o, l) {
     ])
   ]);
 }
-const O = /* @__PURE__ */ _(Se, [["render", Pe], ["styles", [Ce]]]), Me = `.v-bubble[data-v-79d1859a]{position:fixed;z-index:1000000;display:flex;color:#999;line-height:normal}.v-bubble .v-bubble-content[data-v-79d1859a]{max-width:200px;font-size:12px;line-height:20px;background-color:#fff;border-radius:6px;box-shadow:0 0 3px #0003;overflow:hidden}.v-bubble .v-bubble-arrow[data-v-79d1859a]{position:relative;overflow:hidden}.v-bubble .v-bubble-arrow i[data-v-79d1859a]{display:block;width:8px;height:8px;background-color:#fff;position:absolute;transform:rotate(45deg);box-shadow:0 0 3px #0003}.v-bubble.left .v-bubble-arrow[data-v-79d1859a]{width:8px}.v-bubble.left .v-bubble-arrow i[data-v-79d1859a]{left:-4px}.v-bubble.right[data-v-79d1859a]{flex-direction:row-reverse}.v-bubble.right .v-bubble-arrow[data-v-79d1859a]{width:8px}.v-bubble.right .v-bubble-arrow i[data-v-79d1859a]{left:4px}.v-bubble.top[data-v-79d1859a]{flex-direction:column}.v-bubble.top .v-bubble-arrow[data-v-79d1859a]{height:8px}.v-bubble.top .v-bubble-arrow i[data-v-79d1859a]{top:-4px}.v-bubble.bottom[data-v-79d1859a]{flex-direction:column-reverse}.v-bubble.bottom .v-bubble-arrow[data-v-79d1859a]{height:8px}.v-bubble.bottom .v-bubble-arrow i[data-v-79d1859a]{top:4px}
+const O = /* @__PURE__ */ _(Se, [["render", Pe], ["styles", [Ce]]]), Me = `.v-bubble[data-v-bf86540f]{position:fixed;z-index:1000000;display:flex;color:#999;line-height:normal}.v-bubble .v-bubble-content[data-v-bf86540f]{max-width:200px;font-size:12px;line-height:20px;background-color:#fff;border-radius:6px;box-shadow:0 0 3px #0003;overflow:hidden}.v-bubble .v-bubble-arrow[data-v-bf86540f]{position:relative;overflow:hidden}.v-bubble .v-bubble-arrow i[data-v-bf86540f]{display:block;width:8px;height:8px;background-color:#fff;position:absolute;transform:rotate(45deg);box-shadow:0 0 3px #0003}.v-bubble.left .v-bubble-arrow[data-v-bf86540f]{width:8px}.v-bubble.left .v-bubble-arrow i[data-v-bf86540f]{left:-4px}.v-bubble.right[data-v-bf86540f]{flex-direction:row-reverse}.v-bubble.right .v-bubble-arrow[data-v-bf86540f]{width:8px}.v-bubble.right .v-bubble-arrow i[data-v-bf86540f]{left:4px}.v-bubble.top[data-v-bf86540f]{flex-direction:column}.v-bubble.top .v-bubble-arrow[data-v-bf86540f]{height:8px}.v-bubble.top .v-bubble-arrow i[data-v-bf86540f]{top:-4px}.v-bubble.bottom[data-v-bf86540f]{flex-direction:column-reverse}.v-bubble.bottom .v-bubble-arrow[data-v-bf86540f]{height:8px}.v-bubble.bottom .v-bubble-arrow i[data-v-bf86540f]{top:4px}
 `, Be = {
   name: "Bubble",
   props: {
@@ -292,21 +292,14 @@ const O = /* @__PURE__ */ _(Se, [["render", Pe], ["styles", [Ce]]]), Me = `.v-bu
     };
   },
   methods: {
-    level() {
-      const { targetClientRect: e, $el: t } = this, { left: n, right: s, width: o } = e, l = (t.clientWidth - o) / 2, a = o / 2;
-      n < l ? (this.style.left = n + "px", this.arrow = { left: a - 4 + "px" }) : window.innerWidth - s < l && (this.style.right = window.innerWidth - s + "px", this.arrow = { right: a - 4 + "px" });
+    level(e) {
+      const { targetClientRect: t, $el: n } = this, { left: s, right: o, width: l } = t, a = (n.clientWidth - l) / 2, c = l / 2;
+      s < a ? (this.style.left = s + "px", this.arrow = { left: c - 4 + "px" }) : window.innerWidth - o < a && (this.style.right = window.innerWidth - o + "px", this.arrow = { right: c - 4 + "px" });
     },
-    vertical() {
-      const { clientHeight: e } = this.$el, { top: t, bottom: n, height: s } = this.targetClientRect;
-      if (t + e < window.innerHeight) {
-        this.style.top = `${t}px`;
-        const o = s / 2 - 4;
-        this.style.transformOrigin = `0 ${o}px`, this.arrow = { top: `${o}px` };
-      } else {
-        this.style.top = n - e + "px";
-        const o = e - s / 2 - 4 + "px";
-        this.style.transformOrigin = `0 ${o}`, this.arrow = { top: o };
-      }
+    vertical(e) {
+      const { clientHeight: t, clientWidth: n } = this.$el, { top: s, bottom: o, height: l } = this.targetClientRect;
+      let a;
+      s + t < window.innerHeight ? (this.style = { top: `${s}px` }, a = l / 2 - 4 + "px") : (this.style = { top: `${o - t}px` }, a = t - l / 2 - 4 + "px"), this.arrow = { top: a }, e === "R" ? this.style.transformOrigin = `0 ${a}` : this.style.transformOrigin = `${n}px ${a}`;
     },
     top() {
       this.level();
@@ -318,46 +311,46 @@ const O = /* @__PURE__ */ _(Se, [["render", Pe], ["styles", [Ce]]]), Me = `.v-bu
       const { clientHeight: e } = this.$el, { top: t, bottom: n } = this.targetClientRect;
       window.innerHeight - n > e ? (this.direction = "bottom", this.style.top = n + this.gap + "px") : (this.direction = "top", this.style.top = t - e - this.gap + "px");
     },
-    right() {
-      this.vertical();
-      const { right: e, left: t } = this.targetClientRect;
-      e + this.$el.clientWidth < window.innerWidth ? (this.direction = "right", this.style.left = e + this.gap + "px") : (this.direction = "left", this.style.left = t - this.$el.clientWidth - this.gap + "px");
-    },
     left() {
-      this.vertical();
-      const { right: e, left: t } = this.targetClientRect;
-      console.log(e, t), t > this.$el.clientWidth ? (this.direction = "left", this.style.left = t - this.$el.clientWidth - this.gap + "px") : (this.direction = "right", this.style.left = e + this.gap + "px");
+      this.vertical("L");
+      const { right: e, left: t } = this.targetClientRect, n = this.$el.clientWidth + this.gap;
+      t > n ? (this.direction = "left", this.style.left = t - n + "px") : (this.direction = "right", this.style.left = e + this.gap + "px");
+    },
+    right() {
+      this.vertical("R");
+      const { right: e, left: t } = this.targetClientRect, n = this.$el.clientWidth + this.gap;
+      e + n < window.innerWidth ? (this.direction = "right", this.style.left = e + this.gap + "px") : (this.direction = "left", this.style.left = t - n + "px");
     }
   },
   mounted() {
-    this.envNode = this.$el.parentNode, document.body.appendChild(this.$el);
+    this.parentNode = this.$el.parentNode, document.body.appendChild(this.$el);
   },
   activated() {
-    this.targetClientRect = this.envNode.getBoundingClientRect();
+    this.targetClientRect = this.parentNode.getBoundingClientRect();
     const e = this[this.placement];
     e && e();
   },
   install(e) {
     e.component(this.name, this);
   }
-}, Ne = { class: "v-bubble-content" }, Ie = { class: "v-bubble-arrow" };
-function Le(e, t, n, s, o, l) {
-  return r(), c("div", {
+}, Le = { class: "v-bubble-content" }, Ne = { class: "v-bubble-arrow" };
+function Ie(e, t, n, s, o, l) {
+  return r(), d("div", {
     class: f(["v-bubble", [o.direction]]),
     style: U(o.style)
   }, [
-    i("div", Ne, [
+    i("div", Le, [
       D(e.$slots, "default", {}, void 0, !0)
     ]),
-    i("div", Ie, [
+    i("div", Ne, [
       i("i", {
         style: U(o.arrow)
       }, null, 4)
     ])
   ], 6);
 }
-const H = /* @__PURE__ */ _(Be, [["render", Le], ["styles", [Me]], ["__scopeId", "data-v-79d1859a"]]), ze = `.v-date-picker{position:relative;height:38px}
-`, Ye = {
+const H = /* @__PURE__ */ _(Be, [["render", Ie], ["styles", [Me]], ["__scopeId", "data-v-bf86540f"]]), ze = `.v-date-picker{position:relative;height:38px}
+`, Re = {
   extends: T,
   components: { FormBox: P, Bubble: H },
   props: {
@@ -396,12 +389,12 @@ const H = /* @__PURE__ */ _(Be, [["render", Le], ["styles", [Me]], ["__scopeId",
   install(e) {
     e.component(this.name, this), e.component(O.name, O);
   }
-}, Re = { class: "v-input" }, Fe = ["placeholder"], Ue = /* @__PURE__ */ i("i", { class: "vicon-riqi1" }, null, -1), Oe = {
+}, Ye = { class: "v-input" }, Fe = ["placeholder"], Ue = /* @__PURE__ */ i("i", { class: "vicon-riqi1" }, null, -1), Oe = {
   key: 1,
   class: "v-input-preview"
-}, We = { class: "v-input-preview-label" }, Ae = { class: "v-input-preview-value" };
-function Ee(e, t, n, s, o, l) {
-  const a = b("Date", !0), d = b("Bubble"), p = b("FormBox");
+}, Ae = { class: "v-input-preview-label" }, Ee = { class: "v-input-preview-value" };
+function We(e, t, n, s, o, l) {
+  const a = b("Date", !0), c = b("Bubble"), p = b("FormBox");
   return e.edit ? (r(), x(p, {
     key: 0,
     label: n.label,
@@ -410,9 +403,9 @@ function Ee(e, t, n, s, o, l) {
     default: y(() => [
       i("div", {
         class: "v-date-picker",
-        onClick: t[1] || (t[1] = L((...w) => e.click && e.click(...w), ["stop"]))
+        onClick: t[1] || (t[1] = I((...w) => e.click && e.click(...w), ["stop"]))
       }, [
-        i("div", Re, [
+        i("div", Ye, [
           k(i("input", {
             "onUpdate:modelValue": t[0] || (t[0] = (w) => e.input = w),
             placeholder: n.placeholder,
@@ -422,7 +415,7 @@ function Ee(e, t, n, s, o, l) {
           ]),
           Ue
         ]),
-        e.open ? (r(), x(d, {
+        e.open ? (r(), x(c, {
           key: 0,
           placement: "bottom"
         }, {
@@ -437,12 +430,12 @@ function Ee(e, t, n, s, o, l) {
       ])
     ]),
     _: 1
-  }, 8, ["label", "error"])) : n.value ? (r(), c("div", Oe, [
-    i("span", We, u(n.label) + "\uFF1A", 1),
-    i("span", Ae, u(l.setInput(n.value)), 1)
+  }, 8, ["label", "error"])) : n.value ? (r(), d("div", Oe, [
+    i("span", Ae, u(n.label) + "\uFF1A", 1),
+    i("span", Ee, u(l.setInput(n.value)), 1)
   ])) : g("", !0);
 }
-const je = /* @__PURE__ */ _(Ye, [["render", Ee], ["styles", [ze]]]), Te = {
+const je = /* @__PURE__ */ _(Re, [["render", We], ["styles", [ze]]]), Te = {
   emits: ["click"],
   components: { FormBox: P },
   props: {
@@ -492,11 +485,11 @@ function et(e, t, n, s, o, l) {
         i("div", Je, [
           D(e.$slots, "before")
         ]),
-        k(i("input", N({
-          "onUpdate:modelValue": t[0] || (t[0] = (d) => o.input = d)
+        k(i("input", L({
+          "onUpdate:modelValue": t[0] || (t[0] = (c) => o.input = c)
         }, e.$attrs), null, 16), [
           [
-            I,
+            N,
             o.input,
             void 0,
             { number: !0 }
@@ -504,23 +497,23 @@ function et(e, t, n, s, o, l) {
         ]),
         i("div", qe, [
           D(e.$slots, "after", {}, () => [
-            n.icon ? (r(), c("i", {
+            n.icon ? (r(), d("i", {
               key: 0,
               class: f(n.icon)
             }, null, 2)) : g("", !0),
-            n.unit ? (r(), c("span", Ge, u(n.unit), 1)) : g("", !0)
+            n.unit ? (r(), d("span", Ge, u(n.unit), 1)) : g("", !0)
           ])
         ])
       ])
     ]),
     _: 3
-  }, 8, ["label", "error"])) : n.value ? (r(), c("div", Ke, [
-    n.icon ? (r(), c("i", {
+  }, 8, ["label", "error"])) : n.value ? (r(), d("div", Ke, [
+    n.icon ? (r(), d("i", {
       key: 0,
       class: f(n.icon)
-    }, null, 2)) : o.showLabel ? (r(), c("span", Qe, u(o.showLabel) + "\uFF1A", 1)) : g("", !0),
+    }, null, 2)) : o.showLabel ? (r(), d("span", Qe, u(o.showLabel) + "\uFF1A", 1)) : g("", !0),
     i("span", Xe, u(n.value), 1),
-    n.unit ? (r(), c("span", Ze, u(n.unit), 1)) : g("", !0)
+    n.unit ? (r(), d("span", Ze, u(n.unit), 1)) : g("", !0)
   ])) : g("", !0);
 }
 const J = /* @__PURE__ */ _(Te, [["render", et]]), tt = `.v-date-range{position:relative;height:38px}.v-date-range .v-date:nth-child(1){border-right:1px solid #ebeef5}
@@ -537,8 +530,8 @@ const J = /* @__PURE__ */ _(Te, [["render", et]]), tt = `.v-date-range{position:
     if (e)
       e = this.dateParser(e);
     else {
-      const [d, p] = this.getYMD(new Date());
-      e = [d, p];
+      const [c, p] = this.getYMD(new Date());
+      e = [c, p];
     }
     let [n, s] = e;
     t ? t = this.dateParser(t) : t = [n, s + 1];
@@ -574,10 +567,10 @@ const J = /* @__PURE__ */ _(Te, [["render", et]]), tt = `.v-date-range{position:
   }
 };
 function ot(e, t, n, s, o, l) {
-  const a = b("DateRange", !0), d = b("Bubble");
-  return r(), c("div", {
+  const a = b("DateRange", !0), c = b("Bubble");
+  return r(), d("div", {
     class: "v-date-range",
-    onClick: t[4] || (t[4] = L((...p) => e.click && e.click(...p), ["stop"]))
+    onClick: t[4] || (t[4] = I((...p) => e.click && e.click(...p), ["stop"]))
   }, [
     k(i("input", {
       "onUpdate:modelValue": t[0] || (t[0] = (p) => o.input = p),
@@ -597,7 +590,7 @@ function ot(e, t, n, s, o, l) {
     }, null, 512), [
       [V, o.input]
     ]),
-    e.open ? (r(), x(d, {
+    e.open ? (r(), x(c, {
       key: 0,
       class: "v-date-range-box",
       placement: "bottom"
@@ -675,35 +668,35 @@ function gt(e, t, n, s, o, l) {
   }, {
     default: y(() => [
       i("div", rt, [
-        n.icon ? (r(), c("i", {
+        n.icon ? (r(), d("i", {
           key: 0,
           class: f(n.icon)
         }, null, 2)) : g("", !0),
         k(i("input", {
-          "onUpdate:modelValue": t[0] || (t[0] = (d) => o.input[0] = d),
+          "onUpdate:modelValue": t[0] || (t[0] = (c) => o.input[0] = c),
           type: "number",
           placeholder: n.placeholder[0],
-          onInput: t[1] || (t[1] = (...d) => l.min && l.min(...d))
+          onInput: t[1] || (t[1] = (...c) => l.min && l.min(...c))
         }, null, 40, at), [
           [V, o.input[0]]
         ]),
         ct,
         k(i("input", {
           type: "number",
-          "onUpdate:modelValue": t[2] || (t[2] = (d) => o.input[1] = d),
+          "onUpdate:modelValue": t[2] || (t[2] = (c) => o.input[1] = c),
           placeholder: n.placeholder[1],
-          onInput: t[3] || (t[3] = (...d) => l.max && l.max(...d))
+          onInput: t[3] || (t[3] = (...c) => l.max && l.max(...c))
         }, null, 40, dt), [
           [V, o.input[1]]
         ])
       ])
     ]),
     _: 1
-  }, 8, ["label", "error"])) : (r(), c("div", ut, [
-    n.icon ? (r(), c("i", {
+  }, 8, ["label", "error"])) : (r(), d("div", ut, [
+    n.icon ? (r(), d("i", {
       key: 0,
       class: f(n.icon)
-    }, null, 2)) : (r(), c("span", ht, u(n.label) + "\uFF1A", 1)),
+    }, null, 2)) : (r(), d("span", ht, u(n.label) + "\uFF1A", 1)),
     i("span", pt, u(n.value[0]) + " - " + u(n.value[1]), 1),
     i("span", mt, u(n.unit), 1)
   ]));
@@ -738,10 +731,10 @@ function yt(e, t, n, s, o, l) {
   }, {
     default: y(() => [
       i("div", ft, [
-        k(i("input", N({
-          "onUpdate:modelValue": t[0] || (t[0] = (d) => s.input = d)
+        k(i("input", L({
+          "onUpdate:modelValue": t[0] || (t[0] = (c) => s.input = c)
         }, e.$attrs), null, 16), [
-          [I, s.input]
+          [N, s.input]
         ])
       ])
     ]),
@@ -772,7 +765,7 @@ const _t = /* @__PURE__ */ _(bt, [["render", yt]]), wt = `.v-radio{cursor:pointe
   }
 }, kt = { class: "radio-label" };
 function Dt(e, t, n, s, o, l) {
-  return r(), c("div", {
+  return r(), d("div", {
     class: "v-radio",
     onClick: t[0] || (t[0] = (...a) => l.click && l.click(...a))
   }, [
@@ -784,7 +777,7 @@ function Dt(e, t, n, s, o, l) {
     ])
   ]);
 }
-const Ct = /* @__PURE__ */ _(xt, [["render", Dt], ["styles", [wt]]]), W = {
+const Ct = /* @__PURE__ */ _(xt, [["render", Dt], ["styles", [wt]]]), A = {
   text: j,
   date: je,
   daterange: it,
@@ -796,8 +789,8 @@ const Ct = /* @__PURE__ */ _(xt, [["render", Dt], ["styles", [wt]]]), W = {
   name: "Input",
   render() {
     const { type: e, range: t } = this.$attrs;
-    let n = W[e];
-    return n ? t !== void 0 && (n = W[e + "range"]) : n = j, ee(n);
+    let n = A[e];
+    return n ? t !== void 0 && (n = A[e + "range"]) : n = j, ee(n);
   }
 }, $t = `.input-code .button{cursor:pointer;user-select:none;color:#396afe}.input-code .countdown{cursor:pointer;user-select:none;color:gray}
 `, Vt = {
@@ -850,21 +843,21 @@ function Mt(e, t, n, s, o, l) {
     placeholder: n.placeholder,
     type: "text",
     modelValue: o.mobilePhone,
-    "onUpdate:modelValue": t[1] || (t[1] = (d) => o.mobilePhone = d),
+    "onUpdate:modelValue": t[1] || (t[1] = (c) => o.mobilePhone = c),
     onInput: l.input
   }, {
     after: y(() => [
-      o.status ? (r(), c("div", {
+      o.status ? (r(), d("div", {
         key: 0,
         class: "button",
-        onClick: t[0] || (t[0] = (...d) => l.sendCode && l.sendCode(...d))
-      }, "\u53D1\u9001\u77ED\u4FE1\u9A8C\u8BC1\u7801")) : (r(), c("div", Pt, u(o.count) + "s\u540E\u91CD\u8BD5", 1))
+        onClick: t[0] || (t[0] = (...c) => l.sendCode && l.sendCode(...c))
+      }, "\u53D1\u9001\u77ED\u4FE1\u9A8C\u8BC1\u7801")) : (r(), d("div", Pt, u(o.count) + "s\u540E\u91CD\u8BD5", 1))
     ]),
     _: 1
   }, 8, ["label", "placeholder", "modelValue", "onInput"]);
 }
-const Bt = /* @__PURE__ */ _(Vt, [["render", Mt], ["styles", [$t]]]), Nt = `.login[data-v-10cd578b]{width:100%;height:100%;background-image:url(./image/background01.jpeg);background-repeat:no-repeat;background-size:cover;display:flex;flex-direction:column;align-items:center;justify-content:space-between}.login .login-center[data-v-10cd578b]{flex:1}.login .login-center .login-main[data-v-10cd578b]{width:350px;height:520px;background-color:#fff;overflow:hidden;border-radius:15px;box-shadow:0 6px 20px 5px #2878ff1a,0 16px 24px 2px #0000000d}.login .login-center .login-main .logo[data-v-10cd578b]{display:flex;height:100px;justify-content:center;align-items:center}.login .login-center .login-main .login-form[data-v-10cd578b]{padding:0 18px}.login .login-center .login-main .login-form .login-form-header[data-v-10cd578b]{flex:none;display:flex;justify-content:space-between}.login .login-center .login-main .login-form .login-form-header h3[data-v-10cd578b]{cursor:pointer;font-size:18px;padding:12px 0}.login .login-center .login-main .login-form .login-form-header h3.active[data-v-10cd578b]{color:#396afe}.login .login-center .login-main .login-form .login-form-main[data-v-10cd578b]{flex:1}.login .login-center .login-main .login-form .login-form-main .sign-with[data-v-10cd578b]{padding:10px 0}.login .login-center .login-main .login-form .login-form-main .verification-code[data-v-10cd578b]{padding:15px 0}.login .login-center .login-main .login-form .login-form-main .login-button[data-v-10cd578b]{width:100%;margin:20px 0 0;padding:12px 0;height:auto;background-color:#396afe;color:#fff}.login .login-center .login-main .login-form .login-form-main .forget-password[data-v-10cd578b]{margin:10px 0 0;display:inline-block}.login .login-center .login-main .login-form .login-form-main .v-input .v-input-after[data-v-10cd578b]{background:none}.login .login-center .login-main .login-form .login-form-footer[data-v-10cd578b]{flex:none;margin:0 -8px}.login .login-center .login-main .login-form .login-form-footer .protocol[data-v-10cd578b]{padding:10px;height:50px}.login .login-center .login-main .login-form .login-form-footer .protocol a[data-v-10cd578b]{color:#396afe}.login .login-center .login-main .login-form .login-form-footer span[data-v-10cd578b]{cursor:pointer;user-select:none;margin:5px 10px;font-size:16px}.login .login-footer[data-v-10cd578b]{height:26px;font-size:12px;text-align:center;color:#fff}
-`, { brand: A } = E.initOptions, It = K({
+const Bt = /* @__PURE__ */ _(Vt, [["render", Mt], ["styles", [$t]]]), Lt = `.login[data-v-10cd578b]{width:100%;height:100%;background-image:url(./image/background01.jpeg);background-repeat:no-repeat;background-size:cover;display:flex;flex-direction:column;align-items:center;justify-content:space-between}.login .login-center[data-v-10cd578b]{flex:1}.login .login-center .login-main[data-v-10cd578b]{width:350px;height:520px;background-color:#fff;overflow:hidden;border-radius:15px;box-shadow:0 6px 20px 5px #2878ff1a,0 16px 24px 2px #0000000d}.login .login-center .login-main .logo[data-v-10cd578b]{display:flex;height:100px;justify-content:center;align-items:center}.login .login-center .login-main .login-form[data-v-10cd578b]{padding:0 18px}.login .login-center .login-main .login-form .login-form-header[data-v-10cd578b]{flex:none;display:flex;justify-content:space-between}.login .login-center .login-main .login-form .login-form-header h3[data-v-10cd578b]{cursor:pointer;font-size:18px;padding:12px 0}.login .login-center .login-main .login-form .login-form-header h3.active[data-v-10cd578b]{color:#396afe}.login .login-center .login-main .login-form .login-form-main[data-v-10cd578b]{flex:1}.login .login-center .login-main .login-form .login-form-main .sign-with[data-v-10cd578b]{padding:10px 0}.login .login-center .login-main .login-form .login-form-main .verification-code[data-v-10cd578b]{padding:15px 0}.login .login-center .login-main .login-form .login-form-main .login-button[data-v-10cd578b]{width:100%;margin:20px 0 0;padding:12px 0;height:auto;background-color:#396afe;color:#fff}.login .login-center .login-main .login-form .login-form-main .forget-password[data-v-10cd578b]{margin:10px 0 0;display:inline-block}.login .login-center .login-main .login-form .login-form-main .v-input .v-input-after[data-v-10cd578b]{background:none}.login .login-center .login-main .login-form .login-form-footer[data-v-10cd578b]{flex:none;margin:0 -8px}.login .login-center .login-main .login-form .login-form-footer .protocol[data-v-10cd578b]{padding:10px;height:50px}.login .login-center .login-main .login-form .login-form-footer .protocol a[data-v-10cd578b]{color:#396afe}.login .login-center .login-main .login-form .login-form-footer span[data-v-10cd578b]{cursor:pointer;user-select:none;margin:5px 10px;font-size:16px}.login .login-footer[data-v-10cd578b]{height:26px;font-size:12px;text-align:center;color:#fff}
+`, { brand: E } = W.initOptions, Nt = K({
   registered: {
     en: "Registered",
     zh: "\u6CE8\u518C"
@@ -910,10 +903,10 @@ const Bt = /* @__PURE__ */ _(Vt, [["render", Mt], ["styles", [$t]]]), Nt = `.log
     zh: "\u5FD8\u8BB0\u5BC6\u7801\uFF1F"
   },
   brand: {
-    en: A,
-    zh: A
+    en: E,
+    zh: E
   }
-}), Lt = {
+}), It = {
   components: {
     Input: se,
     InputCode: Bt,
@@ -922,7 +915,7 @@ const Bt = /* @__PURE__ */ _(Vt, [["render", Mt], ["styles", [$t]]]), Nt = `.log
     Privacy: te(() => import("../pages/privacy.js"))
   },
   data() {
-    this.langs = It;
+    this.langs = Nt;
     const { bid: e } = localStorage;
     return {
       bid: e,
@@ -962,7 +955,7 @@ const Bt = /* @__PURE__ */ _(Vt, [["render", Mt], ["styles", [$t]]]), Nt = `.log
     },
     accountLogin() {
       const e = Q(X[""]);
-      E.initOptions = e, Z.emit("initVive", e), history.pushState({ url: "#" }, "", "#");
+      W.initOptions = e, Z.emit("initVive", e), history.pushState({ url: "#" }, "", "#");
     },
     accountRegister() {
       const { error: e, data: t } = {};
@@ -980,7 +973,7 @@ const Bt = /* @__PURE__ */ _(Vt, [["render", Mt], ["styles", [$t]]]), Nt = `.log
       localStorage.sign = t, localStorage.bid = n.bid, localStorage.user = JSON.stringify(n), localStorage.authority = JSON.stringify(s), ae("");
     }
   }
-}, q = (e) => (oe("data-v-10cd578b"), e = e(), ie(), e), zt = { class: "login" }, Yt = { class: "login-center center" }, Rt = { class: "login-main" }, Ft = /* @__PURE__ */ q(() => /* @__PURE__ */ i("div", { class: "logo" }, [
+}, q = (e) => (oe("data-v-10cd578b"), e = e(), ie(), e), zt = { class: "login" }, Rt = { class: "login-center center" }, Yt = { class: "login-main" }, Ft = /* @__PURE__ */ q(() => /* @__PURE__ */ i("div", { class: "logo" }, [
   /* @__PURE__ */ i("svg", {
     t: "1629032783534",
     class: "icon",
@@ -1002,25 +995,25 @@ const Bt = /* @__PURE__ */ _(Vt, [["render", Mt], ["styles", [$t]]]), Nt = `.log
       "p-id": "2791"
     })
   ])
-], -1)), Ut = { class: "login-form" }, Ot = { class: "login-form-header" }, Wt = {
+], -1)), Ut = { class: "login-form" }, Ot = { class: "login-form-header" }, At = {
   key: 0,
   class: "login-form-main"
-}, At = {
+}, Et = {
   class: "forget-password",
   href: ""
-}, Et = /* @__PURE__ */ C("Login"), jt = { class: "sign-with" }, Tt = /* @__PURE__ */ C(" Sign in with "), Ht = {
+}, Wt = /* @__PURE__ */ C("Login"), jt = { class: "sign-with" }, Tt = /* @__PURE__ */ C(" Sign in with "), Ht = {
   key: 1,
   class: "login-form-main"
 }, Jt = /* @__PURE__ */ C("Registered"), qt = { class: "login-form-header" }, Gt = { class: "active" }, Kt = { class: "login-form-main" }, Qt = /* @__PURE__ */ C("Login"), Xt = { class: "login-form-footer" }, Zt = { class: "protocol" }, en = /* @__PURE__ */ C(" Registration means that you accept the "), tn = /* @__PURE__ */ C(" of the user agreement and "), nn = /* @__PURE__ */ q(() => /* @__PURE__ */ i("a", null, "privacy", -1)), on = /* @__PURE__ */ C(" policy "), sn = { class: "login-footer" };
 function ln(e, t, n, s, o, l) {
-  const a = b("Input"), d = b("Button"), p = b("InputCode"), w = b("Privacy"), M = b("DialogPage");
-  return r(), c($, null, [
+  const a = b("Input"), c = b("Button"), p = b("InputCode"), w = b("Privacy"), M = b("DialogPage");
+  return r(), d($, null, [
     i("div", zt, [
-      i("div", Yt, [
-        i("div", Rt, [
+      i("div", Rt, [
+        i("div", Yt, [
           Ft,
           i("div", Ut, [
-            o.type === "account" ? (r(), c($, { key: 0 }, [
+            o.type === "account" ? (r(), d($, { key: 0 }, [
               i("div", Ot, [
                 i("h3", {
                   onClick: t[0] || (t[0] = (h) => o.mode = "Login"),
@@ -1031,7 +1024,7 @@ function ln(e, t, n, s, o, l) {
                   class: f({ active: o.mode === "Registered" })
                 }, u(e.langs.registered), 3)
               ]),
-              o.mode === "Login" ? (r(), c("div", Wt, [
+              o.mode === "Login" ? (r(), d("div", At, [
                 v(a, {
                   class: "w100",
                   type: "text",
@@ -1046,13 +1039,13 @@ function ln(e, t, n, s, o, l) {
                   placeholder: e.langs.passwordPlaceholder,
                   value: o.account.password
                 }, null, 8, ["label", "placeholder", "value"]),
-                i("a", At, u(e.langs.forgotPassword), 1),
-                v(d, {
+                i("a", Et, u(e.langs.forgotPassword), 1),
+                v(c, {
                   class: "login-button",
                   onClick: l.accountLogin
                 }, {
                   default: y(() => [
-                    Et
+                    Wt
                   ]),
                   _: 1
                 }, 8, ["onClick"]),
@@ -1067,7 +1060,7 @@ function ln(e, t, n, s, o, l) {
                     class: f({ active: o.type === "sms" })
                   }, u(e.langs.sms) + " " + u(e.langs.login), 3)
                 ])
-              ])) : (r(), c("div", Ht, [
+              ])) : (r(), d("div", Ht, [
                 v(p, {
                   class: "w100",
                   label: e.langs.mobilePhoneNumber,
@@ -1103,7 +1096,7 @@ function ln(e, t, n, s, o, l) {
                   modelValue: o.account.password,
                   "onUpdate:modelValue": t[8] || (t[8] = (h) => o.account.password = h)
                 }, null, 8, ["label", "placeholder", "modelValue"]),
-                v(d, {
+                v(c, {
                   class: "login-button",
                   onClick: l.accountRegister
                 }, {
@@ -1113,7 +1106,7 @@ function ln(e, t, n, s, o, l) {
                   _: 1
                 }, 8, ["onClick"])
               ]))
-            ], 64)) : o.type === "sms" ? (r(), c($, { key: 1 }, [
+            ], 64)) : o.type === "sms" ? (r(), d($, { key: 1 }, [
               i("div", qt, [
                 i("h3", Gt, u(e.langs.sms) + " " + u(e.langs.login), 1)
               ]),
@@ -1134,7 +1127,7 @@ function ln(e, t, n, s, o, l) {
                   modelValue: o.sms.code,
                   "onUpdate:modelValue": t[10] || (t[10] = (h) => o.sms.code = h)
                 }, null, 8, ["modelValue"]),
-                v(d, {
+                v(c, {
                   class: "login-button",
                   onClick: l.smsLogin
                 }, {
@@ -1176,7 +1169,7 @@ function ln(e, t, n, s, o, l) {
     })) : g("", !0)
   ], 64);
 }
-const pn = /* @__PURE__ */ _(Lt, [["render", ln], ["styles", [Nt]], ["__scopeId", "data-v-10cd578b"]]);
+const pn = /* @__PURE__ */ _(It, [["render", ln], ["styles", [Lt]], ["__scopeId", "data-v-10cd578b"]]);
 export {
   _,
   pn as i

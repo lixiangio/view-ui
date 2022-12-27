@@ -1,9 +1,9 @@
-import { open as N } from "/dist/libs/navigator.js";
-import { openBlock as f, createElementBlock as p, withModifiers as P, renderSlot as g, Fragment as L, createElementVNode as m, mergeProps as T, toDisplayString as D, createCommentVNode as F, pushScopeId as B, popScopeId as M, normalizeClass as V, normalizeStyle as x, ref as k, resolveComponent as b, createVNode as S } from "/dist/libs/vue.js";
-import { back as W } from "/dist/libs/router.js";
-import w, { isTouch as $, SetPointer as y, Mask as E } from "/dist/libs/pointer.js";
-import X, { UA as A } from "/dist/libs/view.js";
-import { controllerSwitch as O } from "/dist/libs/state.js";
+import { open as N } from "/view-ui/libs/navigator.js";
+import { openBlock as f, createElementBlock as p, withModifiers as P, renderSlot as g, Fragment as L, createElementVNode as m, mergeProps as T, toDisplayString as D, createCommentVNode as F, pushScopeId as B, popScopeId as M, normalizeClass as V, normalizeStyle as x, ref as k, resolveComponent as b, createVNode as S } from "/view-ui/libs/vue.js";
+import { back as W } from "/view-ui/libs/router.js";
+import w, { isTouch as $, SetPointer as y, Mask as E } from "/view-ui/libs/pointer.js";
+import X, { UA as A } from "/view-ui/libs/view.js";
+import { controllerSwitch as O } from "/view-ui/libs/state.js";
 const _ = (e, r) => {
   const t = e.__vccOpts || e;
   for (const [s, a] of r)
