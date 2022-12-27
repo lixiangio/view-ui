@@ -87,7 +87,7 @@ function j(c, u, f, p, l, g) {
 }
 const L = /* @__PURE__ */ m(F, [["render", j], ["styles", [V]], ["__scopeId", "data-v-550dc700"]]), D = {
   pages: { async: L }
-}, O = { class: "items" }, q = /* @__PURE__ */ v("category?id=1"), G = /* @__PURE__ */ v("category?id=2"), H = /* @__PURE__ */ v("Shop"), J = /* @__PURE__ */ v(" Async Test "), K = /* @__PURE__ */ t("i", { class: "ficon-right" }, null, -1);
+}, O = { class: "items" }, q = /* @__PURE__ */ v(" Async Test "), G = /* @__PURE__ */ t("i", { class: "ficon-right" }, null, -1), H = /* @__PURE__ */ v("category?id=1"), J = /* @__PURE__ */ v("category?id=2"), K = /* @__PURE__ */ v("Shop");
 function M(c, u, f, p, l, g) {
   const r = h("Navbar"), i = h("A");
   return e(), s(_, null, [
@@ -95,25 +95,17 @@ function M(c, u, f, p, l, g) {
     t("div", O, [
       d(i, {
         class: "item",
-        href: "category/index?id=1"
+        href: "components/base/router/async"
       }, {
         default: a(() => [
-          q
-        ]),
-        _: 1
-      }),
-      d(i, {
-        class: "item",
-        href: "category/index?id=2"
-      }, {
-        default: a(() => [
+          q,
           G
         ]),
         _: 1
       }),
       d(i, {
         class: "item",
-        href: "shop/details?id=123"
+        href: "category/index?id=1"
       }, {
         default: a(() => [
           H
@@ -122,10 +114,18 @@ function M(c, u, f, p, l, g) {
       }),
       d(i, {
         class: "item",
-        href: "components/base/router/async"
+        href: "category/index?id=2"
       }, {
         default: a(() => [
-          J,
+          J
+        ]),
+        _: 1
+      }),
+      d(i, {
+        class: "item",
+        href: "shop/details?id=123"
+      }, {
+        default: a(() => [
           K
         ]),
         _: 1
