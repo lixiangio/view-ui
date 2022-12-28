@@ -48,8 +48,6 @@ title: View UI
 
 ## 预览
 
-<p><img src="./screenshot/2022-12-28 21-34-58.png" alt="Screenshot" width="100%"></p>
-
 <p><img src="./screenshot/2022-12-28 21-53-43.png" alt="Screenshot" width="100%"></p>
 
 ## 传统的多端响应式布局存在什么问题？
