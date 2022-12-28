@@ -48,7 +48,7 @@ title: View UI
 
 ## 预览
 
-<img src="./screenshot/202022-12-28%2021-34-58.png" alt="Screenshot">
+<img src="./screenshot/2022-12-28 21-34-58.png" alt="Screenshot" width="100%">
 
 ## 传统的多端响应式布局存在什么问题？
 
