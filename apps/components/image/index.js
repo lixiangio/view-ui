@@ -1,70 +1,70 @@
-import { defineComponent as h, resolveComponent as t, openBlock as c, createElementBlock as _, Fragment as r, createVNode as e, createElementVNode as s, unref as v, withCtx as g, createTextVNode as u } from "/view-ui/libs/vue.js";
-import { Image as $, Images as I } from "/view-ui/libs/viewui.js";
+import { defineComponent as h, resolveComponent as t, openBlock as c, createElementBlock as _, Fragment as r, createVNode as e, createElementVNode as s, unref as v, reactive as $, withCtx as d, createTextVNode as g } from "/view-ui/libs/vue.js";
+import { Image as I, Images as N } from "/view-ui/libs/viewui.js";
 import { _ as i } from "../index2.js";
 import "/view-ui/libs/view.js";
 import "/view-ui/libs/navigator.js";
-const N = { class: "image p10" }, x = /* @__PURE__ */ h({
+const b = { class: "image p10" }, x = /* @__PURE__ */ h({
   __name: "image",
   setup(m) {
     return (l, p) => {
-      const n = t("Navbar");
+      const o = t("Navbar");
       return c(), _(r, null, [
-        e(n, { title: "Image" }),
-        s("div", N, [
-          e(v($))
+        e(o, { title: "Image" }),
+        s("div", b, [
+          e(v(I))
         ])
       ], 64);
     };
   }
-}), b = "", y = /* @__PURE__ */ i(x, [["styles", [b]], ["__scopeId", "data-v-db3fc276"]]), C = "", V = {
-  components: { Images: I },
-  data() {
+}), y = "", C = /* @__PURE__ */ i(x, [["styles", [y]], ["__scopeId", "data-v-db3fc276"]]), V = "", k = {
+  components: { Images: N },
+  setup() {
     return {
-      images: []
+      images: $([])
     };
   }
-}, k = { class: "p10" };
-function A(m, l, p, n, d, f) {
-  const a = t("Navbar"), o = t("Images", !0);
+}, A = { class: "p10" };
+function B(m, l, p, o, u, f) {
+  const a = t("Navbar"), n = t("Images", !0);
   return c(), _(r, null, [
     e(a, { title: "Images" }),
-    s("div", k, [
-      e(o, { value: d.images }, null, 8, ["value"])
+    s("div", A, [
+      e(n, { value: o.images }, null, 8, ["value"])
     ])
   ], 64);
 }
-const B = /* @__PURE__ */ i(V, [["render", A], ["styles", [C]], ["__scopeId", "data-v-5c3f142d"]]), E = {
-  pages: { image: y, images: B }
-}, w = { class: "items" }, F = /* @__PURE__ */ u(" Image "), T = /* @__PURE__ */ s("i", { class: "ficon-right" }, null, -1), j = /* @__PURE__ */ u(" Images "), q = /* @__PURE__ */ s("i", { class: "ficon-right" }, null, -1);
-function z(m, l, p, n, d, f) {
-  const a = t("Navbar"), o = t("A");
+const E = /* @__PURE__ */ i(k, [["render", B], ["styles", [V]], ["__scopeId", "data-v-bdcf82e1"]]), w = {
+  pages: { image: C, images: E }
+}, F = { class: "items" }, T = /* @__PURE__ */ g(" Image "), j = /* @__PURE__ */ s("i", { class: "ficon-right" }, null, -1), q = /* @__PURE__ */ g(" Images "), z = /* @__PURE__ */ s("i", { class: "ficon-right" }, null, -1);
+function D(m, l, p, o, u, f) {
+  const a = t("Navbar"), n = t("A");
   return c(), _(r, null, [
     e(a, { title: "Image" }),
-    s("div", w, [
-      e(o, {
+    s("div", F, [
+      e(n, {
         class: "item",
         href: "components/image/image"
       }, {
-        default: g(() => [
-          F,
-          T
+        default: d(() => [
+          T,
+          j
         ]),
         _: 1
       }),
-      e(o, {
+      e(n, {
         class: "item",
         href: "components/image/images"
       }, {
-        default: g(() => [
-          j,
-          q
+        default: d(() => [
+          q,
+          z
         ]),
         _: 1
       })
     ])
   ], 64);
 }
-const L = /* @__PURE__ */ i(E, [["render", z]]);
+const M = /* @__PURE__ */ i(w, [["render", D]]);
 export {
-  L as default
+  M as default
 };

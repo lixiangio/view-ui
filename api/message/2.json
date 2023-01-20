@@ -1,0 +1,50 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Monkey",
+      "avatar": "🐵",
+      "me": true
+    },
+    {
+      "id": 2,
+      "name": "Lili",
+      "avatar": "💁"
+    },
+    {
+      "id": 3,
+      "name": "Panda",
+      "avatar": "🐼"
+    }
+  ],
+  "list": [
+    {
+      "uid": 2,
+      "content": "🍹🍹🍹"
+    },
+    {
+      "uid": 3,
+      "content": "🍦🍦"
+    },
+    {
+      "uid": 1,
+      "content": "🍟🍟🍟"
+    },
+    {
+      "uid": 2,
+      "content": "⛹️💃"
+    },
+    {
+      "uid": 2,
+      "content": "👌😍"
+    },
+    {
+      "uid": 3,
+      "content": "🐼🐼"
+    },
+    {
+      "uid": 2,
+      "content": "👌🎍😍"
+    }
+  ]
+}

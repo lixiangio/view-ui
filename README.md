@@ -1,3 +1,7 @@
+---
+title: View UI
+---
+
 # View UI
 
 轻量级的跨端、响应式微应用开发平台，通过在所有终端设备中统一使用移动端的交互逻辑，实现多端一致的设计、开发和使用体验。
@@ -44,7 +48,7 @@
 
 ## 预览
 
-<a href="https://lixiangio.github.io/view-ui/" target="_blank"><img src="./screenshot/2023-01-10 20-19-40.jpg" alt="Screenshot"></a>
+<img src="./screenshot/202022-12-28%2021-34-58.png" alt="Screenshot">
 
 ## 传统的多端响应式布局存在什么问题？
 

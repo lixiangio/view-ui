@@ -1,92 +1,92 @@
-import { defineComponent as v, resolveComponent as m, openBlock as i, createElementBlock as l, createVNode as a, createElementVNode as e, Fragment as f, renderList as F, unref as n, normalizeClass as k, normalizeStyle as x, createTextVNode as u, toDisplayString as c, createCommentVNode as z, pushScopeId as b, popScopeId as $, withCtx as p } from "/view-ui/libs/vue.js";
-import { urls as A, languages as E, language as I, Langs as N } from "/view-ui/libs/view.js";
-import { open as S, pushState as B } from "/view-ui/libs/navigator.js";
-import { confirm as w } from "/view-ui/libs/viewui.js";
-const V = (t) => (b("data-v-76682b0c"), t = t(), $(), t), L = { class: "apps" }, U = { class: "items" }, P = {
+import { defineComponent as v, resolveComponent as f, openBlock as i, createElementBlock as l, createVNode as a, createElementVNode as e, Fragment as m, renderList as F, unref as n, normalizeClass as k, normalizeStyle as z, createTextVNode as r, toDisplayString as c, createCommentVNode as x, pushScopeId as $, popScopeId as y, withCtx as p } from "/view-ui/libs/vue.js";
+import { urls as A, languages as E, language as I, Langs as N, Lang as S } from "/view-ui/libs/view.js";
+import { open as w, pushState as B } from "/view-ui/libs/navigator.js";
+import { confirm as V } from "/view-ui/libs/viewui.js";
+const L = (t) => ($("data-v-64144d7e"), t = t(), y(), t), U = { class: "apps" }, D = { class: "items" }, P = {
   key: 0,
   class: "item",
   href: "pages/faq"
-}, Q = { class: "left" }, D = /* @__PURE__ */ V(() => /* @__PURE__ */ e("div", { class: "right" }, "...", -1)), G = /* @__PURE__ */ v({
+}, Q = { class: "left" }, G = /* @__PURE__ */ L(() => /* @__PURE__ */ e("div", { class: "right" }, "...", -1)), M = /* @__PURE__ */ v({
   __name: "apps",
   setup(t) {
-    return (s, r) => {
-      const g = m("Navbar");
-      return i(), l("div", L, [
+    return (s, _) => {
+      const g = f("Navbar");
+      return i(), l("div", U, [
         a(g, { title: "Apps" }),
-        e("div", U, [
-          (i(!0), l(f, null, F(n(A), ({ icon: d, color: _, name: o }) => (i(), l(f, null, [
+        e("div", D, [
+          (i(!0), l(m, null, F(n(A), ({ icon: d, color: u, name: o }) => (i(), l(m, null, [
             d ? (i(), l("div", P, [
               e("div", Q, [
                 e("i", {
                   class: k(d),
-                  style: x({ color: _ })
+                  style: z({ color: u })
                 }, null, 6),
-                u(" " + c(o), 1)
+                r(" " + c(o), 1)
               ]),
-              D
-            ])) : z("", !0)
+              G
+            ])) : x("", !0)
           ], 64))), 256))
         ])
       ]);
     };
   }
-}), M = `.apps .items .item .left i[data-v-76682b0c]{margin-right:5px}
-`, y = (t, s) => {
-  const r = t.__vccOpts || t;
+}), q = `.apps .items .item .left i[data-v-64144d7e]{margin-right:5px}
+`, b = (t, s) => {
+  const _ = t.__vccOpts || t;
   for (const [g, d] of s)
-    r[g] = d;
-  return r;
-}, q = /* @__PURE__ */ y(G, [["styles", [M]], ["__scopeId", "data-v-76682b0c"]]), O = (t) => (b("data-v-a8ddfbe7"), t = t(), $(), t), T = { class: "language" }, j = { class: "items" }, H = ["onClick"], J = /* @__PURE__ */ O(() => /* @__PURE__ */ e("i", { class: "ficon-confirm" }, null, -1)), K = ["onClick"], R = /* @__PURE__ */ v({
+    _[g] = d;
+  return _;
+}, O = /* @__PURE__ */ b(M, [["styles", [q]], ["__scopeId", "data-v-64144d7e"]]), T = (t) => ($("data-v-9c952799"), t = t(), y(), t), j = { class: "language" }, H = { class: "items" }, J = ["onClick"], K = /* @__PURE__ */ T(() => /* @__PURE__ */ e("i", { class: "ficon-confirm" }, null, -1)), R = ["onClick"], W = /* @__PURE__ */ v({
   __name: "language",
   setup(t) {
-    function s(r) {
-      localStorage.lang = r, location.reload();
+    function s(_) {
+      localStorage.lang = _, location.reload();
     }
-    return (r, g) => {
-      const d = m("Navbar");
-      return i(), l(f, null, [
+    return (_, g) => {
+      const d = f("Navbar");
+      return i(), l(m, null, [
         a(d, { title: "Language" }),
-        e("div", T, [
-          e("ul", j, [
-            (i(!0), l(f, null, F(n(E), (_, o) => (i(), l(f, null, [
-              _.code === n(I) ? (i(), l("li", {
+        e("div", j, [
+          e("ul", H, [
+            (i(!0), l(m, null, F(n(E), (u, o) => (i(), l(m, null, [
+              u.code === n(I) ? (i(), l("li", {
                 key: o,
                 class: "item active",
-                onClick: (C) => s(_.code)
+                onClick: (C) => _.onSet(u.code)
               }, [
-                u(c(_.name) + " ", 1),
-                J
-              ], 8, H)) : (i(), l("li", {
+                r(c(u.name) + " ", 1),
+                K
+              ], 8, J)) : (i(), l("li", {
                 key: 1,
                 class: "item",
-                onClick: (C) => s(_.code)
-              }, c(_.name), 9, K))
+                onClick: (C) => s(u.code)
+              }, c(u.name), 9, R))
             ], 64))), 256))
           ])
         ])
       ], 64);
     };
   }
-}), W = `.language .items .item.active i.ficon-confirm[data-v-a8ddfbe7]{position:absolute;top:18px;right:18px;font-size:15px;color:#39c79a}
-`, X = /* @__PURE__ */ y(R, [["styles", [W]], ["__scopeId", "data-v-a8ddfbe7"]]), Y = v({
+}), X = `.language .items .item.active i.ficon-confirm[data-v-9c952799]{position:absolute;top:18px;right:18px;font-size:15px;color:#39c79a}
+`, Y = /* @__PURE__ */ b(W, [["styles", [X]], ["__scopeId", "data-v-9c952799"]]), Z = v({
   data() {
     return {};
   }
-}), Z = "", ee = (t) => (b("data-v-19eb3b6d"), t = t(), $(), t), te = { class: "version" }, se = /* @__PURE__ */ ee(() => /* @__PURE__ */ e("div", null, "v1.0.0", -1));
-function oe(t, s, r, g, d, _) {
-  const o = m("Navbar");
-  return i(), l("div", te, [
+}), ee = "", te = (t) => ($("data-v-19eb3b6d"), t = t(), y(), t), se = { class: "version" }, oe = /* @__PURE__ */ te(() => /* @__PURE__ */ e("div", null, "v1.0.0", -1));
+function ne(t, s, _, g, d, u) {
+  const o = f("Navbar");
+  return i(), l("div", se, [
     a(o, { title: "Version" }),
-    se
+    oe
   ]);
 }
-const ne = /* @__PURE__ */ y(Y, [["render", oe], ["styles", [Z]], ["__scopeId", "data-v-19eb3b6d"]]), h = (t) => (b("data-v-f7ed8d71"), t = t(), $(), t), ae = { class: "setting" }, ce = { class: "language items" }, ie = /* @__PURE__ */ h(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), le = { class: "items" }, _e = /* @__PURE__ */ h(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), ue = { class: "items" }, re = /* @__PURE__ */ h(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), de = { class: "items" }, pe = /* @__PURE__ */ h(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), he = /* @__PURE__ */ h(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), ge = /* @__PURE__ */ h(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), fe = /* @__PURE__ */ h(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), me = { class: "items" }, ve = /* @__PURE__ */ h(() => /* @__PURE__ */ e("div", null, [
+const ae = /* @__PURE__ */ b(Z, [["render", ne], ["styles", [ee]], ["__scopeId", "data-v-19eb3b6d"]]), h = (t) => ($("data-v-49c2579d"), t = t(), y(), t), ce = { class: "setting" }, ie = { class: "language items" }, le = /* @__PURE__ */ h(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), _e = { class: "items" }, ue = /* @__PURE__ */ h(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), re = { class: "items" }, de = /* @__PURE__ */ h(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), pe = { class: "items" }, he = /* @__PURE__ */ h(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), ge = /* @__PURE__ */ h(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), me = /* @__PURE__ */ h(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), fe = /* @__PURE__ */ h(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), ve = { class: "items" }, $e = /* @__PURE__ */ h(() => /* @__PURE__ */ e("div", null, [
   /* @__PURE__ */ e("span", { style: { "font-weight": "normal" } }, "0.0.1 "),
   /* @__PURE__ */ e("i", { class: "ficon-right" })
-], -1)), be = { class: "items" }, $e = {
-  pages: { language: X, apps: q, version: ne }
-}, ye = /* @__PURE__ */ v({
-  ...$e,
+], -1)), ye = { class: "items" }, be = {
+  pages: { language: Y, apps: O, version: ae }
+}, Fe = /* @__PURE__ */ v({
+  ...be,
   __name: "index",
   setup(t) {
     const s = N({
@@ -131,66 +131,66 @@ const ne = /* @__PURE__ */ y(Y, [["render", oe], ["styles", [Z]], ["__scopeId", 
         zh: "\u9000\u51FA\u767B\u5F55"
       }
     });
-    function r() {
-      w.open({
+    function _() {
+      V.open({
         color: "warning",
-        body: "\u662F\u5426\u9000\u51FA\u767B\u5F55\uFF1F",
+        body: S({ en: "Do you want to log out?", zh: "\u662F\u5426\u9000\u51FA\u767B\u5F55\uFF1F" }),
         confirm() {
-          S("login"), B("login");
+          w("login"), B("login");
         }
       });
     }
     return (g, d) => {
-      const _ = m("Navbar"), o = m("A");
-      return i(), l(f, null, [
-        a(_, {
+      const u = f("Navbar"), o = f("A");
+      return i(), l(m, null, [
+        a(u, {
           title: n(s).setting
         }, null, 8, ["title"]),
-        e("div", ae, [
-          e("div", ce, [
+        e("div", ce, [
+          e("div", ie, [
             a(o, {
               class: "item header",
               href: "setting/language"
             }, {
               default: p(() => [
-                u(c(n(s).language) + " ", 1),
-                ie
+                r(c(n(s).language) + " ", 1),
+                le
               ]),
               _: 1
             })
           ]),
-          e("div", le, [
+          e("div", _e, [
             a(o, {
               class: "item header",
               href: "setting/apps"
             }, {
               default: p(() => [
-                u(c(n(s).appManagement) + " ", 1),
-                _e
+                r(c(n(s).appManagement) + " ", 1),
+                ue
               ]),
               _: 1
             })
           ]),
-          e("div", ue, [
+          e("div", re, [
             a(o, {
               class: "item header",
               href: "group"
             }, {
               default: p(() => [
-                u(c(n(s).appsGroup) + " ", 1),
-                re
+                r(c(n(s).appsGroup) + " ", 1),
+                de
               ]),
               _: 1
             })
           ]),
-          e("div", de, [
+          e("div", pe, [
             a(o, {
               class: "item",
               href: "pages/faq"
             }, {
               default: p(() => [
-                u(c(n(s).FAQ) + " ", 1),
-                pe
+                r(c(n(s).FAQ) + " ", 1),
+                he
               ]),
               _: 1
             }),
@@ -199,8 +199,8 @@ const ne = /* @__PURE__ */ y(Y, [["render", oe], ["styles", [Z]], ["__scopeId", 
               href: "pages/feedback"
             }, {
               default: p(() => [
-                u(c(n(s).feedback) + " ", 1),
-                he
+                r(c(n(s).feedback) + " ", 1),
+                ge
               ]),
               _: 1
             }),
@@ -209,8 +209,8 @@ const ne = /* @__PURE__ */ y(Y, [["render", oe], ["styles", [Z]], ["__scopeId", 
               href: "pages/privacy"
             }, {
               default: p(() => [
-                u(c(n(s).privacyPolicy) + " ", 1),
-                ge
+                r(c(n(s).privacyPolicy) + " ", 1),
+                me
               ]),
               _: 1
             }),
@@ -219,35 +219,35 @@ const ne = /* @__PURE__ */ y(Y, [["render", oe], ["styles", [Z]], ["__scopeId", 
               href: "pages/about"
             }, {
               default: p(() => [
-                u(c(n(s).about) + " ", 1),
+                r(c(n(s).about) + " ", 1),
                 fe
               ]),
               _: 1
             })
           ]),
-          e("div", me, [
+          e("div", ve, [
             a(o, {
               class: "item header",
               href: "setting/version"
             }, {
               default: p(() => [
-                u(c(n(s).versionUpdates) + " ", 1),
-                ve
+                r(c(n(s).versionUpdates) + " ", 1),
+                $e
               ]),
               _: 1
             })
           ]),
-          e("div", be, [
+          e("div", ye, [
             e("div", {
               class: "item header",
-              onClick: r
+              onClick: _
             }, c(n(s).logout), 1)
           ])
         ])
       ], 64);
     };
   }
-}), Fe = "", Ae = /* @__PURE__ */ y(ye, [["styles", [Fe]], ["__scopeId", "data-v-f7ed8d71"]]);
+}), Ce = "", Ee = /* @__PURE__ */ b(Fe, [["styles", [Ce]], ["__scopeId", "data-v-49c2579d"]]);
 export {
-  Ae as default
+  Ee as default
 };

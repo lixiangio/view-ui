@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "uid": 1,
+    "time": "22/10/24",
+    "content": "🍹🐼",
+    "type": "chat"
+  },
+  {
+    "id": 2,
+    "uid": 2,
+    "time": "22/10/24",
+    "content": "🍹🍹🍹",
+    "type": "chat"
+  },
+  {
+    "id": 3,
+    "uid": 3,
+    "time": "10:20",
+    "content": "...",
+    "type": "system"
+  }
+]

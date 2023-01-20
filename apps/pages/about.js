@@ -1,16 +1,16 @@
 import { Lang as l } from "/view-ui/libs/view.js";
-import { resolveComponent as i, openBlock as _, createElementBlock as d, Fragment as m, createVNode as p, createElementVNode as n, createTextVNode as u } from "/view-ui/libs/vue.js";
+import { resolveComponent as i, openBlock as p, createElementBlock as _, Fragment as d, createVNode as m, createElementVNode as n, createTextVNode as u } from "/view-ui/libs/vue.js";
 const f = (e, r) => {
   const t = e.__vccOpts || e;
-  for (const [c, o] of r)
-    t[c] = o;
+  for (const [o, c] of r)
+    t[o] = c;
   return t;
 }, a = l({
   en: "About View UI",
   zh: "\u5173\u4E8E View UI"
 }), v = {
-  name: a,
-  data() {
+  app: { name: a },
+  setup() {
     return { name: a };
   }
 }, g = /* @__PURE__ */ n("div", { class: "body" }, [
@@ -22,10 +22,10 @@ const f = (e, r) => {
   ]),
   /* @__PURE__ */ u(" ... ")
 ], -1);
-function b(e, r, t, c, o, h) {
+function b(e, r, t, o, c, h) {
   const s = i("Navbar");
-  return _(), d(m, null, [
-    p(s, { title: o.name }, null, 8, ["title"]),
+  return p(), _(d, null, [
+    m(s, { title: o.name }, null, 8, ["title"]),
     g
   ], 64);
 }

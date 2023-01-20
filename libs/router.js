@@ -1,36 +1,29 @@
-import { UrlParse as h, instances as f } from "/view-ui/libs/view.js";
-function u(r) {
-  let { parentElement: t } = r;
-  if (t)
-    for (; t.parentElement; ) {
-      if (t.back) {
-        t.back();
-        return;
-      }
-      t = t.parentElement;
-    }
+import { UrlParse as u, instances as f } from "/view-ui/libs/view.js";
+function b(r) {
+  const t = new Event("back", { bubbles: !0 });
+  r.parentElement.dispatchEvent(t);
 }
-class b {
+class k {
   el;
   app;
   options;
   container;
   pagesInstance;
-  constructor({ el: t, app: s, options: a, container: e }) {
-    this.el = t, this.app = s, this.container = e, this.options = a;
+  constructor({ el: t, app: s, options: a, container: i }) {
+    this.el = t, this.app = s, this.container = i, this.options = a;
   }
-  open(t) {
-    const { path: s, query: a } = h(t), e = s.split("/");
+  open(t, s) {
+    const { path: a, query: i } = u(t), e = a.split("/");
     e[0] === "" && e.shift();
     let n = "";
-    for (const i in e) {
-      const o = e[i];
-      n.length ? n += `/${o}` : n += o;
-      const c = f[n];
-      if (c) {
-        if (c === this.container) {
-          const l = e.slice(Number(i) + 1), { pagesInstance: p } = this;
-          return p && p.router(l, a), !0;
+    for (const o in e) {
+      const c = e[o];
+      n.length ? n += `/${c}` : n += c;
+      const p = f[n];
+      if (p) {
+        if (p === this.container) {
+          const l = e.slice(Number(o) + 1), { pagesInstance: h } = this;
+          return h && h.router(l, s, i), !0;
         }
         break;
       }
@@ -38,10 +31,10 @@ class b {
     return !1;
   }
   back(t) {
-    u(t);
+    b(t);
   }
 }
 export {
-  u as back,
-  b as default
+  b as back,
+  k as default
 };

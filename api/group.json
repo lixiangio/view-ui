@@ -3,5 +3,6 @@
   "group-component-library",
   "group-database",
   "group-game",
-  "group-ai"
+  "group-ai",
+  "admin"
 ]

@@ -1,5 +1,5 @@
-import { ref as V, reactive as j, defineComponent as D, resolveComponent as M, openBlock as c, createElementBlock as d, Fragment as E, createElementVNode as i, normalizeClass as a, normalizeStyle as u, withModifiers as $, createVNode as v, TransitionGroup as F, withCtx as h, renderList as K, toDisplayString as m, createTextVNode as L, createCommentVNode as P, pushScopeId as G, popScopeId as U } from "/view-ui/libs/vue.js";
-import b, { Langs as W, urls as X, events as B } from "/view-ui/libs/view.js";
+import { ref as V, reactive as j, defineComponent as D, resolveComponent as M, openBlock as c, createElementBlock as d, Fragment as E, createElementVNode as i, normalizeClass as a, normalizeStyle as f, withModifiers as $, createVNode as h, TransitionGroup as F, withCtx as b, renderList as K, toDisplayString as m, createTextVNode as L, createCommentVNode as P, pushScopeId as G, popScopeId as U } from "/view-ui/libs/vue.js";
+import u, { Langs as W, urls as X, events as B } from "/view-ui/libs/view.js";
 import { appsState as l } from "/view-ui/libs/state.js";
 import { close as q, openBlank as A, open as H } from "/view-ui/libs/navigator.js";
 import J from "/view-ui/libs/pointer.js";
@@ -17,7 +17,7 @@ const r = V(!0), n = j([]), R = W({
     en: "Close app",
     zh: "\u5173\u95ED\u5E94\u7528"
   }
-}), x = 5, { initOptions: I } = b, { apps: g, sidebar: Y } = I, { urls: T, style: Z } = Y;
+}), x = 5, { initOptions: I } = u, { apps: g, sidebar: Y } = I, { urls: T, style: Z } = Y;
 if (T)
   for (const e of T) {
     let t = X[e];
@@ -42,7 +42,7 @@ B.on("closing", (e) => {
     n.splice(s, 1);
   }
 });
-const { name: ee, icon: te, color: ie } = I, oe = D({
+const { name: ee, icon: te, color: ie } = I.main, oe = D({
   components: { Tip: Q },
   setup() {
     return {
@@ -65,43 +65,43 @@ const { name: ee, icon: te, color: ie } = I, oe = D({
       l.value === !0 ? (l.value = !1, r.value === !0 && this.collapse()) : (l.value = !0, r.value === !1 && this.expand());
     },
     expand() {
-      r.value = !0, g.left = w, b.swiper.scroll(w - x);
+      r.value = !0, g.left = w, u.swiper.scroll(w - x);
     },
     collapse() {
-      r.value = !1, g.left = x, b.swiper.scroll(-(w - x));
+      r.value = !1, g.left = x, u.swiper.scroll(-(w - x));
     }
   },
   async mounted() {
     const e = new J(this.$el.nextElementSibling, { angle: 40 });
     e.on("lock", () => {
-      e.dir === "X" && (console.log(e.trend), e.trend < 0 && (l.value = !0, e.switch(b.appsPointer)));
+      e.dir === "X" && e.trend < 0 && (l.value = !0, e.switch(u.appsPointer));
     });
   }
 }), ne = `.v-tip.menu-tip .v-bubble-content{padding:0;width:160px}.v-tip.menu-tip .v-bubble-content .tip-title{display:flex;justify-content:space-between;font-size:14px}.v-tip.menu-tip .v-bubble-content .tip-title .tip-name{flex:1;padding:14px;font-weight:700;color:#555;cursor:pointer}.v-tip.menu-tip .v-bubble-content .tip-title .new-tab{flex:none;width:36px;padding:13px 10px;cursor:pointer}.v-tip.menu-tip .v-bubble-content .tip-title .new-tab i{color:#666;font-size:14px}.v-tip.menu-tip .v-bubble-content .link{display:flex;justify-content:space-between;padding:12px 14px;font-size:13px;cursor:pointer;border-top:1px solid #f0f0f0}.v-tip.menu-tip .v-bubble-content .link i{font-size:13px}.v-tip.menu-tip .v-bubble-content .link.close{color:#e44343}
-`, se = `.sidebar[data-v-24b22278]{position:fixed;top:env(titlebar-area-height,0);right:0px;bottom:0;z-index:100000;width:54px;backdrop-filter:blur(10px);transition:transform .25s;overflow:hidden}.sidebar .scroll[data-v-24b22278]{overflow-x:hidden;overflow-y:auto;touch-action:pan-x pan-y;scrollbar-width:none;height:100%}.sidebar .scroll[data-v-24b22278]::-webkit-scrollbar{display:none}.sidebar .scroll .item[data-v-24b22278]{width:100%;padding:5px 0;transition:all .4s}.sidebar .scroll .item .link[data-v-24b22278]{width:40px;height:40px;border-radius:40px;cursor:pointer;transition:all .25s ease;display:flex;justify-content:center;align-items:center}.sidebar .scroll .item .link i[data-v-24b22278]{font-size:20px}.sidebar .scroll .item.active .link[data-v-24b22278]{background-color:var(--active)!important}.sidebar .scroll .bottom-padding[data-v-24b22278]{height:60px}.sidebar.hide[data-v-24b22278]{transform:translate3d(100%,0,0)}.switch[data-v-24b22278]{position:fixed;right:8px;bottom:8px;z-index:110000;width:40px;height:40px;border-radius:40px;transition:all .3s;background-color:#00000030;cursor:pointer}.switch i[data-v-24b22278]{color:#fff;transition:all .3s}.switch .round[data-v-24b22278]{position:absolute;transition:all .3s;width:6px;height:6px;border-radius:6px;border:2px solid #ffffff;opacity:0}.switch.active i[data-v-24b22278]{opacity:0}.switch.active .round[data-v-24b22278]{opacity:1;transform:scale(3)}.switch.active .tip-name[data-v-24b22278]{display:block}.shortcutKey[data-v-24b22278]{border:1px solid #2c2c2c;border-radius:3px;padding:0 3px}@media (any-hover: hover){.sidebar .scroll .item .link[data-v-24b22278]:hover{background-color:var(--active)}}
+`, se = `.sidebar[data-v-4583a2af]{position:fixed;top:env(titlebar-area-height,0);right:0px;bottom:0;z-index:100000;width:54px;backdrop-filter:blur(10px);transition:transform .25s;overflow:hidden}.sidebar .scroll[data-v-4583a2af]{overflow-x:hidden;overflow-y:auto;touch-action:pan-x pan-y;scrollbar-width:none;height:100%}.sidebar .scroll[data-v-4583a2af]::-webkit-scrollbar{display:none}.sidebar .scroll .item[data-v-4583a2af]{width:100%;padding:5px 0;transition:all .4s}.sidebar .scroll .item .link[data-v-4583a2af]{width:40px;height:40px;border-radius:40px;cursor:pointer;transition:all .25s ease;display:flex;justify-content:center;align-items:center}.sidebar .scroll .item .link i[data-v-4583a2af]{font-size:20px}.sidebar .scroll .item.active .link[data-v-4583a2af]{background-color:var(--active)!important}.sidebar .scroll .bottom-padding[data-v-4583a2af]{height:60px}.sidebar.hide[data-v-4583a2af]{transform:translate3d(100%,0,0)}.switch[data-v-4583a2af]{position:fixed;right:8px;bottom:8px;z-index:110000;width:40px;height:40px;border-radius:40px;transition:all .3s;background-color:#00000030;cursor:pointer}.switch i[data-v-4583a2af]{color:#fff;transition:all .3s}.switch .round[data-v-4583a2af]{position:absolute;transition:all .3s;width:6px;height:6px;border-radius:6px;border:2px solid #ffffff;opacity:0}.switch.active i[data-v-4583a2af]{opacity:0}.switch.active .round[data-v-4583a2af]{opacity:1;transform:scale(3)}.switch.active .tip-name[data-v-4583a2af]{display:block}.shortcutKey[data-v-4583a2af]{border:1px solid #2c2c2c;border-radius:3px;padding:0 3px}@media (any-hover: hover){.sidebar .scroll .item .link[data-v-4583a2af]:hover{background-color:var(--active)}}
 `, ae = (e, t) => {
   const s = e.__vccOpts || e;
   for (const [k, y] of t)
     s[k] = y;
   return s;
-}, p = (e) => (G("data-v-24b22278"), e = e(), U(), e), le = {
+}, p = (e) => (G("data-v-4583a2af"), e = e(), U(), e), le = {
   class: "scroll apps",
   ref: "scroll"
-}, re = ["href", "onClick"], pe = { class: "tip-title" }, ce = ["onClick"], de = ["title", "onClick"], ue = /* @__PURE__ */ p(() => /* @__PURE__ */ i("i", { class: "ficon-xinchuangkou" }, null, -1)), be = [
-  ue
-], fe = ["onClick"], ve = /* @__PURE__ */ p(() => /* @__PURE__ */ i("i", { class: "ficon-cha" }, null, -1)), he = /* @__PURE__ */ p(() => /* @__PURE__ */ i("div", { class: "bottom-padding" }, null, -1)), me = /* @__PURE__ */ p(() => /* @__PURE__ */ i("div", { class: "round" }, null, -1)), xe = /* @__PURE__ */ p(() => /* @__PURE__ */ i("span", { class: "shortcutKey" }, "S", -1));
+}, re = ["href", "onClick"], pe = { class: "tip-title" }, ce = ["onClick"], de = ["title", "onClick"], fe = /* @__PURE__ */ p(() => /* @__PURE__ */ i("i", { class: "ficon-xinchuangkou" }, null, -1)), ue = [
+  fe
+], ve = ["onClick"], he = /* @__PURE__ */ p(() => /* @__PURE__ */ i("i", { class: "ficon-cha" }, null, -1)), be = /* @__PURE__ */ p(() => /* @__PURE__ */ i("div", { class: "bottom-padding" }, null, -1)), me = /* @__PURE__ */ p(() => /* @__PURE__ */ i("div", { class: "round" }, null, -1)), xe = /* @__PURE__ */ p(() => /* @__PURE__ */ i("span", { class: "shortcutKey" }, "S", -1));
 function we(e, t, s, k, y, ge) {
   const _ = M("Tip");
   return c(), d(E, null, [
     i("section", {
       class: a(["sidebar", { hide: e.sidebarState === !1 }]),
-      style: u(e.style),
+      style: f(e.style),
       onContextmenu: t[0] || (t[0] = $(() => {
       }, ["prevent", "stop"]))
     }, [
       i("div", le, [
-        v(F, { name: "scale" }, {
-          default: h(() => [
+        h(F, { name: "scale" }, {
+          default: b(() => [
             (c(!0), d(E, null, K(e.appsList, ({ url: o, active: C, name: N, color: S, icon: O, target: z }) => (c(), d("div", {
               class: a(["item center", { active: C }]),
               key: o
@@ -109,38 +109,38 @@ function we(e, t, s, k, y, ge) {
               i("a", {
                 class: "link center",
                 href: o,
-                onClick: $((f) => e.open(o, z), ["prevent"])
+                onClick: $((v) => e.open(o, z), ["prevent"])
               }, [
                 i("i", {
                   class: a(O),
-                  style: u({ color: S })
+                  style: f({ color: S })
                 }, null, 6),
-                v(_, {
+                h(_, {
                   class: "menu-tip",
                   placement: "left",
                   hover: ""
                 }, {
-                  default: h(() => [
+                  default: b(() => [
                     i("div", pe, [
                       i("div", {
                         class: "tip-name",
-                        style: u({ color: S }),
-                        onClick: (f) => e.open(o, z)
+                        style: f({ color: S }),
+                        onClick: (v) => e.open(o, z)
                       }, m(N), 13, ce),
                       i("div", {
                         class: "new-tab",
                         title: e.langs.newTab,
-                        onClick: (f) => e.open(o, "blank")
-                      }, be, 8, de)
+                        onClick: (v) => e.open(o, "blank")
+                      }, ue, 8, de)
                     ]),
                     C ? (c(), d("div", {
                       key: 0,
                       class: "link close",
-                      onClick: (f) => e.close(o)
+                      onClick: (v) => e.close(o)
                     }, [
                       L(m(e.langs.close) + " ", 1),
-                      ve
-                    ], 8, fe)) : P("", !0)
+                      he
+                    ], 8, ve)) : P("", !0)
                   ]),
                   _: 2
                 }, 1024)
@@ -149,7 +149,7 @@ function we(e, t, s, k, y, ge) {
           ]),
           _: 1
         }),
-        he
+        be
       ], 512)
     ], 38),
     i("div", {
@@ -159,11 +159,11 @@ function we(e, t, s, k, y, ge) {
     }, [
       i("i", {
         class: a(e.icon),
-        style: u({ color: e.color })
+        style: f({ color: e.color })
       }, null, 6),
       me,
-      v(_, { placement: "left" }, {
-        default: h(() => [
+      h(_, { placement: "left" }, {
+        default: b(() => [
           xe,
           L(" / " + m(e.langs.appsMenu), 1)
         ]),
@@ -172,7 +172,7 @@ function we(e, t, s, k, y, ge) {
     ], 2)
   ], 64);
 }
-const Ee = /* @__PURE__ */ ae(oe, [["render", we], ["styles", [ne, se]], ["__scopeId", "data-v-24b22278"]]);
+const Ee = /* @__PURE__ */ ae(oe, [["render", we], ["styles", [ne, se]], ["__scopeId", "data-v-4583a2af"]]);
 export {
   Ee as default
 };

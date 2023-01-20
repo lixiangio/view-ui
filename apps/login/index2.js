@@ -271,7 +271,7 @@ function Pe(e, t, n, s, o, l) {
     ])
   ]);
 }
-const O = /* @__PURE__ */ _(Se, [["render", Pe], ["styles", [Ce]]]), Me = `.v-bubble[data-v-bf86540f]{position:fixed;z-index:1000000;display:flex;color:#999;line-height:normal}.v-bubble .v-bubble-content[data-v-bf86540f]{max-width:200px;font-size:12px;line-height:20px;background-color:#fff;border-radius:6px;box-shadow:0 0 3px #0003;overflow:hidden}.v-bubble .v-bubble-arrow[data-v-bf86540f]{position:relative;overflow:hidden}.v-bubble .v-bubble-arrow i[data-v-bf86540f]{display:block;width:8px;height:8px;background-color:#fff;position:absolute;transform:rotate(45deg);box-shadow:0 0 3px #0003}.v-bubble.left .v-bubble-arrow[data-v-bf86540f]{width:8px}.v-bubble.left .v-bubble-arrow i[data-v-bf86540f]{left:-4px}.v-bubble.right[data-v-bf86540f]{flex-direction:row-reverse}.v-bubble.right .v-bubble-arrow[data-v-bf86540f]{width:8px}.v-bubble.right .v-bubble-arrow i[data-v-bf86540f]{left:4px}.v-bubble.top[data-v-bf86540f]{flex-direction:column}.v-bubble.top .v-bubble-arrow[data-v-bf86540f]{height:8px}.v-bubble.top .v-bubble-arrow i[data-v-bf86540f]{top:-4px}.v-bubble.bottom[data-v-bf86540f]{flex-direction:column-reverse}.v-bubble.bottom .v-bubble-arrow[data-v-bf86540f]{height:8px}.v-bubble.bottom .v-bubble-arrow i[data-v-bf86540f]{top:4px}
+const O = /* @__PURE__ */ _(Se, [["render", Pe], ["styles", [Ce]]]), Me = `.v-bubble[data-v-645d64d6]{position:fixed;z-index:1000000;display:flex;color:#999;line-height:normal}.v-bubble .v-bubble-content[data-v-645d64d6]{max-width:200px;font-size:12px;line-height:20px;background-color:#fff;border-radius:6px;box-shadow:0 0 3px #0003;overflow:hidden}.v-bubble .v-bubble-arrow[data-v-645d64d6]{position:relative;overflow:hidden}.v-bubble .v-bubble-arrow i[data-v-645d64d6]{display:block;width:8px;height:8px;background-color:#fff;position:absolute;transform:rotate(45deg);box-shadow:0 0 3px #0003}.v-bubble.left .v-bubble-arrow[data-v-645d64d6]{width:8px}.v-bubble.left .v-bubble-arrow i[data-v-645d64d6]{left:-4px}.v-bubble.right[data-v-645d64d6]{flex-direction:row-reverse}.v-bubble.right .v-bubble-arrow[data-v-645d64d6]{width:8px}.v-bubble.right .v-bubble-arrow i[data-v-645d64d6]{left:4px}.v-bubble.top[data-v-645d64d6]{flex-direction:column}.v-bubble.top .v-bubble-arrow[data-v-645d64d6]{height:8px}.v-bubble.top .v-bubble-arrow i[data-v-645d64d6]{top:-4px}.v-bubble.bottom[data-v-645d64d6]{flex-direction:column-reverse}.v-bubble.bottom .v-bubble-arrow[data-v-645d64d6]{height:8px}.v-bubble.bottom .v-bubble-arrow i[data-v-645d64d6]{top:4px}
 `, Be = {
   name: "Bubble",
   props: {
@@ -329,9 +329,6 @@ const O = /* @__PURE__ */ _(Se, [["render", Pe], ["styles", [Ce]]]), Me = `.v-bu
     this.targetClientRect = this.parentNode.getBoundingClientRect();
     const e = this[this.placement];
     e && e();
-  },
-  install(e) {
-    e.component(this.name, this);
   }
 }, Le = { class: "v-bubble-content" }, Ne = { class: "v-bubble-arrow" };
 function Ie(e, t, n, s, o, l) {
@@ -349,7 +346,7 @@ function Ie(e, t, n, s, o, l) {
     ])
   ], 6);
 }
-const H = /* @__PURE__ */ _(Be, [["render", Ie], ["styles", [Me]], ["__scopeId", "data-v-bf86540f"]]), ze = `.v-date-picker{position:relative;height:38px}
+const H = /* @__PURE__ */ _(Be, [["render", Ie], ["styles", [Me]], ["__scopeId", "data-v-645d64d6"]]), ze = `.v-date-picker{position:relative;height:38px}
 `, Re = {
   extends: T,
   components: { FormBox: P, Bubble: H },
@@ -856,7 +853,7 @@ function Mt(e, t, n, s, o, l) {
     _: 1
   }, 8, ["label", "placeholder", "modelValue", "onInput"]);
 }
-const Bt = /* @__PURE__ */ _(Vt, [["render", Mt], ["styles", [$t]]]), Lt = `.login[data-v-10cd578b]{width:100%;height:100%;background-image:url(./image/background01.jpeg);background-repeat:no-repeat;background-size:cover;display:flex;flex-direction:column;align-items:center;justify-content:space-between}.login .login-center[data-v-10cd578b]{flex:1}.login .login-center .login-main[data-v-10cd578b]{width:350px;height:520px;background-color:#fff;overflow:hidden;border-radius:15px;box-shadow:0 6px 20px 5px #2878ff1a,0 16px 24px 2px #0000000d}.login .login-center .login-main .logo[data-v-10cd578b]{display:flex;height:100px;justify-content:center;align-items:center}.login .login-center .login-main .login-form[data-v-10cd578b]{padding:0 18px}.login .login-center .login-main .login-form .login-form-header[data-v-10cd578b]{flex:none;display:flex;justify-content:space-between}.login .login-center .login-main .login-form .login-form-header h3[data-v-10cd578b]{cursor:pointer;font-size:18px;padding:12px 0}.login .login-center .login-main .login-form .login-form-header h3.active[data-v-10cd578b]{color:#396afe}.login .login-center .login-main .login-form .login-form-main[data-v-10cd578b]{flex:1}.login .login-center .login-main .login-form .login-form-main .sign-with[data-v-10cd578b]{padding:10px 0}.login .login-center .login-main .login-form .login-form-main .verification-code[data-v-10cd578b]{padding:15px 0}.login .login-center .login-main .login-form .login-form-main .login-button[data-v-10cd578b]{width:100%;margin:20px 0 0;padding:12px 0;height:auto;background-color:#396afe;color:#fff}.login .login-center .login-main .login-form .login-form-main .forget-password[data-v-10cd578b]{margin:10px 0 0;display:inline-block}.login .login-center .login-main .login-form .login-form-main .v-input .v-input-after[data-v-10cd578b]{background:none}.login .login-center .login-main .login-form .login-form-footer[data-v-10cd578b]{flex:none;margin:0 -8px}.login .login-center .login-main .login-form .login-form-footer .protocol[data-v-10cd578b]{padding:10px;height:50px}.login .login-center .login-main .login-form .login-form-footer .protocol a[data-v-10cd578b]{color:#396afe}.login .login-center .login-main .login-form .login-form-footer span[data-v-10cd578b]{cursor:pointer;user-select:none;margin:5px 10px;font-size:16px}.login .login-footer[data-v-10cd578b]{height:26px;font-size:12px;text-align:center;color:#fff}
+const Bt = /* @__PURE__ */ _(Vt, [["render", Mt], ["styles", [$t]]]), Lt = `.login[data-v-3ab6fdcb]{width:100%;height:100%;background-image:url(./image/background01.jpeg);background-repeat:no-repeat;background-size:cover;display:flex;flex-direction:column;align-items:center;justify-content:space-between}.login .login-center[data-v-3ab6fdcb]{flex:1}.login .login-center .login-main[data-v-3ab6fdcb]{width:350px;height:520px;background-color:#fff;overflow:hidden;border-radius:15px;box-shadow:0 6px 20px 5px #2878ff1a,0 16px 24px 2px #0000000d}.login .login-center .login-main .logo[data-v-3ab6fdcb]{display:flex;height:100px;justify-content:center;align-items:center}.login .login-center .login-main .login-form[data-v-3ab6fdcb]{padding:0 18px}.login .login-center .login-main .login-form .login-form-header[data-v-3ab6fdcb]{flex:none;display:flex;justify-content:space-between}.login .login-center .login-main .login-form .login-form-header h3[data-v-3ab6fdcb]{cursor:pointer;font-size:18px;padding:12px 0}.login .login-center .login-main .login-form .login-form-header h3.active[data-v-3ab6fdcb]{color:#396afe}.login .login-center .login-main .login-form .login-form-main[data-v-3ab6fdcb]{flex:1}.login .login-center .login-main .login-form .login-form-main .sign-with[data-v-3ab6fdcb]{padding:10px 0}.login .login-center .login-main .login-form .login-form-main .verification-code[data-v-3ab6fdcb]{padding:15px 0}.login .login-center .login-main .login-form .login-form-main .login-button[data-v-3ab6fdcb]{width:100%;margin:20px 0 0;padding:12px 0;height:auto;background-color:#396afe;color:#fff}.login .login-center .login-main .login-form .login-form-main .forget-password[data-v-3ab6fdcb]{margin:10px 0 0;display:inline-block}.login .login-center .login-main .login-form .login-form-main .v-input .v-input-after[data-v-3ab6fdcb]{background:none}.login .login-center .login-main .login-form .login-form-footer[data-v-3ab6fdcb]{flex:none;margin:0 -8px}.login .login-center .login-main .login-form .login-form-footer .protocol[data-v-3ab6fdcb]{padding:10px;height:50px}.login .login-center .login-main .login-form .login-form-footer .protocol a[data-v-3ab6fdcb]{color:#396afe}.login .login-center .login-main .login-form .login-form-footer span[data-v-3ab6fdcb]{cursor:pointer;user-select:none;margin:5px 10px;font-size:16px}.login .login-footer[data-v-3ab6fdcb]{height:26px;font-size:12px;text-align:center;color:#fff}
 `, { brand: E } = W.initOptions, Nt = K({
   registered: {
     en: "Registered",
@@ -955,7 +952,7 @@ const Bt = /* @__PURE__ */ _(Vt, [["render", Mt], ["styles", [$t]]]), Lt = `.log
     },
     accountLogin() {
       const e = Q(X[""]);
-      W.initOptions = e, Z.emit("initVive", e), history.pushState({ url: "#" }, "", "#");
+      W.initOptions = e, Z.emit("vive.init", e), history.pushState({ url: "#" }, "", "#");
     },
     accountRegister() {
       const { error: e, data: t } = {};
@@ -973,7 +970,7 @@ const Bt = /* @__PURE__ */ _(Vt, [["render", Mt], ["styles", [$t]]]), Lt = `.log
       localStorage.sign = t, localStorage.bid = n.bid, localStorage.user = JSON.stringify(n), localStorage.authority = JSON.stringify(s), ae("");
     }
   }
-}, q = (e) => (oe("data-v-10cd578b"), e = e(), ie(), e), zt = { class: "login" }, Rt = { class: "login-center center" }, Yt = { class: "login-main" }, Ft = /* @__PURE__ */ q(() => /* @__PURE__ */ i("div", { class: "logo" }, [
+}, q = (e) => (oe("data-v-3ab6fdcb"), e = e(), ie(), e), zt = { class: "login" }, Rt = { class: "login-center center" }, Yt = { class: "login-main" }, Ft = /* @__PURE__ */ q(() => /* @__PURE__ */ i("div", { class: "logo" }, [
   /* @__PURE__ */ i("svg", {
     t: "1629032783534",
     class: "icon",
@@ -1169,7 +1166,7 @@ function ln(e, t, n, s, o, l) {
     })) : g("", !0)
   ], 64);
 }
-const pn = /* @__PURE__ */ _(It, [["render", ln], ["styles", [Lt]], ["__scopeId", "data-v-10cd578b"]]);
+const pn = /* @__PURE__ */ _(It, [["render", ln], ["styles", [Lt]], ["__scopeId", "data-v-3ab6fdcb"]]);
 export {
   _,
   pn as i

@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "3234335",
+      "name": "overflow-auto",
+      "font_class": "auto",
+      "unicode": "e751",
+      "unicode_decimal": 59217
+    },
+    {
       "icon_id": "77822",
       "name": "更多",
       "font_class": "gengduo",

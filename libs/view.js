@@ -86,16 +86,16 @@ function H(t) {
   let [n, e] = t.split("?");
   const [o] = n;
   (o === "/" || o === "#") && (n = n.slice(1));
-  const i = l[t];
+  const i = l[n];
   if (i)
     return i;
   {
     let s = S(n);
     return s === void 0 && (s = {
-      url: t,
+      url: n,
       app: {
-        src: t,
-        name: t,
+        src: n,
+        name: n,
         level: 100,
         icon: "ficon-wendang",
         color: "#6fdfa5"
@@ -131,7 +131,7 @@ const x = () => import(
   /* @vite-ignore */
   `${w}404.js`
 ), R = O(x);
-async function _(t) {
+async function D(t) {
   return t.endsWith("*") && (t = t.slice(0, -1) + $), import(
     /* @vite-ignore */
     `${w}${t}.js`
@@ -146,7 +146,7 @@ async function _(t) {
     return n;
   });
 }
-function D(t) {
+function _(t) {
   let n = 100;
   for (const e in p) {
     if (t <= p[e])
@@ -184,7 +184,7 @@ export {
   q as UrlParse,
   y as addStyle,
   w as appPath,
-  R as asyncComponent_404,
+  R as asyncComponent404,
   N as baseURL,
   M as default,
   z as events,
@@ -192,9 +192,9 @@ export {
   I as gap,
   H as getAppOptions,
   S as getChildOptions,
-  D as getLevel,
+  _ as getLevel,
   k as getParentOptions,
-  _ as importAsyncComponent,
+  D as importAsyncComponent,
   P as instances,
   v as language,
   W as languages,

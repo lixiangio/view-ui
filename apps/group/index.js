@@ -1,7 +1,7 @@
 import { defineComponent as S, reactive as C, resolveComponent as g, openBlock as a, createElementBlock as l, Fragment as _, createVNode as m, unref as j, createElementVNode as o, renderList as x, withCtx as h, toDisplayString as v, normalizeClass as E, normalizeStyle as I, pushScopeId as N, popScopeId as A } from "/view-ui/libs/vue.js";
 import B from "/view-ui/libs/network.js";
-import { Langs as L, urls as b } from "/view-ui/libs/view.js";
-const V = (e) => (N("data-v-b06a3986"), e = e(), A(), e), D = { class: "groups" }, F = { class: "header item" }, G = { class: "name" }, O = /* @__PURE__ */ V(() => /* @__PURE__ */ o("i", { class: "ficon-xinchuangkou" }, null, -1)), $ = { class: "name" }, q = {}, H = /* @__PURE__ */ S({
+import { Langs as L, urls as y } from "/view-ui/libs/view.js";
+const V = (e) => (N("data-v-eedea812"), e = e(), A(), e), D = { class: "groups" }, F = { class: "header item" }, G = { class: "name" }, O = /* @__PURE__ */ V(() => /* @__PURE__ */ o("i", { class: "ficon-xinchuangkou" }, null, -1)), $ = { class: "name" }, q = {}, H = /* @__PURE__ */ S({
   ...q,
   __name: "index",
   setup(e) {
@@ -13,14 +13,14 @@ const V = (e) => (N("data-v-b06a3986"), e = e(), A(), e), D = { class: "groups" 
     }), t = C({});
     return B.get("/view-ui/api/group.json").then((i) => {
       for (const n of i) {
-        const p = b[n], { apps: s } = p;
+        const p = y[n], { apps: s } = p;
         if (s) {
           const c = { name: p.name };
           t[n] = c;
           const u = [];
           if (s.urls)
             for (const f of s.urls) {
-              const r = b[f];
+              const r = y[f];
               r && u.push(r);
             }
           c.items = u;
@@ -49,12 +49,12 @@ const V = (e) => (N("data-v-b06a3986"), e = e(), A(), e), D = { class: "groups" 
                 m(s, null, {
                   default: h(() => [
                     o("ul", null, [
-                      (a(!0), l(_, null, x(f, ({ name: y, icon: k, color: w }, z) => (a(), l("li", { key: z }, [
+                      (a(!0), l(_, null, x(f, ({ name: k, icon: b, color: w }, z) => (a(), l("li", { key: z }, [
                         o("i", {
-                          class: E(k),
+                          class: E(b),
                           style: I({ color: w })
                         }, null, 6),
-                        o("div", $, v(y), 1)
+                        o("div", $, v(k), 1)
                       ]))), 128))
                     ])
                   ]),
@@ -68,13 +68,13 @@ const V = (e) => (N("data-v-b06a3986"), e = e(), A(), e), D = { class: "groups" 
       ], 64);
     };
   }
-}), J = `.groups .group[data-v-b06a3986]{display:block;margin:10px;padding:8px 3px;background:#f3f3f3c7;border-radius:10px}.groups .group .header[data-v-b06a3986]{display:flex;justify-content:space-between;padding:10px}.groups .group .header .name[data-v-b06a3986]{font-size:15px;color:#444;font-weight:700}.groups .group .header i[data-v-b06a3986]{font-size:12px;color:#666;font-size:14px}.groups .group ul[data-v-b06a3986]{display:flex}.groups .group ul li[data-v-b06a3986]{display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;margin:0 6px;flex:none;list-style:none;width:75px;height:100px}.groups .group ul li i[data-v-b06a3986]{display:flex;flex-direction:column;align-items:center;justify-content:center;background-color:#efefef;width:66px;height:66px;border-radius:18px;font-size:24px}.groups .group ul li .name[data-v-b06a3986]{margin-top:8px;font-size:12px}
+}), J = `.groups .group[data-v-eedea812]{display:block;margin:10px;padding:8px 3px;background:#f3f3f3c7;border-radius:10px}.groups .group .header[data-v-eedea812]{display:flex;justify-content:space-between;padding:10px}.groups .group .header .name[data-v-eedea812]{font-size:15px;color:#444;font-weight:700}.groups .group .header i[data-v-eedea812]{font-size:12px;color:#666;font-size:14px}.groups .group ul[data-v-eedea812]{display:flex}.groups .group ul li[data-v-eedea812]{display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;margin:0 4px;flex:none;list-style:none;width:75px;height:100px}.groups .group ul li i[data-v-eedea812]{display:flex;flex-direction:column;align-items:center;justify-content:center;background-color:#efefef;width:66px;height:66px;border-radius:18px;font-size:24px}.groups .group ul li .name[data-v-eedea812]{margin-top:8px;font-size:12px}
 `, K = (e, d) => {
   const t = e.__vccOpts || e;
   for (const [i, n] of d)
     t[i] = n;
   return t;
-}, R = /* @__PURE__ */ K(H, [["styles", [J]], ["__scopeId", "data-v-b06a3986"]]);
+}, R = /* @__PURE__ */ K(H, [["styles", [J]], ["__scopeId", "data-v-eedea812"]]);
 export {
   R as default
 };

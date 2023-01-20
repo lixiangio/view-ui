@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Monkey",
+    "avatar": "🐵"
+  },
+  {
+    "id": 2,
+    "name": "Lili",
+    "avatar": "💁"
+  },
+  {
+    "id": 3,
+    "name": "Panda",
+    "avatar": "🐼"
+  }
+]
