@@ -44,7 +44,7 @@
 
 ## 预览
 
-<img src="./screenshot/202022-12-28%2021-34-58.png" alt="Screenshot">
+<a href="https://lixiangio.github.io/view-ui/" target="_blank"><img src="./screenshot/2023-01-10 20-19-40.jpg" alt="Screenshot"></a>
 
 ## 传统的多端响应式布局存在什么问题？
 
