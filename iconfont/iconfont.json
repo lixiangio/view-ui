@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "11891771",
+      "name": "code",
+      "font_class": "code",
+      "unicode": "e669",
+      "unicode_decimal": 58985
+    },
+    {
+      "icon_id": "27402279",
+      "name": "代码",
+      "font_class": "daima",
+      "unicode": "ee15",
+      "unicode_decimal": 60949
+    },
+    {
       "icon_id": "3234335",
       "name": "overflow-auto",
       "font_class": "auto",

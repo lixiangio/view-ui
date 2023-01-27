@@ -1,4 +1,4 @@
-import { openBlock as o, createElementBlock as c, normalizeClass as _, normalizeStyle as H, createElementVNode as a, renderSlot as y, resolveComponent as k, createBlock as f, Transition as x, withCtx as v, KeepAlive as G, mergeProps as R, createCommentVNode as h, withModifiers as g, toDisplayString as d, createTextVNode as M, withDirectives as $, vModelDynamic as Y, Fragment as C, renderList as D, vModelText as S, createVNode as B, h as A, pushScopeId as V, popScopeId as P, TransitionGroup as U, vShow as L, withKeys as oe, createApp as ae, markRaw as le, resolveDynamicComponent as re } from "/view-ui/libs/vue.js";
+import { openBlock as o, createElementBlock as c, normalizeClass as _, normalizeStyle as H, createElementVNode as a, renderSlot as b, resolveComponent as k, createBlock as f, Transition as S, withCtx as v, KeepAlive as G, mergeProps as E, createCommentVNode as h, withModifiers as g, toDisplayString as d, createTextVNode as M, withDirectives as $, vModelDynamic as Y, Fragment as C, renderList as D, vModelText as x, createVNode as B, h as A, pushScopeId as V, popScopeId as P, TransitionGroup as U, vShow as R, withKeys as oe, createApp as ae, markRaw as le, resolveDynamicComponent as re } from "/view-ui/libs/vue.js";
 import ce from "/view-ui/libs/dayjs.js";
 const p = (e, t) => {
   const s = e.__vccOpts || e;
@@ -70,7 +70,7 @@ function he(e, t, s, r, n, i) {
     style: H(n.style)
   }, [
     a("div", de, [
-      y(e.$slots, "default", {}, void 0, !0)
+      b(e.$slots, "default", {}, void 0, !0)
     ]),
     a("div", me, [
       a("i", {
@@ -79,25 +79,25 @@ function he(e, t, s, r, n, i) {
     ])
   ], 6);
 }
-const T = /* @__PURE__ */ p(ue, [["render", he], ["__scopeId", "data-v-645d64d6"]]);
+const L = /* @__PURE__ */ p(ue, [["render", he], ["__scopeId", "data-v-645d64d6"]]);
 const pe = {
   name: "Tip",
-  components: { Bubble: T },
+  components: { Bubble: L },
   props: { hover: Boolean },
   data() {
-    return this.timeStamp = 0, { open: !1 };
+    return { open: !1 };
   },
   methods: {
-    mouseenter({ timeStamp: e }) {
-      e - this.timeStamp > 200 && (this.open = !0), this.timeStamp = e;
+    mouseenter() {
+      this.open = !0;
     },
-    mouseleave({ timeStamp: e, relatedTarget: t }) {
-      if (this.timeStamp = e, this.hover) {
-        let s = t.parentElement;
-        for (; s; ) {
-          if (s === this.$el)
+    mouseleave({ relatedTarget: e }) {
+      if (this.hover) {
+        let t = e.parentElement;
+        for (; t; ) {
+          if (t === this.$el)
             return;
-          s = s.parentElement;
+          t = t.parentElement;
         }
       }
       this.open = !1;
@@ -121,10 +121,10 @@ const pe = {
 };
 function _e(e, t, s, r, n, i) {
   const l = k("Bubble");
-  return o(), f(x, { name: "scale" }, {
+  return o(), f(S, { name: "scale" }, {
     default: v(() => [
       (o(), f(G, null, [
-        n.open ? (o(), f(l, R({
+        n.open ? (o(), f(l, E({
           key: 0,
           class: "v-tip"
         }, e.$attrs, {
@@ -132,7 +132,7 @@ function _e(e, t, s, r, n, i) {
           onMouseleave: i.bubbleMouseleave
         }), {
           default: v(() => [
-            y(e.$slots, "default")
+            b(e.$slots, "default")
           ]),
           _: 3
         }, 16, ["onClick", "onMouseleave"])) : h("", !0)
@@ -141,7 +141,7 @@ function _e(e, t, s, r, n, i) {
     _: 3
   });
 }
-const Sn = /* @__PURE__ */ p(pe, [["render", _e]]);
+const xn = /* @__PURE__ */ p(pe, [["render", _e]]);
 const ve = {
   name: "Button",
   emits: ["click"],
@@ -176,7 +176,7 @@ function ge(e, t, s, r, n, i) {
     type: s.type,
     onClick: t[0] || (t[0] = g((...l) => i.click && i.click(...l), ["prevent"]))
   }, [
-    y(e.$slots, "default")
+    b(e.$slots, "default")
   ], 10, fe);
 }
 const J = /* @__PURE__ */ p(ve, [["render", ge]]);
@@ -205,7 +205,7 @@ const ye = {
   class: "v-dialog-title"
 };
 function ke(e, t, s, r, n, i) {
-  return o(), f(x, {
+  return o(), f(S, {
     name: "fade",
     appear: ""
   }, {
@@ -221,7 +221,7 @@ function ke(e, t, s, r, n, i) {
           class: _(["v-dialog col", s.class])
         }, [
           s.title ? (o(), c("div", be, d(s.title), 1)) : h("", !0),
-          y(e.$slots, "default")
+          b(e.$slots, "default")
         ], 2)
       ], 544)
     ]),
@@ -252,9 +252,9 @@ const we = {
 }, Ce = { class: "v-dialog-page vertical" }, De = {
   key: 0,
   class: "v-dialog-page-header"
-}, Be = { class: "v-dialog-page-main" }, Se = { class: "v-dialog-page-sidebar" };
-function xe(e, t, s, r, n, i) {
-  return o(), f(x, {
+}, Be = { class: "v-dialog-page-main" }, xe = { class: "v-dialog-page-sidebar" };
+function Se(e, t, s, r, n, i) {
+  return o(), f(S, {
     name: "fade",
     appear: ""
   }, {
@@ -273,10 +273,10 @@ function xe(e, t, s, r, n, i) {
             M(" " + d(s.title), 1)
           ])) : h("", !0),
           a("main", Be, [
-            y(e.$slots, "default")
+            b(e.$slots, "default")
           ]),
-          a("aside", Se, [
-            y(e.$slots, "sidebar")
+          a("aside", xe, [
+            b(e.$slots, "sidebar")
           ])
         ]),
         a("i", {
@@ -288,7 +288,7 @@ function xe(e, t, s, r, n, i) {
     _: 3
   });
 }
-const xn = /* @__PURE__ */ p(we, [["render", xe]]);
+const Sn = /* @__PURE__ */ p(we, [["render", Se]]);
 const Me = {
   name: "Alert",
   props: {
@@ -303,7 +303,7 @@ function Ie(e, t, s, r, n, i) {
   return o(), c("div", {
     class: _(["v-alert", `v-alert-${s.type}`])
   }, [
-    y(e.$slots, "default")
+    b(e.$slots, "default")
   ], 2);
 }
 const Mn = /* @__PURE__ */ p(Me, [["render", Ie]]);
@@ -313,17 +313,17 @@ const Fe = {
     label: String,
     error: String
   }
-}, Ne = { class: "v-form-box" }, Te = {
+}, Ne = { class: "v-form-box" }, Le = {
   key: 0,
   class: "v-form-box-header"
 };
-function Ee(e, t, s, r, n, i) {
+function Te(e, t, s, r, n, i) {
   return o(), c("div", Ne, [
-    s.label ? (o(), c("div", Te, d(s.label), 1)) : h("", !0),
-    y(e.$slots, "default")
+    s.label ? (o(), c("div", Le, d(s.label), 1)) : h("", !0),
+    b(e.$slots, "default")
   ]);
 }
-const I = /* @__PURE__ */ p(Fe, [["render", Ee]]), Re = {
+const I = /* @__PURE__ */ p(Fe, [["render", Te]]), Ee = {
   name: "InputText",
   emits: ["click"],
   components: { FormBox: I },
@@ -351,7 +351,7 @@ const I = /* @__PURE__ */ p(Fe, [["render", Ee]]), Re = {
   install(e) {
     e.component(this.name, this);
   }
-}, Le = { class: "v-input" }, Ae = { class: "v-input-before" }, Ye = { class: "v-input-after" }, Ve = {
+}, Re = { class: "v-input" }, Ae = { class: "v-input-before" }, Ye = { class: "v-input-after" }, Ve = {
   key: 1,
   class: "v-input-unit"
 }, Pe = {
@@ -364,7 +364,7 @@ const I = /* @__PURE__ */ p(Fe, [["render", Ee]]), Re = {
   key: 2,
   class: "v-input-preview-unit"
 };
-function Ke(e, t, s, r, n, i) {
+function We(e, t, s, r, n, i) {
   const l = k("FormBox");
   return n.edit ? (o(), f(l, {
     key: 0,
@@ -372,17 +372,17 @@ function Ke(e, t, s, r, n, i) {
     error: n.error
   }, {
     default: v(() => [
-      a("div", Le, [
+      a("div", Re, [
         a("div", Ae, [
-          y(e.$slots, "before")
+          b(e.$slots, "before")
         ]),
-        $(a("input", R({
+        $(a("input", E({
           "onUpdate:modelValue": t[0] || (t[0] = (u) => n.input = u)
         }, e.$attrs), null, 16), [
           [Y, n.input]
         ]),
         a("div", Ye, [
-          y(e.$slots, "after", {}, () => [
+          b(e.$slots, "after", {}, () => [
             s.icon ? (o(), c("i", {
               key: 0,
               class: _(s.icon)
@@ -402,7 +402,7 @@ function Ke(e, t, s, r, n, i) {
     s.unit ? (o(), c("span", Oe, d(s.unit), 1)) : h("", !0)
   ])) : h("", !0);
 }
-const Q = /* @__PURE__ */ p(Re, [["render", Ke]]), X = {
+const Q = /* @__PURE__ */ p(Ee, [["render", We]]), X = {
   data() {
     return { open: !1 };
   },
@@ -441,7 +441,7 @@ const Q = /* @__PURE__ */ p(Re, [["render", Ke]]), X = {
     }
   }
 };
-const We = {
+const Ke = {
   name: "Date",
   props: {
     value: Array
@@ -471,31 +471,31 @@ const We = {
       let j = 6;
       m !== 1 && (j = m - 2);
       const F = [];
-      for (let b = w - j; b <= w; b++)
+      for (let y = w - j; y <= w; y++)
         F.push({
-          date: b,
+          date: y,
           class: "v-date-prev-month"
         });
       const O = this.nweDate(e, t + 1);
       O.setMilliseconds(-1);
       const ie = O.getDate();
-      for (let b = 1; b <= ie; b++) {
-        const N = { date: b };
-        b === l && e === n && t === i && (N.class = "v-date-select"), b === this.setDay && e === this.setYear && t === this.setMonth && (N.class = "v-date-prominent"), F.push(N);
+      for (let y = 1; y <= ie; y++) {
+        const N = { date: y };
+        y === l && e === n && t === i && (N.class = "v-date-select"), y === this.setDay && e === this.setYear && t === this.setMonth && (N.class = "v-date-prominent"), F.push(N);
       }
-      const K = 42 - F.length;
-      if (K)
-        for (let b = 1; b <= K; b++)
+      const W = 42 - F.length;
+      if (W)
+        for (let y = 1; y <= W; y++)
           F.push({
-            date: b,
+            date: y,
             class: "v-date-next-month"
           });
-      const W = [];
-      for (let b = 0; b < F.length; b += 7) {
-        const N = F.slice(b, b + 7);
-        W.push(N);
+      const K = [];
+      for (let y = 0; y < F.length; y += 7) {
+        const N = F.slice(y, y + 7);
+        K.push(N);
       }
-      this.dates = W;
+      this.dates = K;
     },
     switchMonth(e) {
       this.monthDate || (this.monthDate = this.nweDate(this.year, this.month));
@@ -567,10 +567,10 @@ function ze(e, t, s, r, n, i) {
     ])
   ]);
 }
-const q = /* @__PURE__ */ p(We, [["render", ze]]);
+const q = /* @__PURE__ */ p(Ke, [["render", ze]]);
 const Ge = {
   extends: X,
-  components: { FormBox: I, Bubble: T },
+  components: { FormBox: I, Bubble: L },
   props: {
     value: {
       type: String
@@ -629,7 +629,7 @@ function st(e, t, s, r, n, i) {
             placeholder: s.placeholder,
             readonly: ""
           }, null, 8, Qe), [
-            [S, e.input]
+            [x, e.input]
           ]),
           Xe
         ]),
@@ -701,9 +701,9 @@ function ht(e, t, s, r, n, i) {
     default: v(() => [
       a("div", ot, [
         a("div", at, [
-          y(e.$slots, "before")
+          b(e.$slots, "before")
         ]),
-        $(a("input", R({
+        $(a("input", E({
           "onUpdate:modelValue": t[0] || (t[0] = (u) => n.input = u)
         }, e.$attrs), null, 16), [
           [
@@ -714,7 +714,7 @@ function ht(e, t, s, r, n, i) {
           ]
         ]),
         a("div", lt, [
-          y(e.$slots, "after", {}, () => [
+          b(e.$slots, "after", {}, () => [
             s.icon ? (o(), c("i", {
               key: 0,
               class: _(s.icon)
@@ -737,7 +737,7 @@ function ht(e, t, s, r, n, i) {
 const Z = /* @__PURE__ */ p(it, [["render", ht]]);
 const pt = {
   extends: X,
-  components: { InputNumber: Z, Bubble: T },
+  components: { InputNumber: Z, Bubble: L },
   props: {
     value: {
       type: Array
@@ -797,7 +797,7 @@ function _t(e, t, s, r, n, i) {
       vicon: "\uE628",
       range: ""
     }, null, 512), [
-      [S, n.input]
+      [x, n.input]
     ]),
     $(a("input", {
       "onUpdate:modelValue": t[1] || (t[1] = (m) => n.input = m),
@@ -806,7 +806,7 @@ function _t(e, t, s, r, n, i) {
       vicon: "\uE628",
       range: ""
     }, null, 512), [
-      [S, n.input]
+      [x, n.input]
     ]),
     e.open ? (o(), f(u, {
       key: 0,
@@ -896,7 +896,7 @@ function Bt(e, t, s, r, n, i) {
           placeholder: s.placeholder[0],
           onInput: t[1] || (t[1] = (...u) => i.min && i.min(...u))
         }, null, 40, yt), [
-          [S, n.input[0]]
+          [x, n.input[0]]
         ]),
         bt,
         $(a("input", {
@@ -905,7 +905,7 @@ function Bt(e, t, s, r, n, i) {
           placeholder: s.placeholder[1],
           onInput: t[3] || (t[3] = (...u) => i.max && i.max(...u))
         }, null, 40, kt), [
-          [S, n.input[1]]
+          [x, n.input[1]]
         ])
       ])
     ]),
@@ -919,7 +919,7 @@ function Bt(e, t, s, r, n, i) {
     a("span", Dt, d(s.unit), 1)
   ]));
 }
-const St = /* @__PURE__ */ p(ft, [["render", Bt]]), xt = {
+const xt = /* @__PURE__ */ p(ft, [["render", Bt]]), St = {
   emits: ["click"],
   components: { FormBox: I },
   props: {
@@ -949,7 +949,7 @@ function It(e, t, s, r, n, i) {
   }, {
     default: v(() => [
       a("div", Mt, [
-        $(a("input", R({
+        $(a("input", E({
           "onUpdate:modelValue": t[0] || (t[0] = (u) => r.input = u)
         }, e.$attrs), null, 16), [
           [Y, r.input]
@@ -959,7 +959,7 @@ function It(e, t, s, r, n, i) {
     _: 1
   }, 8, ["label", "error"]);
 }
-const Ft = /* @__PURE__ */ p(xt, [["render", It]]);
+const Ft = /* @__PURE__ */ p(St, [["render", It]]);
 const Nt = {
   name: "Radio",
   props: ["value", "label"],
@@ -981,8 +981,8 @@ const Nt = {
   install(e) {
     e.component(this.name, this);
   }
-}, Tt = { class: "radio-label" };
-function Et(e, t, s, r, n, i) {
+}, Lt = { class: "radio-label" };
+function Tt(e, t, s, r, n, i) {
   return o(), c("div", {
     class: "v-radio",
     onClick: t[0] || (t[0] = (...l) => i.click && i.click(...l))
@@ -990,19 +990,19 @@ function Et(e, t, s, r, n, i) {
     a("div", {
       class: _(["radio-circular", { "radio-highlight": n.status }])
     }, null, 2),
-    a("span", Tt, [
-      y(e.$slots, "default")
+    a("span", Lt, [
+      b(e.$slots, "default")
     ])
   ]);
 }
-const Rt = /* @__PURE__ */ p(Nt, [["render", Et]]), z = {
+const Et = /* @__PURE__ */ p(Nt, [["render", Tt]]), z = {
   text: Q,
   date: nt,
   daterange: vt,
   number: Z,
-  numberrange: St,
+  numberrange: xt,
   password: Ft,
-  radio: Rt
+  radio: Et
 }, In = {
   name: "Input",
   render() {
@@ -1011,7 +1011,7 @@ const Rt = /* @__PURE__ */ p(Nt, [["render", Et]]), z = {
     return s ? t !== void 0 && (s = z[e + "range"]) : s = Q, A(s);
   }
 };
-const Lt = {
+const Rt = {
   name: "Img",
   props: {
     src: String,
@@ -1040,7 +1040,7 @@ function Vt(e, t, s, r, n, i) {
     }, null, 2))
   ], 2);
 }
-const Fn = /* @__PURE__ */ p(Lt, [["render", Vt]]);
+const Fn = /* @__PURE__ */ p(Rt, [["render", Vt]]);
 const Pt = {
   name: "ImagePreview",
   props: {
@@ -1071,7 +1071,7 @@ const Pt = {
 }, Ut = {
   key: 0,
   class: "v-image-preview-header"
-}, jt = { class: "v-image-preview-title" }, Ot = { class: "v-image-preview-main" }, Kt = ["src"], Wt = {
+}, jt = { class: "v-image-preview-title" }, Ot = { class: "v-image-preview-main" }, Wt = ["src"], Kt = {
   key: 1,
   class: "v-image-preview-map"
 }, Ht = ["src", "onMouseover"], qt = {
@@ -1079,7 +1079,7 @@ const Pt = {
   class: "v-image-preview-footer"
 }, zt = /* @__PURE__ */ a("i", { class: "v-image-preview-close vicon-cha" }, null, -1);
 function Gt(e, t, s, r, n, i) {
-  return o(), f(x, {
+  return o(), f(S, {
     name: "fade",
     appear: ""
   }, {
@@ -1099,9 +1099,9 @@ function Gt(e, t, s, r, n, i) {
             src: n.image.src,
             onClick: t[0] || (t[0] = g(() => {
             }, ["stop"]))
-          }, null, 8, Kt)) : h("", !0)
+          }, null, 8, Wt)) : h("", !0)
         ]),
-        s.images.length > 1 ? (o(), c("div", Wt, [
+        s.images.length > 1 ? (o(), c("div", Kt, [
           (o(!0), c(C, null, D(s.images, (l, u) => (o(), c("img", {
             key: u,
             class: _({ "v-image-preview-highlight": l === n.image }),
@@ -1178,7 +1178,7 @@ const Jt = {
   install(e, t) {
     this.network = t, e.component(this.name, this);
   }
-}, Qt = (e) => (V("data-v-57f77f8f"), e = e(), P(), e), Xt = { class: "v-image-box" }, Zt = ["src"], es = /* @__PURE__ */ Qt(() => /* @__PURE__ */ a("i", { class: "vicon-add" }, null, -1)), ts = {
+}, Qt = (e) => (V("data-v-422a6ba1"), e = e(), P(), e), Xt = { class: "v-image-box" }, Zt = ["src"], es = /* @__PURE__ */ Qt(() => /* @__PURE__ */ a("i", { class: "vicon-add" }, null, -1)), ts = {
   key: 1,
   class: "v-image-show"
 }, ss = ["src"], ns = {
@@ -1231,7 +1231,7 @@ function is(e, t, s, r, n, i) {
     ]))
   ], 2);
 }
-const Nn = /* @__PURE__ */ p(Jt, [["render", is], ["__scopeId", "data-v-57f77f8f"]]);
+const Nn = /* @__PURE__ */ p(Jt, [["render", is], ["__scopeId", "data-v-422a6ba1"]]);
 const os = {
   name: "Images",
   emits: ["input", "change"],
@@ -1242,18 +1242,19 @@ const os = {
         return [];
       }
     },
-    read: Boolean,
     max: {
       type: Number,
       default: 20
     },
+    read: Boolean,
     title: String,
     placeholder: String
   },
-  data() {
-    return this.count = this.value.length, {
-      edit: !this.read,
-      images: this.value
+  setup({ read: e, value: t }) {
+    return {
+      id: 0,
+      edit: !e,
+      images: t
     };
   },
   methods: {
@@ -1265,14 +1266,16 @@ const os = {
       e.preventDefault(), e.stopPropagation();
     },
     dragenter(e, t) {
+      e.preventDefault(), e.stopPropagation();
       const { currentTarget: s } = e;
       if (s !== this.currentTarget) {
-        const { currentTarget: r, currentKey: n } = this, { value: i } = this, l = i[n];
-        i.splice(n, 1), i.splice(t, 0, l), r.style.opacity = "unset", this.currentKey = t, this.currentTarget = s, s.style.opacity = 0;
+        console.log("dragenter ->");
+        const { images: r, currentKey: n } = this, i = r[t];
+        i && (r.splice(n, 1), r.splice(t, 0, i)), this.currentTarget.style.opacity = "", this.currentKey = t, this.currentTarget = s, s.style.opacity = 0;
       }
     },
     dragend() {
-      this.currentTarget.style.opacity = "unset", this.$emit("input", this.value);
+      this.currentTarget.style.opacity = "", this.$emit("input", this.value);
     },
     add() {
       this.$refs.input.click();
@@ -1282,22 +1285,20 @@ const os = {
         for (const t of e) {
           const s = new FileReader();
           s.readAsDataURL(t);
-          const n = { src: await new Promise(function(i) {
+          const r = await new Promise(function(i) {
             s.onload = () => {
               i(s.result);
             };
-          }), file: t };
+          }), n = { id: this.id++, src: r, file: t };
           this.$emit("change", n), this.images.push(n);
         }
       this.$refs.input.value = "";
     },
-    destroy(e) {
-      const t = this.images[e];
-      if (t.file === void 0) {
-        const s = [...this.value];
-        s.splice(s.indexOf(t.src), 1), this.$emit("input", this.images);
-      }
-      this.images.splice(e, 1);
+    destroy(e, t) {
+      this.images.splice(t, 1);
+    },
+    onBeforeLeave(e) {
+      e.style.left = `${e.offsetLeft}px`, e.style.top = `${e.offsetTop}px`;
     },
     preview(e) {
       const { images: t, title: s } = this;
@@ -1328,7 +1329,7 @@ const os = {
   install(e, t) {
     this.network = t, e.component(this.name, this);
   }
-}, te = (e) => (V("data-v-2190a168"), e = e(), P(), e), as = ["onDragstart", "onDragover", "onDragenter", "onDragend", "onClick"], ls = { class: "v-images-item" }, rs = ["src", "title"], cs = ["placeholder", "onUpdate:modelValue"], us = ["onClick"], ds = /* @__PURE__ */ te(() => /* @__PURE__ */ a("i", { class: "vicon-add" }, null, -1)), ms = {
+}, te = (e) => (V("data-v-ae047926"), e = e(), P(), e), as = ["onDragstart", "onDragover", "onDragenter", "onDragend", "onClick"], ls = { class: "v-images-item" }, rs = ["src", "title"], cs = ["placeholder", "onUpdate:modelValue"], us = ["onClick"], ds = /* @__PURE__ */ te(() => /* @__PURE__ */ a("i", { class: "vicon-add" }, null, -1)), ms = {
   key: 1,
   class: "v-images v-images-preview"
 }, hs = ["onClick"], ps = ["src"], _s = {
@@ -1338,7 +1339,7 @@ const os = {
   vs
 ];
 function gs(e, t, s, r, n, i) {
-  return n.edit ? (o(), c("div", {
+  return r.edit ? (o(), c("div", {
     key: 0,
     class: "v-images",
     onMousedownCapture: t[3] || (t[3] = g(() => {
@@ -1348,12 +1349,15 @@ function gs(e, t, s, r, n, i) {
     onMouseupCapture: t[5] || (t[5] = g(() => {
     }, ["stop"]))
   }, [
-    B(U, { name: "draggable" }, {
+    B(U, {
+      name: "drag",
+      onBeforeLeave: i.onBeforeLeave
+    }, {
       default: v(() => [
-        n.images.length ? (o(!0), c(C, { key: 0 }, D(s.value, (l, u) => (o(), c("div", {
+        r.images.length ? (o(!0), c(C, { key: 0 }, D(s.value, (l, u) => (o(), c("div", {
+          key: l.id,
           class: "v-draggable-item",
           draggable: "true",
-          key: u,
           onDragstart: g((m) => i.dragstart(m, u), ["stop"]),
           onDragover: g((m) => i.dragover(m, u), ["stop"]),
           onDragenter: g((m) => i.dragenter(m, u), ["stop"]),
@@ -1361,33 +1365,31 @@ function gs(e, t, s, r, n, i) {
           onClick: (m) => i.preview(u)
         }, [
           a("div", ls, [
-            y(e.$slots, "default", { item: l }, () => [
-              a("img", {
-                draggable: "false",
-                src: l.src,
-                title: l.name
-              }, null, 8, rs),
-              $(a("input", {
-                draggable: "false",
-                class: "v-images-input",
-                type: "text",
-                placeholder: s.placeholder,
-                "onUpdate:modelValue": (m) => l.name = m,
-                onClick: t[0] || (t[0] = g(() => {
-                }, ["stop"]))
-              }, null, 8, cs), [
-                [S, l.name]
-              ])
-            ], !0)
+            a("img", {
+              draggable: "false",
+              src: l.src,
+              title: l.name
+            }, null, 8, rs),
+            $(a("input", {
+              draggable: "false",
+              class: "v-images-input",
+              type: "text",
+              placeholder: s.placeholder,
+              "onUpdate:modelValue": (m) => l.name = m,
+              onClick: t[0] || (t[0] = g(() => {
+              }, ["stop"]))
+            }, null, 8, cs), [
+              [x, l.name]
+            ])
           ]),
           a("i", {
             class: "v-images-delete vicon-cha",
-            onClick: g((m) => i.destroy(u), ["stop"])
+            onClick: g((m) => i.destroy(l, u), ["stop"])
           }, null, 8, us)
         ], 40, as))), 128)) : h("", !0),
         $(a("div", {
+          key: "add",
           class: "v-images-add",
-          key: "images-add",
           onClick: t[2] || (t[2] = (...l) => i.add && i.add(...l))
         }, [
           ds,
@@ -1400,11 +1402,11 @@ function gs(e, t, s, r, n, i) {
             onChange: t[1] || (t[1] = (l) => i.change(l.target.files))
           }, null, 544)
         ], 512), [
-          [L, n.images.length < s.max]
+          [R, r.images.length < s.max]
         ])
       ]),
-      _: 3
-    })
+      _: 1
+    }, 8, ["onBeforeLeave"])
   ], 32)) : (o(), c("div", ms, [
     s.value.length ? (o(!0), c(C, { key: 0 }, D(s.value, (l, u) => (o(), c("div", {
       class: "v-images-item",
@@ -1417,10 +1419,10 @@ function gs(e, t, s, r, n, i) {
     ], 8, hs))), 128)) : (o(), c("div", _s, fs))
   ]));
 }
-const Tn = /* @__PURE__ */ p(os, [["render", gs], ["__scopeId", "data-v-2190a168"]]);
+const Ln = /* @__PURE__ */ p(os, [["render", gs], ["__scopeId", "data-v-ae047926"]]);
 const ys = {
   name: "FloatMenu",
-  components: { Bubble: T },
+  components: { Bubble: L },
   props: {
     options: {
       type: Array
@@ -1465,7 +1467,7 @@ const ys = {
 }, bs = { class: "v-float-menu-items" }, ks = ["onClick"];
 function $s(e, t, s, r, n, i) {
   const l = k("Bubble");
-  return o(), f(x, {
+  return o(), f(S, {
     name: "scale",
     appear: ""
   }, {
@@ -1497,10 +1499,10 @@ function $s(e, t, s, r, n, i) {
     _: 1
   });
 }
-const En = /* @__PURE__ */ p(ys, [["render", $s]]);
+const Tn = /* @__PURE__ */ p(ys, [["render", $s]]);
 const ws = {
   name: "Dropdown",
-  components: { Bubble: T },
+  components: { Bubble: L },
   props: {
     name: {
       type: String
@@ -1544,7 +1546,7 @@ function Cs(e, t, s, r, n, i) {
         class: _(["vicon arrow", { arrow_up: n.open }])
       }, "\uE678", 2)
     ], 2),
-    B(x, { name: "scale" }, {
+    B(S, { name: "scale" }, {
       default: v(() => [
         n.open ? (o(), f(l, {
           key: 0,
@@ -1552,7 +1554,7 @@ function Cs(e, t, s, r, n, i) {
           gap: s.gap
         }, {
           default: v(() => [
-            y(e.$slots, "default")
+            b(e.$slots, "default")
           ]),
           _: 3
         }, 8, ["gap"])) : h("", !0)
@@ -1561,7 +1563,7 @@ function Cs(e, t, s, r, n, i) {
     })
   ]);
 }
-const Rn = /* @__PURE__ */ p(ws, [["render", Cs]]);
+const En = /* @__PURE__ */ p(ws, [["render", Cs]]);
 const Ds = {
   name: "Form",
   components: { Button: J },
@@ -1595,24 +1597,24 @@ const Ds = {
   install(e) {
     e.component(this.name, this);
   }
-}, Bs = { class: "v-form" }, Ss = { class: "v-form-header" }, xs = { key: 0 }, Ms = {
+}, Bs = { class: "v-form" }, xs = { class: "v-form-header" }, Ss = { key: 0 }, Ms = {
   key: 0,
   class: "remark"
 }, Is = { class: "v-form-main" }, Fs = {
   key: 0,
   class: "v-form-footer"
 }, Ns = /* @__PURE__ */ M("\u786E\u8BA4");
-function Ts(e, t, s, r, n, i) {
+function Ls(e, t, s, r, n, i) {
   const l = k("Button");
   return o(), c("div", Bs, [
-    a("div", Ss, [
-      s.name ? (o(), c("h4", xs, [
+    a("div", xs, [
+      s.name ? (o(), c("h4", Ss, [
         M(d(s.name) + " ", 1),
         n.status === !0 ? (o(), c("span", Ms, d(s.remark), 1)) : h("", !0)
       ])) : h("", !0)
     ]),
     a("div", Is, [
-      y(e.$slots, "default")
+      b(e.$slots, "default")
     ]),
     n.confirm ? (o(), c("div", Fs, [
       B(l, {
@@ -1627,8 +1629,8 @@ function Ts(e, t, s, r, n, i) {
     ])) : h("", !0)
   ]);
 }
-const Ln = /* @__PURE__ */ p(Ds, [["render", Ts]]);
-const Es = {
+const Rn = /* @__PURE__ */ p(Ds, [["render", Ls]]);
+const Ts = {
   name: "Tag",
   components: { FormBox: I },
   emits: ["input"],
@@ -1668,12 +1670,15 @@ const Es = {
     blur(e) {
       const t = e.target.value;
       t !== "" && (this.tags.includes(t), this.tags.push(t), this.input = "", this.$emit("input", this.tags));
+    },
+    onBeforeLeave(e) {
+      e.style.left = `${e.offsetLeft}px`, e.style.top = `${e.offsetTop}px`;
     }
   },
   install(e) {
     e.component(this.name, this);
   }
-}, Rs = { class: "v-tag" }, Ls = ["onClick"], As = ["placeholder"], Ys = {
+}, Es = { class: "v-tag" }, Rs = ["onClick"], As = ["placeholder"], Ys = {
   key: 1,
   class: "v-tag-preview"
 }, Vs = {
@@ -1689,14 +1694,13 @@ function Ps(e, t, s, r, n, i) {
     error: n.error
   }, {
     default: v(() => [
-      a("div", Rs, [
+      a("div", Es, [
         B(U, {
-          tag: "div",
-          class: "v-tag-group",
-          name: "tag"
+          name: "tag",
+          onBeforeLeave: i.onBeforeLeave
         }, {
           default: v(() => [
-            (o(!0), c(C, null, D(n.tags, (u, m) => (o(), c("span", {
+            (o(!0), c(C, null, D(n.tags, (u, m) => (o(), c("div", {
               class: "v-tag-item",
               key: u
             }, [
@@ -1704,22 +1708,23 @@ function Ps(e, t, s, r, n, i) {
               a("i", {
                 class: "vicon",
                 onClick: (w) => i.destroy(m)
-              }, "\uE679", 8, Ls)
-            ]))), 128))
+              }, "\uE679", 8, Rs)
+            ]))), 128)),
+            $(a("input", {
+              class: "v-tag-input",
+              key: "tag-inpu",
+              placeholder: s.placeholder,
+              ref: "input",
+              type: "text",
+              "onUpdate:modelValue": t[0] || (t[0] = (u) => n.input = u),
+              onKeyup: t[1] || (t[1] = oe((...u) => i.enter && i.enter(...u), ["enter"])),
+              onBlur: t[2] || (t[2] = (...u) => i.blur && i.blur(...u))
+            }, null, 40, As), [
+              [x, n.input]
+            ])
           ]),
           _: 1
-        }),
-        $(a("input", {
-          class: "v-tag-input",
-          placeholder: s.placeholder,
-          ref: "input",
-          type: "text",
-          "onUpdate:modelValue": t[0] || (t[0] = (u) => n.input = u),
-          onKeyup: t[1] || (t[1] = oe((...u) => i.enter && i.enter(...u), ["enter"])),
-          onBlur: t[2] || (t[2] = (...u) => i.blur && i.blur(...u))
-        }, null, 40, As), [
-          [S, n.input]
-        ])
+        }, 8, ["onBeforeLeave"])
       ])
     ]),
     _: 1
@@ -1731,7 +1736,7 @@ function Ps(e, t, s, r, n, i) {
     }, d(u), 1))), 128))
   ])) : h("", !0);
 }
-const An = /* @__PURE__ */ p(Es, [["render", Ps], ["__scopeId", "data-v-f37b0063"]]);
+const An = /* @__PURE__ */ p(Ts, [["render", Ps], ["__scopeId", "data-v-5fc7ee63"]]);
 const Us = {
   name: "Switch",
   emits: ["click", "input"],
@@ -1769,18 +1774,18 @@ const Us = {
   install(e) {
     e.component(this.name, this);
   }
-}, js = (e) => (V("data-v-54f1654a"), e = e(), P(), e), Os = /* @__PURE__ */ js(() => /* @__PURE__ */ a("div", { class: "v-switch-circle" }, null, -1)), Ks = [
+}, js = (e) => (V("data-v-54f1654a"), e = e(), P(), e), Os = /* @__PURE__ */ js(() => /* @__PURE__ */ a("div", { class: "v-switch-circle" }, null, -1)), Ws = [
   Os
 ];
-function Ws(e, t, s, r, n, i) {
+function Ks(e, t, s, r, n, i) {
   return o(), c("div", {
     class: _(["v-switch", { "v-switch-open": n.status, "v-switch-disable": s.disable }]),
     onClick: t[0] || (t[0] = (...l) => i.click && i.click(...l)),
     onDblclick: t[1] || (t[1] = g(() => {
     }, ["stop"]))
-  }, Ks, 34);
+  }, Ws, 34);
 }
-const Yn = /* @__PURE__ */ p(Us, [["render", Ws], ["__scopeId", "data-v-54f1654a"]]);
+const Yn = /* @__PURE__ */ p(Us, [["render", Ks], ["__scopeId", "data-v-54f1654a"]]);
 const se = {
   components: { FormBox: I },
   props: {
@@ -1845,15 +1850,15 @@ function Qs(e, t, s, r, n, i) {
         a("i", {
           class: _(["vicon arrow", { arrow_up: e.drop }])
         }, "\uE678", 2),
-        B(x, {
+        B(S, {
           name: "select-drop",
           appear: ""
         }, {
           default: v(() => [
             $(a("ul", null, [
-              y(e.$slots, "default")
+              b(e.$slots, "default")
             ], 512), [
-              [L, e.drop]
+              [R, e.drop]
             ])
           ]),
           _: 3
@@ -1891,20 +1896,20 @@ function tn(e, t, s, r, n, i) {
           "onUpdate:modelValue": t[0] || (t[0] = (u) => e.current = u),
           onChange: t[1] || (t[1] = (...u) => i.change && i.change(...u))
         }, null, 40, en), [
-          [S, e.current]
+          [x, e.current]
         ]),
         a("i", {
           class: _(["vicon arrow", { arrow_up: e.drop }])
         }, "\uE678", 2),
-        B(x, {
+        B(S, {
           name: "drop",
           appear: ""
         }, {
           default: v(() => [
             $(a("ul", null, [
-              y(e.$slots, "default")
+              b(e.$slots, "default")
             ], 512), [
-              [L, e.drop]
+              [R, e.drop]
             ])
           ]),
           _: 3
@@ -1940,7 +1945,7 @@ function on(e, t, s, r, n, i) {
     class: _({ "vt-active": n.active }),
     onClick: t[0] || (t[0] = (l) => i.select(s.value))
   }, [
-    y(e.$slots, "default", {}, () => [
+    b(e.$slots, "default", {}, () => [
       M(d(s.label || s.value), 1)
     ])
   ], 2);
@@ -2000,11 +2005,11 @@ function cn(e, t, s, r, n, i) {
     _: 1
   });
 }
-const E = /* @__PURE__ */ p(rn, [["render", cn], ["__scopeId", "data-v-9c1c8f7b"]]);
+const T = /* @__PURE__ */ p(rn, [["render", cn], ["__scopeId", "data-v-9c1c8f7b"]]);
 const un = {
   add(e) {
     const { type: t = "", body: s = "", time: r = 3e3 } = e;
-    E.add({
+    T.add({
       data() {
         return {
           type: t,
@@ -2097,14 +2102,14 @@ function fn(e, t, s, r, n, i) {
     ]),
     _: 1
   }, 8, ["title", "onClose"])), [
-    [L, e.open]
+    [R, e.open]
   ]);
 }
 const Un = /* @__PURE__ */ p(pn, [["render", fn], ["__scopeId", "data-v-b23319c2"]]);
 const gn = {
   add(e) {
     const { title: t = "", body: s = "", time: r, confirm: n, close: i } = e;
-    return E.add({
+    return T.add({
       data() {
         return {
           title: t,
@@ -2114,10 +2119,10 @@ const gn = {
       },
       methods: {
         close() {
-          E.close(this.$options.id), i && i();
+          T.close(this.$options.id), i && i();
         },
         confirm() {
-          E.close(this.$options.id), n && n();
+          T.close(this.$options.id), n && n();
         }
       },
       render: this.render,
@@ -2151,21 +2156,21 @@ function Cn(e, t, s, r, n, i) {
 const jn = /* @__PURE__ */ p(gn, [["render", Cn]]);
 export {
   Mn as Alert,
-  T as Bubble,
+  L as Bubble,
   J as Button,
   $e as Dialog,
-  xn as DialogPage,
-  Rn as Dropdown,
-  En as FloatMenu,
-  Ln as Form,
+  Sn as DialogPage,
+  En as Dropdown,
+  Tn as FloatMenu,
+  Rn as Form,
   Nn as Image,
-  Tn as Images,
+  Ln as Images,
   Fn as Img,
   In as Input,
   Vn as Select,
   Yn as Switch,
   An as Tag,
-  Sn as Tip,
+  xn as Tip,
   Un as confirm,
   Pn as message,
   jn as notification

@@ -1,25 +1,26 @@
-import { resolveComponent as g, openBlock as c, createElementBlock as l, Fragment as d, createVNode as m, withCtx as u, createElementVNode as t, renderList as b, createTextVNode as _, toDisplayString as p, pushScopeId as v, popScopeId as x } from "/view-ui/libs/vue.js";
+import { resolveComponent as f, openBlock as l, createElementBlock as d, Fragment as p, createVNode as m, withCtx as u, createElementVNode as e, renderList as _, createTextVNode as b, toDisplayString as h, pushScopeId as v, popScopeId as x } from "/view-ui/libs/vue.js";
 import { Lang as i } from "/view-ui/libs/view.js";
-const k = `.navbar-github a[data-v-844bff54]{display:flex;justify-content:center;align-items:center}.navbar-github a i[data-v-844bff54]{font-size:24px;color:#fff}.links a[data-v-844bff54]{display:block;padding:20px 15px;margin:10px;border-radius:6px;border:1px solid #e7e7e7}.links a h3 i[data-v-844bff54]{float:right;font-size:13px}.links a .description[data-v-844bff54]{margin-top:14px;line-height:24px;font-size:14px}
-`, y = (e, a) => {
-  const o = e.__vccOpts || e;
-  for (const [r, n] of a)
-    o[r] = n;
+const k = `.navbar-github a[data-v-ed32517c]{display:flex;justify-content:center;align-items:center}.navbar-github a i[data-v-ed32517c]{font-size:24px;color:#fff}.links a[data-v-ed32517c]{display:block;padding:15px;margin:10px;border-radius:6px;border:1px solid #e7e7e7}.links a h3 i[data-v-ed32517c]{float:right;font-size:13px}.links a .description[data-v-ed32517c]{margin-top:14px;line-height:24px;font-size:14px}
+`, y = (t, a) => {
+  const o = t.__vccOpts || t;
+  for (const [c, n] of a)
+    o[c] = n;
   return o;
-}, f = (e) => (v("data-v-844bff54"), e = e(), x(), e), w = /* @__PURE__ */ f(() => /* @__PURE__ */ t("a", {
+}, r = (t) => (v("data-v-ed32517c"), t = t(), x(), t), w = /* @__PURE__ */ r(() => /* @__PURE__ */ e("div", { class: "navbar-center" }, "GitHub", -1)), z = /* @__PURE__ */ r(() => /* @__PURE__ */ e("a", {
+  class: "navbar-right",
   href: "https://github.com/lixiangio",
   target: "_blank"
 }, [
-  /* @__PURE__ */ t("i", { class: "ficon-github" })
-], -1)), z = { class: "links" }, S = ["href"], C = /* @__PURE__ */ f(() => /* @__PURE__ */ t("i", { class: "ficon-xinchuangkou" }, null, -1)), I = { class: "description" }, j = {
+  /* @__PURE__ */ e("i", { class: "ficon-github" })
+], -1)), S = { class: "links" }, C = ["href"], I = /* @__PURE__ */ r(() => /* @__PURE__ */ e("i", { class: "ficon-xinchuangkou" }, null, -1)), j = { class: "description" }, M = {
   app: {
     style: {
       background: "#fff"
     }
   }
-}, M = /* @__PURE__ */ Object.assign(j, {
+}, N = /* @__PURE__ */ Object.assign(M, {
   __name: "index",
-  setup(e) {
+  setup(t) {
     const a = [
       {
         name: "View UI",
@@ -54,36 +55,36 @@ const k = `.navbar-github a[data-v-844bff54]{display:flex;justify-content:center
         })
       }
     ];
-    return (o, r) => {
-      const n = g("Navbar");
-      return c(), l(d, null, [
+    return (o, c) => {
+      const n = f("Navbar");
+      return l(), d(p, null, [
         m(n, {
           class: "navbar-github",
-          title: "GitHub",
           style: { background: "#24292f", "border-bottom": "1px solid #24292f", color: "#fff" }
         }, {
           default: u(() => [
-            w
+            w,
+            z
           ]),
           _: 1
         }),
-        t("div", z, [
-          (c(), l(d, null, b(a, (s, h) => t("a", {
-            key: h,
+        e("div", S, [
+          (l(), d(p, null, _(a, (s, g) => e("a", {
+            key: g,
             href: s.href,
             target: "_blank"
           }, [
-            t("h3", null, [
-              _(p(s.name) + " ", 1),
-              C
+            e("h3", null, [
+              b(h(s.name) + " ", 1),
+              I
             ]),
-            t("div", I, p(s.description), 1)
-          ], 8, S)), 64))
+            e("div", j, h(s.description), 1)
+          ], 8, C)), 64))
         ])
       ], 64);
     };
   }
-}), K = /* @__PURE__ */ y(M, [["styles", [k]], ["__scopeId", "data-v-844bff54"]]);
+}), O = /* @__PURE__ */ y(N, [["styles", [k]], ["__scopeId", "data-v-ed32517c"]]);
 export {
-  K as default
+  O as default
 };

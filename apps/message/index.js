@@ -1,26 +1,27 @@
-import { resolveComponent as g, openBlock as d, createElementBlock as c, Fragment as h, createVNode as v, createStaticVNode as A, createElementVNode as e, toDisplayString as p, pushScopeId as N, popScopeId as j, defineComponent as E, ref as F, reactive as z, watch as M, withCtx as $, TransitionGroup as B, renderList as I, withDirectives as L, withKeys as V, vModelText as K } from "/view-ui/libs/vue.js";
+import { resolveComponent as g, openBlock as d, createElementBlock as r, Fragment as h, createVNode as m, createStaticVNode as T, createElementVNode as t, toDisplayString as o, pushScopeId as w, popScopeId as C, defineComponent as A, ref as E, reactive as z, watch as F, withCtx as b, TransitionGroup as B, renderList as I, withDirectives as L, withKeys as V, vModelText as K } from "/view-ui/libs/vue.js";
 import { Lang as G, Langs as O } from "/view-ui/libs/view.js";
 import k from "/view-ui/libs/network.js";
+import { notification as U } from "/view-ui/libs/viewui.js";
 import { back as S } from "/view-ui/libs/router.js";
-const U = "", x = (t, i) => {
-  const a = t.__vccOpts || t;
+const q = "", x = (e, i) => {
+  const a = e.__vccOpts || e;
   for (const [s, f] of i)
     a[s] = f;
   return a;
-}, q = {
+}, H = {
   props: ["user"]
-}, H = /* @__PURE__ */ A('<div class="system"><div class="items"><div class="item"> A: 1 </div><div class="item"> B: 2 </div><div class="item"> C: 3 </div></div></div>', 1);
-function J(t, i, a, s, f, u) {
-  const r = g("Navbar");
-  return d(), c(h, null, [
-    v(r, {
+}, J = /* @__PURE__ */ T('<div class="system"><div class="items"><div class="item"> A: 1 </div><div class="item"> B: 2 </div><div class="item"> C: 3 </div></div></div>', 1);
+function P(e, i, a, s, f, u) {
+  const l = g("Navbar");
+  return d(), r(h, null, [
+    m(l, {
       title: a.user.name
     }, null, 8, ["title"]),
-    H
+    J
   ], 64);
 }
-const P = /* @__PURE__ */ x(q, [["render", J], ["styles", [U]]]), Q = `.userinfo .header[data-v-691d64a3]{display:flex;justify-content:space-between;align-items:center;padding:5px 14px 10px}.userinfo .header .avatar[data-v-691d64a3]{display:flex;justify-content:center;align-items:center;width:50px;height:50px;border-radius:50px;font-size:30px;background:#fff}
-`, R = {
+const Q = /* @__PURE__ */ x(H, [["render", P], ["styles", [q]]]), R = `.userinfo .header[data-v-691d64a3]{display:flex;justify-content:space-between;align-items:center;padding:5px 14px 10px}.userinfo .header .avatar[data-v-691d64a3]{display:flex;justify-content:center;align-items:center;width:50px;height:50px;border-radius:50px;font-size:30px;background:#fff}
+`, W = {
   props: ["user"],
   app: {
     style: {
@@ -28,62 +29,62 @@ const P = /* @__PURE__ */ x(q, [["render", J], ["styles", [U]]]), Q = `.userinfo
     }
   },
   methods: {
-    onclick(t) {
-      S(t.currentTarget);
+    onclick(e) {
+      S(e.currentTarget);
     }
   }
-}, W = (t) => (N("data-v-691d64a3"), t = t(), j(), t), X = { class: "userinfo" }, Y = { class: "header" }, Z = { class: "avatar" }, ee = /* @__PURE__ */ W(() => /* @__PURE__ */ e("i", { class: "ficon-cha" }, null, -1)), te = [
-  ee
+}, X = (e) => (w("data-v-691d64a3"), e = e(), C(), e), Y = { class: "userinfo" }, Z = { class: "header" }, tt = { class: "avatar" }, et = /* @__PURE__ */ X(() => /* @__PURE__ */ t("i", { class: "ficon-cha" }, null, -1)), st = [
+  et
 ];
-function se(t, i, a, s, f, u) {
-  return d(), c("div", X, [
-    e("div", Y, [
-      e("div", Z, p(a.user.avatar), 1),
-      e("div", null, p(a.user.name), 1),
-      e("div", {
+function at(e, i, a, s, f, u) {
+  return d(), r("div", Y, [
+    t("div", Z, [
+      t("div", tt, o(a.user.avatar), 1),
+      t("div", null, o(a.user.name), 1),
+      t("div", {
         class: "close",
-        onClick: i[0] || (i[0] = (...r) => u.onclick && u.onclick(...r))
-      }, te)
+        onClick: i[0] || (i[0] = (...l) => u.onclick && u.onclick(...l))
+      }, st)
     ])
   ]);
 }
-const ae = /* @__PURE__ */ x(R, [["render", se], ["styles", [Q]], ["__scopeId", "data-v-691d64a3"]]), ne = `.setting .header[data-v-40c58d46]{display:flex;justify-content:space-between;align-items:center;padding:5px 14px 10px}.setting .header .title[data-v-40c58d46]{width:50px;height:50px}
-`, C = G({
+const nt = /* @__PURE__ */ x(W, [["render", at], ["styles", [R]], ["__scopeId", "data-v-691d64a3"]]), it = `.setting .header[data-v-40c58d46]{display:flex;justify-content:space-between;align-items:center;padding:5px 14px 10px}.setting .header .title[data-v-40c58d46]{width:50px;height:50px}
+`, j = G({
   en: "Monkey",
   zh: "Monkey"
-}), ie = {
+}), ot = {
   app: {
-    name: C,
+    name: j,
     style: {
       flex: "none"
     }
   },
   setup() {
-    return { name: C };
+    return { name: j };
   },
   methods: {
-    onclick(t) {
-      S(t.currentTarget);
+    onclick(e) {
+      S(e.currentTarget);
     }
   }
-}, oe = { class: "setting" };
-function de(t, i, a, s, f, u) {
-  const r = g("Navbar");
-  return d(), c("div", oe, [
-    v(r, { title: "Setting" })
+}, ct = { class: "setting" };
+function dt(e, i, a, s, f, u) {
+  const l = g("Navbar");
+  return d(), r("div", ct, [
+    m(l, { title: "Setting" })
   ]);
 }
-const ce = /* @__PURE__ */ x(ie, [["render", de], ["styles", [ne]], ["__scopeId", "data-v-40c58d46"]]), w = (t) => (N("data-v-83ad578e"), t = t(), j(), t), re = /* @__PURE__ */ w(() => /* @__PURE__ */ e("i", { class: "ficon-gengduo" }, null, -1)), le = { class: "list" }, pe = {
+const rt = /* @__PURE__ */ x(ot, [["render", dt], ["styles", [it]], ["__scopeId", "data-v-40c58d46"]]), N = (e) => (w("data-v-16204693"), e = e(), C(), e), lt = { class: "navbar-center" }, pt = /* @__PURE__ */ N(() => /* @__PURE__ */ t("i", { class: "ficon-gengduo" }, null, -1)), ft = { class: "list" }, ut = {
   key: 0,
   class: "me"
-}, fe = ["onClick"], ue = { class: "message" }, _e = { class: "content" }, me = {
+}, _t = ["onClick"], vt = { class: "message" }, mt = { class: "content" }, ht = {
   key: 1,
   class: "he"
-}, ve = ["onClick"], he = { class: "message" }, ge = { class: "content" }, xe = { class: "inputbox safe-bottom" }, be = /* @__PURE__ */ w(() => /* @__PURE__ */ e("button", null, [
-  /* @__PURE__ */ e("i", { class: "ficon-yuyin" })
-], -1)), ye = ["onKeyup"], $e = /* @__PURE__ */ w(() => /* @__PURE__ */ e("button", null, [
-  /* @__PURE__ */ e("i", { class: "ficon-jia" })
-], -1)), ke = {
+}, gt = ["onClick"], xt = { class: "message" }, bt = { class: "content" }, $t = { class: "inputbox safe-bottom" }, yt = /* @__PURE__ */ N(() => /* @__PURE__ */ t("button", null, [
+  /* @__PURE__ */ t("i", { class: "ficon-yuyin" })
+], -1)), kt = ["onKeyup"], wt = /* @__PURE__ */ N(() => /* @__PURE__ */ t("button", null, [
+  /* @__PURE__ */ t("i", { class: "ficon-jia" })
+], -1)), Ct = {
   app: {
     level: 200,
     style: {
@@ -91,34 +92,36 @@ const ce = /* @__PURE__ */ x(ie, [["render", de], ["styles", [ne]], ["__scopeId"
       flex: 1
     }
   },
-  pages: { userinfo: ae, setting: ce }
-}, we = /* @__PURE__ */ E({
-  ...ke,
+  pages: { userinfo: nt, setting: rt }
+}, Nt = /* @__PURE__ */ A({
+  ...Ct,
   __name: "index",
   props: ["id", "user"],
-  setup(t) {
-    const i = t, a = F(""), s = z([]);
+  setup(e) {
+    const i = e, a = E(""), s = z([]);
     let f;
-    function u(l) {
-      if (l.length) {
-        const o = l.shift();
-        o && s.push(o), f = setTimeout(() => u(l), 1500);
+    function u(p) {
+      if (p.length) {
+        const c = p.shift();
+        c && (f = setTimeout(() => {
+          s.push(c), u(p);
+        }, 1500));
       }
     }
-    function r(l) {
-      k.get(`/view-ui/api/message/${l}.json`).then(({ users: o, list: _ }) => {
-        const m = {};
-        for (const n of o)
-          m[n.id] = n;
+    function l(p) {
+      k.get(`/view-ui/api/message/${p}.json`).then(({ users: c, list: _ }) => {
+        const v = {};
+        for (const n of c)
+          v[n.id] = n;
         for (const n of _)
-          n.user = m[n.uid];
+          n.user = v[n.uid];
         u(_);
       });
     }
-    r(i.id), M(i, () => {
-      s.splice(0), clearTimeout(f), r(i.id);
+    l(i.id), F(i, () => {
+      s.splice(0), clearTimeout(f), l(i.id);
     });
-    function b() {
+    function $() {
       s.push({
         uid: 1,
         user: {
@@ -130,44 +133,43 @@ const ce = /* @__PURE__ */ x(ie, [["render", de], ["styles", [ne]], ["__scopeId"
         content: a.value
       }), a.value = "";
     }
-    return (l, o) => {
-      const _ = g("A"), m = g("Navbar");
-      return d(), c(h, null, [
-        v(m, {
-          title: t.user.name
-        }, {
-          default: $(() => [
-            v(_, {
-              class: "center",
+    return (p, c) => {
+      const _ = g("A"), v = g("Navbar");
+      return d(), r(h, null, [
+        m(v, null, {
+          default: b(() => [
+            t("div", lt, o(e.user.name), 1),
+            m(_, {
+              class: "navbar-right",
               href: "message/chat/setting"
             }, {
-              default: $(() => [
-                re
+              default: b(() => [
+                pt
               ]),
               _: 1
             })
           ]),
           _: 1
-        }, 8, ["title"]),
-        e("div", le, [
-          v(B, { name: "fade-in" }, {
-            default: $(() => [
-              (d(!0), c(h, null, I(s, ({ user: n, content: y }) => (d(), c(h, null, [
-                n.me ? (d(), c("div", pe, [
-                  e("div", {
+        }),
+        t("div", ft, [
+          m(B, { name: "fade-in" }, {
+            default: b(() => [
+              (d(!0), r(h, null, I(s, ({ user: n, content: y }) => (d(), r(h, null, [
+                n.me ? (d(), r("div", ut, [
+                  t("div", {
                     class: "avatar",
-                    onClick: (T) => l.$router.open("message/chat/userinfo", { user: n })
-                  }, p(n.avatar), 9, fe),
-                  e("div", ue, [
-                    e("div", _e, p(y), 1)
+                    onClick: (M) => p.$router.open("message/chat/userinfo", { user: n })
+                  }, o(n.avatar), 9, _t),
+                  t("div", vt, [
+                    t("div", mt, o(y), 1)
                   ])
-                ])) : (d(), c("div", me, [
-                  e("div", {
+                ])) : (d(), r("div", ht, [
+                  t("div", {
                     class: "avatar",
-                    onClick: (T) => l.$router.open("message/chat/userinfo", { user: n })
-                  }, p(n.avatar), 9, ve),
-                  e("div", he, [
-                    e("div", ge, p(y), 1)
+                    onClick: (M) => p.$router.open("message/chat/userinfo", { user: n })
+                  }, o(n.avatar), 9, gt),
+                  t("div", xt, [
+                    t("div", bt, o(y), 1)
                   ])
                 ]))
               ], 64))), 256))
@@ -175,22 +177,22 @@ const ce = /* @__PURE__ */ x(ie, [["render", de], ["styles", [ne]], ["__scopeId"
             _: 1
           })
         ]),
-        e("div", xe, [
-          be,
-          L(e("input", {
+        t("div", $t, [
+          yt,
+          L(t("input", {
             type: "text",
-            "onUpdate:modelValue": o[0] || (o[0] = (n) => a.value = n),
-            onKeyup: V(b, ["enter"])
-          }, null, 40, ye), [
+            "onUpdate:modelValue": c[0] || (c[0] = (n) => a.value = n),
+            onKeyup: V($, ["enter"])
+          }, null, 40, kt), [
             [K, a.value]
           ]),
-          $e
+          wt
         ])
       ], 64);
     };
   }
-}), Ce = `.list[data-v-83ad578e]{padding-bottom:50px}.list .me[data-v-83ad578e],.list .he[data-v-83ad578e]{padding:15px 10px}.list .me .avatar[data-v-83ad578e],.list .he .avatar[data-v-83ad578e]{display:flex;justify-content:center;align-items:center;width:50px;height:50px;border-radius:50px;font-size:30px;background:#fff}.list .me .message[data-v-83ad578e],.list .he .message[data-v-83ad578e]{flex:1;max-width:600px}.list .me .message .content[data-v-83ad578e],.list .he .message .content[data-v-83ad578e]{padding:16px;border-radius:10px}.list .me .message .content[data-v-83ad578e]:before,.list .he .message .content[data-v-83ad578e]:before{position:absolute;top:20px;content:"";width:10px;height:10px;transform:rotate(45deg)}.list .me[data-v-83ad578e]{display:flex;flex-direction:row-reverse}.list .me .message .content[data-v-83ad578e]{margin:0 12px 0 40px;background:#a8f7a7}.list .me .message .content[data-v-83ad578e]:before{right:-5px;background-color:#a8f7a7}.list .he[data-v-83ad578e]{display:flex}.list .he .message .content[data-v-83ad578e]{margin:0 40px 0 12px;background:#fff}.list .he .message .content[data-v-83ad578e]:before{left:-5px;background-color:#fff}.inputbox[data-v-83ad578e]{position:fixed;display:flex;width:100%;height:50px;padding:6px 0;background-color:#f7f7f7;border-top:1px solid #f1f1f1}.inputbox input[data-v-83ad578e]{flex:1;background-color:#fff;border-radius:10px;border:none}.inputbox button[data-v-83ad578e]{width:38px;height:38px;border-radius:50px;background:#fff;margin:0 10px;border:1px solid #efefef}.inputbox button i[data-v-83ad578e]{font-size:18px}.fade-in-enter-from[data-v-83ad578e]{opacity:0}.fade-in-enter-active[data-v-83ad578e]{transition:opacity .2s ease}
-`, Ne = /* @__PURE__ */ x(we, [["styles", [Ce]], ["__scopeId", "data-v-83ad578e"]]), je = O({
+}), jt = `.list[data-v-16204693]{padding-bottom:50px}.list .me[data-v-16204693],.list .he[data-v-16204693]{padding:15px 10px}.list .me .avatar[data-v-16204693],.list .he .avatar[data-v-16204693]{display:flex;justify-content:center;align-items:center;width:50px;height:50px;border-radius:50px;font-size:30px;background:#fff;cursor:pointer}.list .me .message[data-v-16204693],.list .he .message[data-v-16204693]{flex:1;max-width:600px}.list .me .message .content[data-v-16204693],.list .he .message .content[data-v-16204693]{padding:16px;border-radius:10px}.list .me .message .content[data-v-16204693]:before,.list .he .message .content[data-v-16204693]:before{position:absolute;top:20px;content:"";width:10px;height:10px;transform:rotate(45deg)}.list .me[data-v-16204693]{display:flex;flex-direction:row-reverse}.list .me .message .content[data-v-16204693]{margin:0 12px 0 40px;background:#a8f7a7}.list .me .message .content[data-v-16204693]:before{right:-5px;background-color:#a8f7a7}.list .he[data-v-16204693]{display:flex}.list .he .message .content[data-v-16204693]{margin:0 40px 0 12px;background:#fff}.list .he .message .content[data-v-16204693]:before{left:-5px;background-color:#fff}.inputbox[data-v-16204693]{position:fixed;display:flex;width:100%;height:50px;padding:6px 0;background-color:#f7f7f7;border-top:1px solid #f1f1f1}.inputbox input[data-v-16204693]{flex:1;background-color:#fff;border-radius:10px;border:none}.inputbox button[data-v-16204693]{width:38px;height:38px;border-radius:50px;background:#fff;margin:0 10px;border:1px solid #efefef}.inputbox button i[data-v-16204693]{font-size:18px}.fade-in-enter-from[data-v-16204693]{opacity:0}.fade-in-enter-active[data-v-16204693]{transition:opacity .2s ease}
+`, zt = /* @__PURE__ */ x(Nt, [["styles", [jt]], ["__scopeId", "data-v-16204693"]]), It = O({
   message: {
     en: "Message",
     zh: "\u6D88\u606F"
@@ -204,47 +206,56 @@ const ce = /* @__PURE__ */ x(ie, [["render", de], ["styles", [ne]], ["__scopeId"
     zh: "\u4EA4\u6613\u7269\u6D41"
   }
 }), D = z([]);
-k.get("/view-ui/api/message/index.json").then((t) => {
+k.get("/view-ui/api/message/index.json").then((e) => {
   k.get("/view-ui/api/user.json").then((i) => {
     const a = {};
     for (const s of i)
       a[s.id] = s;
-    for (const s of t)
+    for (const s of e)
       s.user = a[s.uid], D.push(s);
   });
 });
-const ze = {
-  pages: { chat: Ne, system: P },
+const St = {
+  pages: { chat: zt, system: Q },
   setup() {
-    return { langs: je, list: D };
+    return { langs: It, list: D };
+  },
+  mounted() {
+    U.add({ title: "Message", time: 3e3 });
   }
-}, Ie = `.message .list .item[data-v-be78fd1e]{display:flex;height:75px}.message .list .item .avatar[data-v-be78fd1e]{display:flex;justify-content:center;align-items:center;width:50px;height:50px;margin:10px 0 0 10px;background:#efefef;border-radius:50px;font-size:30px}.message .list .item .right[data-v-be78fd1e]{flex:1;margin-left:10px;border-bottom:1px solid #f1f1f1;padding:0 5px}.message .list .item .right .title[data-v-be78fd1e]{display:flex;justify-content:space-between;padding:12px 10px 0 0;height:30px}.message .list .item .right .title .name[data-v-be78fd1e]{font-size:14px;font-weight:700}.message .list .item .right .title .time[data-v-be78fd1e]{font-size:13px;color:#aaa}.message .list .item .right .content[data-v-be78fd1e]{color:#888;padding:12px 12px 12px 0}
-`, Se = { class: "message" }, De = { class: "list" }, Te = ["onClick"], Ae = { class: "avatar" }, Ee = { class: "right" }, Fe = { class: "title" }, Me = { class: "name" }, Be = { class: "time" }, Le = { class: "content" };
-function Ve(t, i, a, s, f, u) {
-  const r = g("Navbar");
-  return d(), c("div", Se, [
-    v(r, {
-      title: s.langs.message
-    }, null, 8, ["title"]),
-    e("div", De, [
-      (d(!0), c(h, null, I(s.list, ({ id: b, type: l, user: o, time: _, content: m }, n) => (d(), c("div", {
+}, Dt = `.message .list .item[data-v-5f26c467]{display:flex;height:75px;cursor:pointer}.message .list .item .avatar[data-v-5f26c467]{display:flex;justify-content:center;align-items:center;width:50px;height:50px;margin:10px 0 0 10px;background:#efefef;border-radius:50px;font-size:30px}.message .list .item .right[data-v-5f26c467]{flex:1;margin-left:10px;border-bottom:1px solid #f1f1f1;padding:0 5px}.message .list .item .right .title[data-v-5f26c467]{display:flex;justify-content:space-between;padding:12px 10px 0 0;height:30px}.message .list .item .right .title .name[data-v-5f26c467]{font-size:14px;font-weight:700}.message .list .item .right .title .time[data-v-5f26c467]{font-size:13px;color:#aaa}.message .list .item .right .content[data-v-5f26c467]{color:#888;padding:12px 12px 12px 0}
+`, Mt = (e) => (w("data-v-5f26c467"), e = e(), C(), e), Tt = { class: "message" }, At = { class: "navbar-center" }, Et = /* @__PURE__ */ Mt(() => /* @__PURE__ */ t("div", { class: "navbar-right" }, [
+  /* @__PURE__ */ t("i", { class: "ficon-gengduo" })
+], -1)), Ft = { class: "list" }, Bt = ["onClick"], Lt = { class: "avatar" }, Vt = { class: "right" }, Kt = { class: "title" }, Gt = { class: "name" }, Ot = { class: "time" }, Ut = { class: "content" };
+function qt(e, i, a, s, f, u) {
+  const l = g("Navbar");
+  return d(), r("div", Tt, [
+    m(l, null, {
+      default: b(() => [
+        t("div", At, o(s.langs.message), 1),
+        Et
+      ]),
+      _: 1
+    }),
+    t("div", Ft, [
+      (d(!0), r(h, null, I(s.list, ({ id: $, type: p, user: c, time: _, content: v }, n) => (d(), r("div", {
         key: n,
         class: "item",
-        onClick: (y) => t.$router.open(`message/${l}`, { id: b, user: o })
+        onClick: (y) => e.$router.open(`message/${p}`, { id: $, user: c })
       }, [
-        e("div", Ae, p(o.avatar), 1),
-        e("div", Ee, [
-          e("div", Fe, [
-            e("div", Me, p(o.name), 1),
-            e("div", Be, p(_), 1)
+        t("div", Lt, o(c.avatar), 1),
+        t("div", Vt, [
+          t("div", Kt, [
+            t("div", Gt, o(c.name), 1),
+            t("div", Ot, o(_), 1)
           ]),
-          e("div", Le, p(m), 1)
+          t("div", Ut, o(v), 1)
         ])
-      ], 8, Te))), 128))
+      ], 8, Bt))), 128))
     ])
   ]);
 }
-const qe = /* @__PURE__ */ x(ze, [["render", Ve], ["styles", [Ie]], ["__scopeId", "data-v-be78fd1e"]]);
+const Wt = /* @__PURE__ */ x(St, [["render", qt], ["styles", [Dt]], ["__scopeId", "data-v-5f26c467"]]);
 export {
-  qe as default
+  Wt as default
 };

@@ -1,100 +1,101 @@
-import v, { instances as c, gap as E } from "/view-ui/libs/view.js";
-import { apps as L, appsState as m } from "/view-ui/libs/state.js";
+import m, { instances as c, gap as E } from "/view-ui/libs/view.js";
+import { apps as L, appsState as g } from "/view-ui/libs/state.js";
+import { screenWidth as b } from "/view-ui/libs/pointer.js";
 const { MIN_SAFE_INTEGER: u, MAX_SAFE_INTEGER: a } = Number;
 function d() {
-  return window.innerWidth - v.initOptions.apps.right;
+  return window.innerWidth - m.initOptions.apps.right;
 }
-function b() {
-  const { left: g } = v.initOptions.apps, s = d();
-  let n = a, e = a, t, o;
-  for (const l in c) {
-    const i = c[l], { left: p, width: r } = i, h = g - p, f = Math.abs(h) - Math.abs(n);
-    (f < 0 || f === 0 && h > n) && (n = h, t = i);
-    const M = s - (p + r), w = Math.abs(M) - Math.abs(e);
-    (w < 0 || w === 0 && M < e) && (e = M, o = i);
+function O() {
+  const { left: v } = m.initOptions.apps, s = d();
+  let n = a, t = a, e, o;
+  for (const i in c) {
+    const f = c[i], { left: p, width: l } = f, h = v - p, r = Math.abs(h) - Math.abs(n);
+    (r < 0 || r === 0 && h > n) && (n = h, e = f);
+    const M = s - (p + l), w = Math.abs(M) - Math.abs(t);
+    (w < 0 || w === 0 && M < t) && (t = M, o = f);
   }
-  return Math.abs(n) <= Math.abs(e) ? {
+  return Math.abs(n) <= Math.abs(t) ? {
     move: n,
-    container: t
+    container: e
   } : {
-    move: e,
+    move: t,
     container: o
   };
 }
-class O {
+class S {
   el;
   constructor(s) {
     this.el = s;
   }
   move(s) {
     for (const n in c) {
-      const e = c[n];
-      e.left += s;
-      const { style: t } = e.$el;
-      t.transition = "unset", t.transform = `translate3d(${e.left}px, 0, 0)`;
+      const t = c[n];
+      t.left += s;
+      const { style: e } = t.$el;
+      e.transition = "unset", e.transform = `translate3d(${t.left}px, 0, 0)`;
     }
   }
   scroll(s) {
     for (const n in c) {
-      const e = c[n];
-      e.left += s;
-      const { style: t } = e.$el;
-      t.transition = "", t.transform = `translate3d(${e.left}px, 0, 0)`;
+      const t = c[n];
+      t.left += s;
+      const { style: e } = t.$el;
+      e.transition = "", e.transform = `translate3d(${t.left}px, 0, 0)`;
     }
   }
   next() {
     if (L.length === 0) {
-      m.value = !1;
+      g.value = !1;
       return;
     }
-    const { left: s } = v.initOptions.apps, n = d();
-    let e = a, t = a, o = u;
+    const { left: s } = m.initOptions.apps, n = d();
+    let t = a, e = a, o = u;
     for (const p in c) {
-      const { left: r, width: h } = c[p], f = r + h;
-      f > o && (o = f), r > s && r < e && (e = r), f > n && f < t && (t = f);
+      const { left: l, width: h } = c[p], r = l + h;
+      r > o && (o = r), l > s && l < t && (t = l), r > n && r < e && (e = r);
     }
-    const l = s - e, i = n - t;
-    e === a ? t === a ? (m.value = !1, this.scroll(s - o - E)) : this.scroll(i) : t === a ? this.scroll(l) : l > i ? this.scroll(l) : this.scroll(i);
+    const i = s - t, f = n - e;
+    t === a ? e === a ? (g.value = !1, this.scroll(s - o - E)) : this.scroll(f) : e === a ? this.scroll(i) : i > f ? this.scroll(i) : this.scroll(f);
   }
   previous() {
     if (L.length === 0) {
-      m.value = !1;
+      g.value = !1;
       return;
     }
-    const { left: s } = v.initOptions.apps, n = d();
-    let e = u, t = u, o = a;
+    const { left: s } = m.initOptions.apps, n = d();
+    let t = u, e = u, o = a;
     for (const p in c) {
-      const { left: r, width: h } = c[p];
-      r < o && (o = r), r < s && r > e && (e = r);
-      const f = r + h;
-      f < n && f > t && (t = f);
+      const { left: l, width: h } = c[p];
+      l < o && (o = l), l < s && l > t && (t = l);
+      const r = l + h;
+      r < n && r > e && (e = r);
     }
-    const l = s - e, i = n - t;
-    e === u ? t === u ? (m.value = !1, this.scroll(n - o)) : this.scroll(i) : t === u ? this.scroll(l) : l < i ? this.scroll(l) : this.scroll(i);
+    const i = s - t, f = n - e;
+    t === u ? e === u ? (g.value = !1, this.scroll(n - o)) : this.scroll(f) : e === u ? this.scroll(i) : i < f ? this.scroll(i) : this.scroll(f);
   }
   align() {
-    const { move: s } = b();
+    const { move: s } = O();
     requestAnimationFrame(() => this.scroll(s));
   }
 }
-function A(g, { inertia: s }) {
-  const n = "level", e = window.screen.width - 1;
+function I(v, { inertia: s }) {
+  const n = "level";
   return (t) => {
-    const o = new O(g);
-    v.swiper = o, t.on(n, (l) => {
-      const { screenX: i } = l;
-      i === 0 ? o.move(-20) : i === e ? o.move(20) : o.move(t.move);
-    }), t.on("end", (l) => {
-      if (t.gesture !== n || l.timeStamp - t.moveEvent.timeStamp > 10)
+    const e = new S(v);
+    m.swiper = e, t.on(n, (o) => {
+      const { screenX: i } = o;
+      i ? i === b ? e.move(16) : e.move(t.move) : e.move(-16);
+    }), t.on("end", (o) => {
+      if (t.gesture !== n || o.timeStamp - t.moveEvent.timeStamp > 10)
         return;
       const { move: i } = t;
-      i > s ? o.previous(i) : i < -s && o.next(i);
+      i > s ? e.previous(i) : i < -s && e.next(i);
     });
   };
 }
 export {
-  O as Swiper,
-  A as default,
-  b as getMinMove,
+  S as Swiper,
+  I as default,
+  O as getMinMove,
   d as getRightBaseLine
 };

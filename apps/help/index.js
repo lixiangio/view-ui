@@ -14,7 +14,7 @@ const h = { class: "markdown-body" }, v = /* @__PURE__ */ a({
 }), $ = a({
   app: {
     name: p.help,
-    level: 200
+    level: 100
   },
   components: { Test: v },
   setup() {
