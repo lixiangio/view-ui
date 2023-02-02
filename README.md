@@ -1,6 +1,8 @@
-# View UI
+<a href="https://lixiangio.github.io/view-ui/" target="_blank"><img src="./screenshot/01-42-44.png" alt="Screenshot"></a>
 
-[简体中文](./README-ZH.md)
+English | [简体中文](./README-ZH.md)
+
+# View UI
 
 Lightweight cross-end, responsive micro-application development platform, through the unified use of mobile interaction logic in all terminal devices, to achieve a consistent design, development and use experience of multiple ends.
 
@@ -45,10 +47,6 @@ Using the current mainstream traditional vertical screen cell phones as the basi
 - Built-in simple and lightweight sub-application isolation scheme, supporting ES Component, Shadow DOM, IFrame three options.
 
 - Integrated PWA offline cache, installable to the desktop.
-
-## Preview
-
-<a href="https://lixiangio.github.io/view-ui/" target="_blank"><img src="./screenshot/01-42-44.png" alt="Screenshot"></a>
 
 ## What are the problems with traditional multi-terminal responsive layouts?
 

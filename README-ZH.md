@@ -1,3 +1,7 @@
+<a href="https://lixiangio.github.io/view-ui/" target="_blank"><img src="./screenshot/01-42-44.png" alt="Screenshot"></a>
+
+[English](./README-ZH.md) | 简体中文
+
 # View UI
 
 轻量级的跨端、响应式微应用开发平台，通过在所有终端设备中统一使用移动端的交互逻辑，实现多端一致的设计、开发和使用体验。
@@ -43,10 +47,6 @@
 - 内置简单、轻量级的子应用隔离方案， 支持 ES Component、Shadow DOM、IFrame 三种方案可选；
 
 - 集成 PWA 离线缓存，可安装至桌面；
-
-## 预览
-
-<a href="https://lixiangio.github.io/view-ui/" target="_blank"><img src="./screenshot/01-42-44.png" alt="Screenshot"></a>
 
 ## 传统的多端响应式布局存在什么问题？
 
