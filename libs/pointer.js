@@ -87,7 +87,9 @@ class f {
       }
   }
   parent() {
-    e.gesture = void 0, e = e.parentPointer, e.onstart(this.startEvent, this);
+    e.gesture = void 0;
+    const { parentPointer: t } = e;
+    t && (e = t, t.onstart(this.startEvent, this));
   }
   switch(t) {
     e.gesture = void 0, e = t, e.onstart(this.startEvent, this);

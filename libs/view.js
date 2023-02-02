@@ -1,210 +1,212 @@
-import { defineAsyncComponent as O } from "/view-ui/libs/vue.js";
-const $ = window.innerWidth < 850 ? "single" : "split", { language: v, languages: W } = window.VIEW, I = 16, c = 390;
-function L(t) {
-  return t[v] || t.en;
+const { language: v, languages: L } = window.VIEW;
+function P(n) {
+  return n[v] || n.en;
 }
-function T(t) {
-  const n = {};
-  for (const e in t) {
-    const o = t[e];
-    n[e] = o[v] || o.en;
+function T(n) {
+  const t = {};
+  for (const e in n) {
+    const o = n[e];
+    t[e] = o[v] || o.en;
   }
-  return n;
+  return t;
 }
-const p = {
-  100: c,
-  150: c * 1.5,
-  200: c * 2,
-  250: c * 2.5,
-  300: c * 3,
-  350: c * 3.5,
-  400: c * 4,
-  450: c * 4.5,
-  500: c * 5
-}, d = location.hash || "/", N = `${location.origin}`, w = "/view-ui/apps/", { path: b, query: j } = q(`${d}${location.search}`), l = {}, P = {}, m = sessionStorage[d], V = m ? m.split(",") : void 0, { userAgent: f } = navigator;
-let u;
-f.indexOf("Chrome") > -1 ? u = "Chrome" : f.indexOf("Safari") > -1 ? u = "Safari" : f.indexOf("Firefox") > -1 ? u = "Firefox" : f.indexOf("MSIE") > -1 && (u = "IE");
-const h = document.querySelector('meta[name="theme-color"]');
-function F(t) {
-  h && h.setAttribute("content", t);
+function E(n = "") {
+  const t = {}, [e, o] = n.split("?");
+  if (o) {
+    const i = o.split("&");
+    for (const s of i) {
+      const [a, x] = s.split("=");
+      t[a.trim()] = x.trim();
+    }
+  }
+  return { path: e, query: t };
+}
+const b = 16, w = 390, S = w + b, f = {};
+let u = S;
+const $ = w / 2;
+for (let n = 100; n <= 500; n += 50)
+  f[n] = u, u = u + $;
+const j = window.innerWidth < 850 ? "single" : "multi", p = location.hash || "/", V = `${location.origin}`, q = "/view-ui/apps/", { path: C, query: A } = E(`${p}${location.search}`), c = {}, D = {}, d = sessionStorage[p], M = d ? d.split(",") : void 0, { userAgent: r } = navigator;
+let l;
+r.indexOf("Chrome") > -1 ? l = "Chrome" : r.indexOf("Safari") > -1 ? l = "Safari" : r.indexOf("Firefox") > -1 ? l = "Firefox" : r.indexOf("MSIE") > -1 && (l = "IE");
+const m = document.querySelector('meta[name="theme-color"]');
+function k(n) {
+  m && m.setAttribute("content", n);
 }
 Object.assign(window.VIEW, {
-  path: b,
-  pathname: d,
-  query: j,
+  path: C,
+  pathname: p,
+  query: A,
   initDataPromise: void 0,
   instance: void 0,
   swiper: void 0,
   initOptions: void 0
 });
-const M = window.VIEW;
-function C(t) {
-  let n = "";
-  for (const o in t) {
-    const i = t[o];
-    i && (n += `${o}: ${i};`);
+const H = window.VIEW;
+function N(n) {
+  let t = "";
+  for (const o in n) {
+    const i = n[o];
+    i && (t += `${o}: ${i};`);
   }
   const e = document.createElement("style");
-  e.innerHTML = `:root {${n}}`, document.body.appendChild(e);
+  e.innerHTML = `:root {${t}}`, document.body.appendChild(e);
 }
-const { toString: g } = Object.prototype;
-function U(t) {
-  const n = t.extends;
-  if (n === void 0 || typeof n == "string") {
-    const o = l[n || "default"];
-    for (const i in o) {
-      const s = o[i], r = t[i];
-      if (r === void 0)
-        t[i] = s;
-      else if (g.call(s) === "[object Object]" && g.call(r) === "[object Object]")
-        for (const a in s)
-          r[a] === void 0 && (r[a] = s[a]);
+const { toString: h, hasOwnProperty: W } = Object.prototype;
+function O(n, t) {
+  for (const e in t)
+    if (W.call(n, e)) {
+      const o = t[e], i = n[e];
+      h.call(o) === "[object Object]" && h.call(i) === "[object Object]" && O(i, o);
+    } else
+      n[e] = t[e];
+}
+function R(n) {
+  const t = n.extends === void 0 ? "default" : n.extends;
+  if (typeof t == "string") {
+    const e = c[t];
+    if (e) {
+      const { brand: o, main: i, apps: s, multi: a } = e;
+      O(n, { brand: o, main: i, apps: s, multi: a });
     }
-  }
-  return t.var && C(t.var), t;
-}
-function k(t) {
-  const n = t.split("/");
-  for (n.pop(); n.length; ) {
-    const e = l[n.join("/")];
-    if (e)
-      return e;
-    n.pop();
-  }
-}
-function S(t) {
-  let n, e = "";
-  const o = t.split("/");
-  for (const i of o) {
-    e.length ? e += `/${i}` : e += i;
-    const s = l[e];
-    s && (n = s);
   }
   return n;
 }
-function H(t) {
-  let [n, e] = t.split("?");
-  const [o] = n;
-  (o === "/" || o === "#") && (n = n.slice(1));
-  const i = l[n];
+function U(n) {
+  const t = n.split("/");
+  for (t.pop(); t.length; ) {
+    const e = c[t.join("/")];
+    if (e)
+      return e;
+    t.pop();
+  }
+}
+function F(n) {
+  let t, e = "";
+  const o = n.split("/");
+  for (const i of o) {
+    e.length ? e += `/${i}` : e += i;
+    const s = c[e];
+    s && (t = s);
+  }
+  return t;
+}
+function _(n) {
+  let [t, e] = n.split("?");
+  const [o] = t;
+  (o === "/" || o === "#") && (t = t.slice(1));
+  const i = c[t];
   if (i)
     return i;
   {
-    let s = S(n);
+    let s = F(t);
     return s === void 0 && (s = {
-      url: n,
+      url: t,
       app: {
-        src: n,
-        name: n,
+        src: t,
+        name: t,
         level: 100,
         icon: "ficon-wendang",
         color: "#6fdfa5"
       },
       icon: "ficon-wendang",
       color: "#6fdfa5"
-    }, l[n] = s), s;
+    }, c[t] = s), s;
   }
 }
-function q(t = "") {
-  const [n, e] = t.split("?"), o = {};
-  if (e) {
-    const i = e.split("&");
-    for (const s of i) {
-      const [r, a] = s.split("=");
-      o[r.trim()] = a.trim();
-    }
-  }
-  return { path: n, query: o };
-}
-function y(t) {
-  const { styles: n } = t;
-  if (n && n.lock === void 0) {
-    n.lock = !0;
-    const e = n.join("");
+function g(n) {
+  const { styles: t } = n;
+  if (t && t.lock === void 0) {
+    t.lock = !0;
+    const e = t.join("");
     if (e) {
       const o = document.createElement("style");
       o.innerText = e, document.head.appendChild(o);
     }
   }
 }
-const x = () => import(
-  /* @vite-ignore */
-  `${w}404.js`
-), R = O(x);
-async function D(t) {
-  return t.endsWith("*") && (t = t.slice(0, -1) + $), import(
+async function y(n) {
+  return import(
     /* @vite-ignore */
-    `${w}${t}.js`
-  ).catch((n) => (console.error(n, t), x())).then(({ default: n }) => {
+    `${q}${n}.js`
+  ).then(({ default: t }) => {
     {
-      y(n);
-      const { components: e } = n;
+      g(t);
+      const { components: e } = t;
       if (e)
         for (const o in e)
-          y(e[o]);
+          g(e[o]);
     }
-    return n;
+    return t;
   });
 }
-function _(t) {
-  let n = 100;
-  for (const e in p) {
-    if (t <= p[e])
-      return n;
-    n = Number(e);
-  }
-  return n;
+async function z(n) {
+  return n.endsWith("*") && (n = n.slice(0, -1) + j), y(n).catch((t) => (console.error("\u5E94\u7528\u7EC4\u4EF6\u52A0\u8F7D\u5931\u8D25", t), y("404")));
 }
-class E {
+function B(n) {
+  let t = 100;
+  for (const e in f) {
+    if (n <= f[e])
+      return t;
+    t = Number(e);
+  }
+  return t;
+}
+class I {
   container = {};
-  on(n, e) {
+  on(t, e) {
     if (!(e instanceof Function))
       return;
     const { container: o } = this;
-    let i = o[n];
-    i || (i = o[n] = []), i.push(e);
+    let i = o[t];
+    i === void 0 && (i = o[t] = []), i.push(e);
   }
-  emit(n, ...e) {
-    const o = this.container[n];
-    if (o)
+  emit(t, ...e) {
+    const o = this.container[t];
+    if (o) {
+      const i = [];
       try {
-        for (const i of o)
-          i(...e);
-      } catch (i) {
-        console.error(i);
+        for (const s of o)
+          i.push(s(...e));
+      } catch (s) {
+        console.error(s);
       }
+      return i;
+    }
   }
 }
-const z = new E();
+const G = new I();
 export {
-  E as Events,
-  L as Lang,
+  I as Events,
+  P as Lang,
   T as Langs,
-  u as UA,
-  q as UrlParse,
-  y as addStyle,
-  w as appPath,
-  R as asyncComponent404,
-  N as baseURL,
-  M as default,
-  z as events,
-  U as extendsOptions,
-  I as gap,
-  H as getAppOptions,
-  S as getChildOptions,
-  _ as getLevel,
-  k as getParentOptions,
-  D as importAsyncComponent,
-  P as instances,
+  l as UA,
+  N as addRootStyleVar,
+  q as appPath,
+  V as baseURL,
+  g as createStyle,
+  H as default,
+  G as events,
+  R as extendsOptions,
+  b as gap,
+  _ as getAppOptions,
+  F as getChildOptions,
+  B as getLevel,
+  U as getParentOptions,
+  z as importApp,
+  y as importComponent,
+  D as instances,
   v as language,
-  W as languages,
-  c as minAppWidith,
-  $ as mode,
-  b as path,
-  d as pathname,
-  j as query,
-  F as setThemeColor,
-  V as urlHistory,
-  l as urls,
-  p as widths
+  L as languages,
+  S as minAppWidith,
+  w as minViewWidith,
+  j as mode,
+  C as path,
+  p as pathname,
+  A as query,
+  k as setThemeColor,
+  M as urlHistory,
+  E as urlParse,
+  c as urls,
+  f as widths
 };

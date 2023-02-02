@@ -1,157 +1,247 @@
-import { resolveComponent as m, openBlock as d, createElementBlock as _, Fragment as h, createVNode as i, withCtx as u, createElementVNode as e, toDisplayString as n, normalizeClass as z, normalizeStyle as C, unref as o, pushScopeId as f, popScopeId as $, defineComponent as y, renderList as F, createTextVNode as p, createCommentVNode as I } from "/view-ui/libs/vue.js";
-import { Langs as A, urls as N, languages as S, language as E, Lang as V } from "/view-ui/libs/view.js";
-import { open as B, pushState as L } from "/view-ui/libs/navigator.js";
-import { confirm as U } from "/view-ui/libs/viewui.js";
-const D = `.app .icon[data-v-80d4143c]{height:150px}.app .icon i[data-v-80d4143c]{font-size:50px}.app .versions .version .time[data-v-80d4143c]{color:#888}.app .cancel[data-v-80d4143c]{height:50px;background-color:#e9e9e9;margin:10px;border-radius:6px;cursor:pointer}.app .delete[data-v-80d4143c]{height:50px;background-color:red;margin:10px;border-radius:6px;color:#fff;cursor:pointer}
-`, b = (t, s) => {
-  const a = t.__vccOpts || t;
-  for (const [g, l] of s)
-    a[g] = l;
-  return a;
-}, x = (t) => (f("data-v-80d4143c"), t = t(), $(), t), P = { class: "navbar-center" }, Q = /* @__PURE__ */ x(() => /* @__PURE__ */ e("div", { class: "navbar-right" }, null, -1)), G = { class: "app" }, M = { class: "icon center" }, O = { class: "versions items" }, q = { class: "item header" }, T = /* @__PURE__ */ x(() => /* @__PURE__ */ e("div", { class: "version item" }, [
+import { resolveComponent as b, openBlock as _, createElementBlock as u, Fragment as m, createVNode as d, withCtx as p, createElementVNode as e, toDisplayString as o, normalizeClass as F, normalizeStyle as z, unref as i, pushScopeId as k, popScopeId as x, defineComponent as I, inject as P, renderList as w, createTextVNode as r } from "/view-ui/libs/vue.js";
+import { Lang as E, Langs as L, urls as B, languages as U, language as G } from "/view-ui/libs/view.js";
+import { open as M, pushState as Q } from "/view-ui/libs/navigator.js";
+import { confirm as S, message as V } from "/view-ui/libs/viewui.js";
+const D = E({
+  en: "This feature is temporarily unavailable!",
+  zh: "\u8BE5\u529F\u80FD\u6682\u4E0D\u53EF\u7528\uFF01"
+}), O = `.app .icon[data-v-de9e5305]{height:150px}.app .icon i[data-v-de9e5305]{font-size:50px}.app .versions .version .time[data-v-de9e5305]{color:#888}.app .cancel[data-v-de9e5305]{height:50px;background-color:#e9e9e9;margin:10px;border-radius:6px;cursor:pointer}.app .delete[data-v-de9e5305]{height:50px;background-color:red;margin:10px;border-radius:6px;color:#fff;cursor:pointer}
+`, C = (s, t) => {
+  const c = s.__vccOpts || s;
+  for (const [v, h] of t)
+    c[v] = h;
+  return c;
+}, A = (s) => (k("data-v-de9e5305"), s = s(), x(), s), T = { class: "navbar-center" }, j = /* @__PURE__ */ A(() => /* @__PURE__ */ e("i", { class: "ficon-xinchuangkou" }, null, -1)), q = { class: "app" }, H = { class: "icon center" }, J = { class: "items" }, K = { class: "item" }, R = /* @__PURE__ */ A(() => /* @__PURE__ */ e("div", null, "Path", -1)), W = { class: "item" }, X = /* @__PURE__ */ A(() => /* @__PURE__ */ e("div", null, "Extends", -1)), Y = { class: "versions items" }, Z = { class: "item header" }, ee = /* @__PURE__ */ A(() => /* @__PURE__ */ e("div", { class: "version item" }, [
   /* @__PURE__ */ e("div", null, "v0.0.1"),
   /* @__PURE__ */ e("div", { class: "time" }, "2022-10-24")
-], -1)), j = /* @__PURE__ */ x(() => /* @__PURE__ */ e("div", { class: "version item" }, [
+], -1)), se = /* @__PURE__ */ A(() => /* @__PURE__ */ e("div", { class: "version item" }, [
   /* @__PURE__ */ e("div", null, "v0.0.12"),
   /* @__PURE__ */ e("div", { class: "time" }, "2023-01-10")
-], -1)), H = { class: "cancel center" }, J = { class: "delete center" }, K = {
+], -1)), te = {
   __name: "app",
-  props: ["name", "icon", "color"],
-  setup(t) {
-    const s = t, a = A({
+  props: ["name", "icon", "color", "url", "extends"],
+  setup(s) {
+    const t = s, c = L({
       switchVersion: {
-        en: "Switch Version",
-        zh: "\u7248\u672C\u5207\u6362"
+        en: "Versions",
+        zh: "\u7248\u672C"
       },
-      unpublish: {
-        en: "Unpublish",
-        zh: "\u53D6\u6D88\u53D1\u5E03"
+      disable: {
+        en: "Disable App",
+        zh: "\u7981\u7528\u5E94\u7528"
       },
       deleteApp: {
         en: "Delete App",
         zh: "\u5220\u9664\u5E94\u7528"
       }
     });
-    return (g, l) => {
-      const r = m("Navbar");
-      return d(), _(h, null, [
-        i(r, null, {
-          default: u(() => [
-            e("div", P, n(s.name), 1),
-            Q
+    function v() {
+      S.open({
+        color: "warning",
+        body: E({ en: "Is the application disabled?", zh: "\u662F\u5426\u7981\u7528\u5E94\u7528\uFF1F" }),
+        confirm() {
+          V.warning(D, 3e3);
+        }
+      });
+    }
+    function h() {
+      S.open({
+        color: "warning",
+        body: E({ en: "Do you delete the application?", zh: "\u662F\u5426\u5220\u9664\u5E94\u7528\uFF1F" }),
+        confirm() {
+          V.warning(D, 3e3);
+        }
+      });
+    }
+    return (l, n) => {
+      const g = b("A"), a = b("Navbar");
+      return _(), u(m, null, [
+        d(a, null, {
+          default: p(() => [
+            e("div", T, o(t.name || t.url), 1),
+            d(g, {
+              class: "navbar-right",
+              href: t.url,
+              target: "_blank"
+            }, {
+              default: p(() => [
+                j
+              ]),
+              _: 1
+            }, 8, ["href"])
           ]),
           _: 1
         }),
-        e("div", G, [
-          e("div", M, [
+        e("div", q, [
+          e("div", H, [
             e("i", {
-              class: z(t.icon),
-              style: C({ color: s.color })
+              class: F(s.icon),
+              style: z({ color: t.color })
             }, null, 6)
           ]),
-          e("div", O, [
-            e("div", q, n(o(a).switchVersion), 1),
-            T,
-            j
+          e("div", J, [
+            e("div", K, [
+              R,
+              e("div", null, o(t.url), 1)
+            ]),
+            e("div", W, [
+              X,
+              e("div", null, o(t.extends || "default"), 1)
+            ])
           ]),
-          e("div", H, n(o(a).unpublish), 1),
-          e("div", J, n(o(a).deleteApp), 1)
+          e("div", Y, [
+            e("div", Z, o(i(c).switchVersion), 1),
+            ee,
+            se
+          ]),
+          e("div", {
+            class: "cancel center",
+            onClick: v
+          }, o(i(c).disable), 1),
+          e("div", {
+            class: "delete center",
+            onClick: h
+          }, o(i(c).deleteApp), 1)
         ])
       ], 64);
     };
   }
-}, R = /* @__PURE__ */ b(K, [["styles", [D]], ["__scopeId", "data-v-80d4143c"]]), k = (t) => (f("data-v-3fcada1b"), t = t(), $(), t), W = /* @__PURE__ */ k(() => /* @__PURE__ */ e("div", { class: "navbar-center" }, "Apps", -1)), X = /* @__PURE__ */ k(() => /* @__PURE__ */ e("div", { class: "navbar-right" }, null, -1)), Y = { class: "apps items" }, Z = ["onClick"], ee = { class: "left" }, te = /* @__PURE__ */ k(() => /* @__PURE__ */ e("div", { class: "right" }, "...", -1)), se = {
-  pages: { app: R }
-}, oe = /* @__PURE__ */ y({
-  ...se,
+}, ne = /* @__PURE__ */ C(te, [["styles", [O]], ["__scopeId", "data-v-de9e5305"]]), f = (s) => (k("data-v-29bc6e26"), s = s(), x(), s), oe = /* @__PURE__ */ f(() => /* @__PURE__ */ e("div", { class: "navbar-center" }, "Apps", -1)), ae = /* @__PURE__ */ f(() => /* @__PURE__ */ e("div", { class: "navbar-right" }, null, -1)), ie = { class: "apps items" }, ce = /* @__PURE__ */ f(() => /* @__PURE__ */ e("div", { class: "item header" }, "Main Apps", -1)), le = ["onClick"], de = { class: "left" }, re = /* @__PURE__ */ f(() => /* @__PURE__ */ e("div", { class: "right" }, "...", -1)), _e = { class: "apps items" }, ue = /* @__PURE__ */ f(() => /* @__PURE__ */ e("div", { class: "item header" }, "Sub Apps", -1)), pe = ["onClick"], he = { class: "left" }, ve = /* @__PURE__ */ f(() => /* @__PURE__ */ e("div", { class: "right" }, "...", -1)), ge = { class: "apps items" }, me = /* @__PURE__ */ f(() => /* @__PURE__ */ e("div", { class: "item header" }, "Group Apps", -1)), fe = ["onClick"], $e = { class: "left" }, be = /* @__PURE__ */ f(() => /* @__PURE__ */ e("div", { class: "right" }, "...", -1)), ye = {
+  pages: { app: ne }
+}, ke = /* @__PURE__ */ I({
+  ...ye,
   __name: "index",
-  setup(t) {
-    return (s, a) => {
-      const g = m("Navbar");
-      return d(), _(h, null, [
-        i(g, null, {
-          default: u(() => [
-            W,
-            X
+  setup(s) {
+    const t = P("router"), c = {}, v = {}, h = {};
+    for (const l in B) {
+      const n = B[l], { main: g } = n;
+      if (g) {
+        if (n.url === "default")
+          continue;
+        const { apps: a } = n;
+        (g.src || g.iframe) && (c[l] = n), a && a.urls && (v[l] = n);
+      } else
+        n.app && (h[l] = n);
+    }
+    return (l, n) => {
+      const g = b("Navbar");
+      return _(), u(m, null, [
+        d(g, null, {
+          default: p(() => [
+            oe,
+            ae
           ]),
           _: 1
         }),
-        e("div", Y, [
-          (d(!0), _(h, null, F(o(N), (l, r) => (d(), _(h, null, [
-            l.icon ? (d(), _("div", {
-              class: "item",
-              key: r,
-              onClick: (c) => s.$router.open("setting/apps/app", l)
-            }, [
-              e("div", ee, [
-                e("i", {
-                  class: z(l.icon),
-                  style: C({ color: l.color })
-                }, null, 6),
-                p(" " + n(l.name), 1)
-              ]),
-              te
-            ], 8, Z)) : I("", !0)
-          ], 64))), 256))
+        e("div", ie, [
+          ce,
+          (_(), u(m, null, w(c, (a, y) => e("div", {
+            key: y,
+            class: "item",
+            onClick: (N) => i(t).open("setting/apps/app", a)
+          }, [
+            e("div", de, [
+              e("i", {
+                class: F(a.main.icon),
+                style: z({ color: a.main.color })
+              }, null, 6),
+              r(" " + o(a.main.name), 1)
+            ]),
+            re
+          ], 8, le)), 64))
+        ]),
+        e("div", _e, [
+          ue,
+          (_(), u(m, null, w(h, (a, y) => e("div", {
+            class: "item",
+            key: y,
+            onClick: (N) => i(t).open("setting/apps/app", a)
+          }, [
+            e("div", he, [
+              e("i", {
+                class: F(a.app.icon),
+                style: z({ color: a.app.color })
+              }, null, 6),
+              r(" " + o(a.app.name), 1)
+            ]),
+            ve
+          ], 8, pe)), 64))
+        ]),
+        e("div", ge, [
+          me,
+          (_(), u(m, null, w(v, (a, y) => e("div", {
+            key: y,
+            class: "item",
+            onClick: (N) => i(t).open("setting/apps/app", a)
+          }, [
+            e("div", $e, [
+              e("i", {
+                class: F(a.main.icon),
+                style: z({ color: a.main.color })
+              }, null, 6),
+              r(" " + o(a.main.name), 1)
+            ]),
+            be
+          ], 8, fe)), 64))
         ])
       ], 64);
     };
   }
-}), ne = `.apps.items .item .left i[data-v-3fcada1b]{margin-right:5px}
-`, ae = /* @__PURE__ */ b(oe, [["styles", [ne]], ["__scopeId", "data-v-3fcada1b"]]), ce = (t) => (f("data-v-9c952799"), t = t(), $(), t), ie = { class: "language" }, le = { class: "items" }, re = ["onClick"], de = /* @__PURE__ */ ce(() => /* @__PURE__ */ e("i", { class: "ficon-confirm" }, null, -1)), _e = ["onClick"], ue = /* @__PURE__ */ y({
+}), xe = `.apps.items .item .left i[data-v-29bc6e26]{display:inline-block;width:25px}
+`, Ce = /* @__PURE__ */ C(ke, [["styles", [xe]], ["__scopeId", "data-v-29bc6e26"]]), Ae = (s) => (k("data-v-9c952799"), s = s(), x(), s), Fe = { class: "language" }, ze = { class: "items" }, we = ["onClick"], Ee = /* @__PURE__ */ Ae(() => /* @__PURE__ */ e("i", { class: "ficon-confirm" }, null, -1)), Ie = ["onClick"], Se = /* @__PURE__ */ I({
   __name: "language",
-  setup(t) {
-    function s(a) {
-      localStorage.lang = a, location.reload();
+  setup(s) {
+    function t(c) {
+      localStorage.lang = c, location.reload();
     }
-    return (a, g) => {
-      const l = m("Navbar");
-      return d(), _(h, null, [
-        i(l, { title: "Language" }),
-        e("div", ie, [
-          e("ul", le, [
-            (d(!0), _(h, null, F(o(S), (r, c) => (d(), _(h, null, [
-              r.code === o(E) ? (d(), _("li", {
-                key: c,
+    return (c, v) => {
+      const h = b("Navbar");
+      return _(), u(m, null, [
+        d(h, { title: "Language" }),
+        e("div", Fe, [
+          e("ul", ze, [
+            (_(!0), u(m, null, w(i(U), (l, n) => (_(), u(m, null, [
+              l.code === i(G) ? (_(), u("li", {
+                key: n,
                 class: "item active",
-                onClick: (w) => a.onSet(r.code)
+                onClick: (g) => c.onSet(l.code)
               }, [
-                p(n(r.name) + " ", 1),
-                de
-              ], 8, re)) : (d(), _("li", {
+                r(o(l.name) + " ", 1),
+                Ee
+              ], 8, we)) : (_(), u("li", {
                 key: 1,
                 class: "item",
-                onClick: (w) => s(r.code)
-              }, n(r.name), 9, _e))
+                onClick: (g) => t(l.code)
+              }, o(l.name), 9, Ie))
             ], 64))), 256))
           ])
         ])
       ], 64);
     };
   }
-}), pe = `.language .items .item.active i.ficon-confirm[data-v-9c952799]{position:absolute;top:18px;right:18px;font-size:15px;color:#39c79a}
-`, he = /* @__PURE__ */ b(ue, [["styles", [pe]], ["__scopeId", "data-v-9c952799"]]), ve = y({
+}), Ne = `.language .items .item.active i.ficon-confirm[data-v-9c952799]{position:absolute;top:18px;right:18px;font-size:15px;color:#39c79a}
+`, Be = /* @__PURE__ */ C(Se, [["styles", [Ne]], ["__scopeId", "data-v-9c952799"]]), Ve = I({
   data() {
     return {};
   }
-}), ge = "", me = (t) => (f("data-v-19eb3b6d"), t = t(), $(), t), fe = { class: "version" }, $e = /* @__PURE__ */ me(() => /* @__PURE__ */ e("div", null, "v1.0.0", -1));
-function be(t, s, a, g, l, r) {
-  const c = m("Navbar");
-  return d(), _("div", fe, [
-    i(c, { title: "Version" }),
-    $e
+}), De = "", Le = (s) => (k("data-v-19eb3b6d"), s = s(), x(), s), Pe = { class: "version" }, Ue = /* @__PURE__ */ Le(() => /* @__PURE__ */ e("div", null, "v1.0.0", -1));
+function Ge(s, t, c, v, h, l) {
+  const n = b("Navbar");
+  return _(), u("div", Pe, [
+    d(n, { title: "Version" }),
+    Ue
   ]);
 }
-const ye = /* @__PURE__ */ b(ve, [["render", be], ["styles", [ge]], ["__scopeId", "data-v-19eb3b6d"]]), v = (t) => (f("data-v-1badaedb"), t = t(), $(), t), xe = { class: "setting" }, ke = { class: "language items" }, ze = /* @__PURE__ */ v(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), Ce = { class: "items" }, Fe = /* @__PURE__ */ v(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), Ae = { class: "items" }, we = /* @__PURE__ */ v(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), Ie = { class: "items" }, Ne = /* @__PURE__ */ v(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), Se = /* @__PURE__ */ v(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), Ee = /* @__PURE__ */ v(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), Ve = /* @__PURE__ */ v(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), Be = { class: "items" }, Le = /* @__PURE__ */ v(() => /* @__PURE__ */ e("div", null, [
+const Me = /* @__PURE__ */ C(Ve, [["render", Ge], ["styles", [De]], ["__scopeId", "data-v-19eb3b6d"]]), $ = (s) => (k("data-v-1badaedb"), s = s(), x(), s), Qe = { class: "setting" }, Oe = { class: "language items" }, Te = /* @__PURE__ */ $(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), je = { class: "items" }, qe = /* @__PURE__ */ $(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), He = { class: "items" }, Je = /* @__PURE__ */ $(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), Ke = { class: "items" }, Re = /* @__PURE__ */ $(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), We = /* @__PURE__ */ $(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), Xe = /* @__PURE__ */ $(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), Ye = /* @__PURE__ */ $(() => /* @__PURE__ */ e("i", { class: "ficon-right" }, null, -1)), Ze = { class: "items" }, es = /* @__PURE__ */ $(() => /* @__PURE__ */ e("div", null, [
   /* @__PURE__ */ e("span", { style: { "font-weight": "normal" } }, "0.0.1 "),
   /* @__PURE__ */ e("i", { class: "ficon-right" })
-], -1)), Ue = { class: "items" }, De = {
-  pages: { apps: ae, language: he, version: ye }
-}, Pe = /* @__PURE__ */ y({
-  ...De,
+], -1)), ss = { class: "items" }, ts = {
+  pages: { apps: Ce, language: Be, version: Me }
+}, ns = /* @__PURE__ */ I({
+  ...ts,
   __name: "index",
-  setup(t) {
-    const s = A({
+  setup(s) {
+    const t = L({
       setting: {
         en: "Setting",
         zh: "\u8BBE\u7F6E"
@@ -193,123 +283,123 @@ const ye = /* @__PURE__ */ b(ve, [["render", be], ["styles", [ge]], ["__scopeId"
         zh: "\u9000\u51FA\u767B\u5F55"
       }
     });
-    function a() {
-      U.open({
+    function c() {
+      S.open({
         color: "warning",
-        body: V({ en: "Do you want to log out?", zh: "\u662F\u5426\u9000\u51FA\u767B\u5F55\uFF1F" }),
+        body: E({ en: "Do you want to log out?", zh: "\u662F\u5426\u9000\u51FA\u767B\u5F55\uFF1F" }),
         confirm() {
-          B("login"), L("login");
+          M("login"), Q("login");
         }
       });
     }
-    return (g, l) => {
-      const r = m("Navbar"), c = m("A");
-      return d(), _(h, null, [
-        i(r, {
-          title: o(s).setting
+    return (v, h) => {
+      const l = b("Navbar"), n = b("A");
+      return _(), u(m, null, [
+        d(l, {
+          title: i(t).setting
         }, null, 8, ["title"]),
-        e("div", xe, [
-          e("div", ke, [
-            i(c, {
+        e("div", Qe, [
+          e("div", Oe, [
+            d(n, {
               class: "item header",
               href: "setting/language"
             }, {
-              default: u(() => [
-                p(n(o(s).language) + " ", 1),
-                ze
+              default: p(() => [
+                r(o(i(t).language) + " ", 1),
+                Te
               ]),
               _: 1
             })
           ]),
-          e("div", Ce, [
-            i(c, {
+          e("div", je, [
+            d(n, {
               class: "item header",
               href: "setting/apps"
             }, {
-              default: u(() => [
-                p(n(o(s).appManagement) + " ", 1),
-                Fe
+              default: p(() => [
+                r(o(i(t).appManagement) + " ", 1),
+                qe
               ]),
               _: 1
             })
           ]),
-          e("div", Ae, [
-            i(c, {
+          e("div", He, [
+            d(n, {
               class: "item header",
               href: "group"
             }, {
-              default: u(() => [
-                p(n(o(s).appsGroup) + " ", 1),
-                we
+              default: p(() => [
+                r(o(i(t).appsGroup) + " ", 1),
+                Je
               ]),
               _: 1
             })
           ]),
-          e("div", Ie, [
-            i(c, {
+          e("div", Ke, [
+            d(n, {
               class: "item",
               href: "pages/faq"
             }, {
-              default: u(() => [
-                p(n(o(s).FAQ) + " ", 1),
-                Ne
+              default: p(() => [
+                r(o(i(t).FAQ) + " ", 1),
+                Re
               ]),
               _: 1
             }),
-            i(c, {
+            d(n, {
               class: "item",
               href: "pages/feedback"
             }, {
-              default: u(() => [
-                p(n(o(s).feedback) + " ", 1),
-                Se
+              default: p(() => [
+                r(o(i(t).feedback) + " ", 1),
+                We
               ]),
               _: 1
             }),
-            i(c, {
+            d(n, {
               class: "item",
               href: "pages/privacy"
             }, {
-              default: u(() => [
-                p(n(o(s).privacyPolicy) + " ", 1),
-                Ee
+              default: p(() => [
+                r(o(i(t).privacyPolicy) + " ", 1),
+                Xe
               ]),
               _: 1
             }),
-            i(c, {
+            d(n, {
               class: "item",
               href: "pages/about"
             }, {
-              default: u(() => [
-                p(n(o(s).about) + " ", 1),
-                Ve
+              default: p(() => [
+                r(o(i(t).about) + " ", 1),
+                Ye
               ]),
               _: 1
             })
           ]),
-          e("div", Be, [
-            i(c, {
+          e("div", Ze, [
+            d(n, {
               class: "item header",
               href: "setting/version"
             }, {
-              default: u(() => [
-                p(n(o(s).versionUpdates) + " ", 1),
-                Le
+              default: p(() => [
+                r(o(i(t).versionUpdates) + " ", 1),
+                es
               ]),
               _: 1
             })
           ]),
-          e("div", Ue, [
+          e("div", ss, [
             e("div", {
               class: "item header",
-              onClick: a
-            }, n(o(s).logout), 1)
+              onClick: c
+            }, o(i(t).logout), 1)
           ])
         ])
       ], 64);
     };
   }
-}), Qe = "", Te = /* @__PURE__ */ b(Pe, [["styles", [Qe]], ["__scopeId", "data-v-1badaedb"]]);
+}), os = "", ds = /* @__PURE__ */ C(ns, [["styles", [os]], ["__scopeId", "data-v-1badaedb"]]);
 export {
-  Te as default
+  ds as default
 };

@@ -9,14 +9,14 @@ const m = "", u = (e, t) => {
     return { id: new URLSearchParams(location.search).get("id") };
   }
 };
-function v(e, t, o, r, n, b) {
+function v(e, t, o, r, n, h) {
   const a = c("Navbar");
   return s(), l(_, null, [
-    d(a, { title: "Details" }),
+    d(a, { title: "Shop Details" }),
     i("div", null, p(n.id), 1)
   ], 64);
 }
-const g = /* @__PURE__ */ u(f, [["render", v], ["styles", [m]], ["__scopeId", "data-v-4bb7e2bd"]]);
+const x = /* @__PURE__ */ u(f, [["render", v], ["styles", [m]], ["__scopeId", "data-v-c6d8b230"]]);
 export {
-  g as default
+  x as default
 };

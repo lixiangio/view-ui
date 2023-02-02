@@ -1,90 +1,83 @@
-import { resolveComponent as g, openBlock as d, createElementBlock as r, Fragment as h, createVNode as m, createStaticVNode as T, createElementVNode as t, toDisplayString as o, pushScopeId as w, popScopeId as C, defineComponent as A, ref as E, reactive as z, watch as F, withCtx as b, TransitionGroup as B, renderList as I, withDirectives as L, withKeys as V, vModelText as K } from "/view-ui/libs/vue.js";
-import { Lang as G, Langs as O } from "/view-ui/libs/view.js";
-import k from "/view-ui/libs/network.js";
-import { notification as U } from "/view-ui/libs/viewui.js";
-import { back as S } from "/view-ui/libs/router.js";
-const q = "", x = (e, i) => {
-  const a = e.__vccOpts || e;
-  for (const [s, f] of i)
-    a[s] = f;
-  return a;
-}, H = {
+import { resolveComponent as b, openBlock as r, createElementBlock as l, Fragment as x, createVNode as m, createStaticVNode as L, createElementVNode as e, toDisplayString as c, pushScopeId as z, popScopeId as C, unref as y, defineComponent as E, inject as D, reactive as A, ref as S, watch as V, withCtx as w, TransitionGroup as K, renderList as F, withDirectives as H, withKeys as O, vModelText as G, nextTick as T, onMounted as U } from "/view-ui/libs/vue.js";
+import { Lang as q, Langs as J } from "/view-ui/libs/view.js";
+import j from "/view-ui/libs/network.js";
+import { notification as P } from "/view-ui/libs/viewui.js";
+import { back as Q } from "/view-ui/libs/router.js";
+const R = "", $ = (t, i) => {
+  const s = t.__vccOpts || t;
+  for (const [o, u] of i)
+    s[o] = u;
+  return s;
+}, W = {
   props: ["user"]
-}, J = /* @__PURE__ */ T('<div class="system"><div class="items"><div class="item"> A: 1 </div><div class="item"> B: 2 </div><div class="item"> C: 3 </div></div></div>', 1);
-function P(e, i, a, s, f, u) {
-  const l = g("Navbar");
-  return d(), r(h, null, [
-    m(l, {
-      title: a.user.name
+}, X = /* @__PURE__ */ L('<div class="system"><div class="items"><div class="item"> A: 1 </div><div class="item"> B: 2 </div><div class="item"> C: 3 </div></div></div>', 1);
+function Y(t, i, s, o, u, p) {
+  const a = b("Navbar");
+  return r(), l(x, null, [
+    m(a, {
+      title: s.user.name
     }, null, 8, ["title"]),
-    J
+    X
   ], 64);
 }
-const Q = /* @__PURE__ */ x(H, [["render", P], ["styles", [q]]]), R = `.userinfo .header[data-v-691d64a3]{display:flex;justify-content:space-between;align-items:center;padding:5px 14px 10px}.userinfo .header .avatar[data-v-691d64a3]{display:flex;justify-content:center;align-items:center;width:50px;height:50px;border-radius:50px;font-size:30px;background:#fff}
-`, W = {
+const Z = /* @__PURE__ */ $(W, [["render", Y], ["styles", [R]]]), ee = `.userinfo .header[data-v-dc46cc65]{display:flex;justify-content:space-between;padding:10px}.userinfo .header .header-left[data-v-dc46cc65]{display:flex;align-items:center}.userinfo .header .header-left .avatar[data-v-dc46cc65]{display:flex;justify-content:center;align-items:center;width:56px;height:56px;font-size:34px;background:#efefef;border-radius:50px;flex:none}.userinfo .header .header-left .user-name[data-v-dc46cc65]{margin-left:12px;font-size:14px}.userinfo .close[data-v-dc46cc65]{position:absolute;right:6px;top:6px;z-index:1;display:flex;justify-content:center;align-items:center;width:50px;height:50px;flex:none;cursor:pointer}
+`, te = {
+  app: {
+    style: { flex: "none" }
+  },
   props: ["user"],
-  app: {
-    style: {
-      flex: "none"
-    }
-  },
   methods: {
-    onclick(e) {
-      S(e.currentTarget);
+    onclick(t) {
+      Q(t.currentTarget);
     }
   }
-}, X = (e) => (w("data-v-691d64a3"), e = e(), C(), e), Y = { class: "userinfo" }, Z = { class: "header" }, tt = { class: "avatar" }, et = /* @__PURE__ */ X(() => /* @__PURE__ */ t("i", { class: "ficon-cha" }, null, -1)), st = [
-  et
+}, se = (t) => (z("data-v-dc46cc65"), t = t(), C(), t), ae = { class: "userinfo" }, ne = { class: "header" }, ie = { class: "header-left" }, oe = { class: "avatar" }, ce = { class: "user-name" }, de = /* @__PURE__ */ se(() => /* @__PURE__ */ e("i", { class: "ficon-cha" }, null, -1)), re = [
+  de
 ];
-function at(e, i, a, s, f, u) {
-  return d(), r("div", Y, [
-    t("div", Z, [
-      t("div", tt, o(a.user.avatar), 1),
-      t("div", null, o(a.user.name), 1),
-      t("div", {
-        class: "close",
-        onClick: i[0] || (i[0] = (...l) => u.onclick && u.onclick(...l))
-      }, st)
-    ])
+function le(t, i, s, o, u, p) {
+  return r(), l("div", ae, [
+    e("div", ne, [
+      e("div", ie, [
+        e("div", oe, c(s.user.avatar), 1),
+        e("div", ce, c(s.user.name), 1)
+      ])
+    ]),
+    e("div", {
+      class: "close",
+      onClick: i[0] || (i[0] = (...a) => p.onclick && p.onclick(...a))
+    }, re)
   ]);
 }
-const nt = /* @__PURE__ */ x(W, [["render", at], ["styles", [R]], ["__scopeId", "data-v-691d64a3"]]), it = `.setting .header[data-v-40c58d46]{display:flex;justify-content:space-between;align-items:center;padding:5px 14px 10px}.setting .header .title[data-v-40c58d46]{width:50px;height:50px}
-`, j = G({
-  en: "Monkey",
-  zh: "Monkey"
-}), ot = {
+const pe = /* @__PURE__ */ $(te, [["render", le], ["styles", [ee]], ["__scopeId", "data-v-dc46cc65"]]), fe = `.setting .header[data-v-4c0d827f]{display:flex;justify-content:space-between;align-items:center;padding:5px 14px 10px}.setting .header .title[data-v-4c0d827f]{width:50px;height:50px}
+`, ue = { class: "setting" }, M = q({
+  en: "Setting",
+  zh: "\u8BBE\u7F6E"
+}), _e = {
   app: {
-    name: j,
-    style: {
-      flex: "none"
-    }
-  },
-  setup() {
-    return { name: j };
-  },
-  methods: {
-    onclick(e) {
-      S(e.currentTarget);
-    }
+    name: M,
+    style: { flex: "none" }
   }
-}, ct = { class: "setting" };
-function dt(e, i, a, s, f, u) {
-  const l = g("Navbar");
-  return d(), r("div", ct, [
-    m(l, { title: "Setting" })
-  ]);
-}
-const rt = /* @__PURE__ */ x(ot, [["render", dt], ["styles", [it]], ["__scopeId", "data-v-40c58d46"]]), N = (e) => (w("data-v-16204693"), e = e(), C(), e), lt = { class: "navbar-center" }, pt = /* @__PURE__ */ N(() => /* @__PURE__ */ t("i", { class: "ficon-gengduo" }, null, -1)), ft = { class: "list" }, ut = {
+}, ve = /* @__PURE__ */ Object.assign(_e, {
+  __name: "setting",
+  setup(t) {
+    return (i, s) => {
+      const o = b("Navbar");
+      return r(), l("div", ue, [
+        m(o, { title: y(M) }, null, 8, ["title"])
+      ]);
+    };
+  }
+}), he = /* @__PURE__ */ $(ve, [["styles", [fe]], ["__scopeId", "data-v-4c0d827f"]]), N = (t) => (z("data-v-cc8b288d"), t = t(), C(), t), me = { class: "navbar-center" }, ge = /* @__PURE__ */ N(() => /* @__PURE__ */ e("i", { class: "ficon-gengduo" }, null, -1)), xe = {
   key: 0,
   class: "me"
-}, _t = ["onClick"], vt = { class: "message" }, mt = { class: "content" }, ht = {
+}, be = ["onClick"], ye = { class: "message" }, $e = { class: "content" }, ke = {
   key: 1,
   class: "he"
-}, gt = ["onClick"], xt = { class: "message" }, bt = { class: "content" }, $t = { class: "inputbox safe-bottom" }, yt = /* @__PURE__ */ N(() => /* @__PURE__ */ t("button", null, [
-  /* @__PURE__ */ t("i", { class: "ficon-yuyin" })
-], -1)), kt = ["onKeyup"], wt = /* @__PURE__ */ N(() => /* @__PURE__ */ t("button", null, [
-  /* @__PURE__ */ t("i", { class: "ficon-jia" })
-], -1)), Ct = {
+}, we = ["onClick"], je = { class: "message" }, ze = { class: "content" }, Ce = { class: "inputbox safe-bottom" }, Ne = /* @__PURE__ */ N(() => /* @__PURE__ */ e("button", null, [
+  /* @__PURE__ */ e("i", { class: "ficon-yuyin" })
+], -1)), Ie = ["onKeyup"], Se = /* @__PURE__ */ N(() => /* @__PURE__ */ e("button", null, [
+  /* @__PURE__ */ e("i", { class: "ficon-jia" })
+], -1)), Te = {
   app: {
     level: 200,
     style: {
@@ -92,37 +85,17 @@ const rt = /* @__PURE__ */ x(ot, [["render", dt], ["styles", [it]], ["__scopeId"
       flex: 1
     }
   },
-  pages: { userinfo: nt, setting: rt }
-}, Nt = /* @__PURE__ */ A({
-  ...Ct,
+  pages: { userinfo: pe, setting: he }
+}, Ee = /* @__PURE__ */ E({
+  ...Te,
   __name: "index",
   props: ["id", "user"],
-  setup(e) {
-    const i = e, a = E(""), s = z([]);
-    let f;
-    function u(p) {
-      if (p.length) {
-        const c = p.shift();
-        c && (f = setTimeout(() => {
-          s.push(c), u(p);
-        }, 1500));
-      }
-    }
-    function l(p) {
-      k.get(`/view-ui/api/message/${p}.json`).then(({ users: c, list: _ }) => {
-        const v = {};
-        for (const n of c)
-          v[n.id] = n;
-        for (const n of _)
-          n.user = v[n.uid];
-        u(_);
-      });
-    }
-    l(i.id), F(i, () => {
-      s.splice(0), clearTimeout(f), l(i.id);
-    });
-    function $() {
-      s.push({
+  setup(t) {
+    const i = t, s = D("router"), o = A([]);
+    let u;
+    const p = S(), a = S("");
+    function f() {
+      a.value !== "" && (o.push({
         uid: 1,
         user: {
           id: 1,
@@ -131,131 +104,158 @@ const rt = /* @__PURE__ */ x(ot, [["render", dt], ["styles", [it]], ["__scopeId"
           me: !0
         },
         content: a.value
-      }), a.value = "";
+      }), a.value = "", T(() => {
+        const { parentElement: d } = p.value;
+        d.scrollTo(0, d.scrollHeight);
+      }));
     }
-    return (p, c) => {
-      const _ = g("A"), v = g("Navbar");
-      return d(), r(h, null, [
-        m(v, null, {
-          default: b(() => [
-            t("div", lt, o(e.user.name), 1),
-            m(_, {
+    function k(d) {
+      if (d.length) {
+        const _ = d.shift();
+        _ && (o.push(_), T(() => {
+          const { parentElement: v } = p.value;
+          v.scrollTo(0, v.scrollHeight), u = setTimeout(() => k(d), 1500);
+        }));
+      }
+    }
+    function h(d) {
+      j.get(`/view-ui/api/message/${d}.json`).then(({ users: _, list: v }) => {
+        const g = {};
+        for (const n of _)
+          g[n.id] = n;
+        for (const n of v)
+          n.user = g[n.uid];
+        k(v);
+      });
+    }
+    return h(i.id), V(i, () => {
+      o.splice(0), clearTimeout(u), h(i.id);
+    }), (d, _) => {
+      const v = b("A"), g = b("Navbar");
+      return r(), l(x, null, [
+        m(g, null, {
+          default: w(() => [
+            e("div", me, c(t.user.name), 1),
+            m(v, {
               class: "navbar-right",
               href: "message/chat/setting"
             }, {
-              default: b(() => [
-                pt
+              default: w(() => [
+                ge
               ]),
               _: 1
             })
           ]),
           _: 1
         }),
-        t("div", ft, [
-          m(B, { name: "fade-in" }, {
-            default: b(() => [
-              (d(!0), r(h, null, I(s, ({ user: n, content: y }) => (d(), r(h, null, [
-                n.me ? (d(), r("div", ut, [
-                  t("div", {
+        e("div", {
+          class: "list",
+          ref_key: "$list",
+          ref: p
+        }, [
+          m(K, { name: "fade-in" }, {
+            default: w(() => [
+              (r(!0), l(x, null, F(o, ({ user: n, content: I }) => (r(), l(x, null, [
+                n.me ? (r(), l("div", xe, [
+                  e("div", {
                     class: "avatar",
-                    onClick: (M) => p.$router.open("message/chat/userinfo", { user: n })
-                  }, o(n.avatar), 9, _t),
-                  t("div", vt, [
-                    t("div", mt, o(y), 1)
+                    onClick: (B) => y(s).open("message/chat/userinfo", { user: n })
+                  }, c(n.avatar), 9, be),
+                  e("div", ye, [
+                    e("div", $e, c(I), 1)
                   ])
-                ])) : (d(), r("div", ht, [
-                  t("div", {
+                ])) : (r(), l("div", ke, [
+                  e("div", {
                     class: "avatar",
-                    onClick: (M) => p.$router.open("message/chat/userinfo", { user: n })
-                  }, o(n.avatar), 9, gt),
-                  t("div", xt, [
-                    t("div", bt, o(y), 1)
+                    onClick: (B) => y(s).open("message/chat/userinfo", { user: n })
+                  }, c(n.avatar), 9, we),
+                  e("div", je, [
+                    e("div", ze, c(I), 1)
                   ])
                 ]))
               ], 64))), 256))
             ]),
             _: 1
           })
-        ]),
-        t("div", $t, [
-          yt,
-          L(t("input", {
+        ], 512),
+        e("div", Ce, [
+          Ne,
+          H(e("input", {
             type: "text",
-            "onUpdate:modelValue": c[0] || (c[0] = (n) => a.value = n),
-            onKeyup: V($, ["enter"])
-          }, null, 40, kt), [
-            [K, a.value]
+            "onUpdate:modelValue": _[0] || (_[0] = (n) => a.value = n),
+            onKeyup: O(f, ["enter"])
+          }, null, 40, Ie), [
+            [G, a.value]
           ]),
-          wt
+          Se
         ])
       ], 64);
     };
   }
-}), jt = `.list[data-v-16204693]{padding-bottom:50px}.list .me[data-v-16204693],.list .he[data-v-16204693]{padding:15px 10px}.list .me .avatar[data-v-16204693],.list .he .avatar[data-v-16204693]{display:flex;justify-content:center;align-items:center;width:50px;height:50px;border-radius:50px;font-size:30px;background:#fff;cursor:pointer}.list .me .message[data-v-16204693],.list .he .message[data-v-16204693]{flex:1;max-width:600px}.list .me .message .content[data-v-16204693],.list .he .message .content[data-v-16204693]{padding:16px;border-radius:10px}.list .me .message .content[data-v-16204693]:before,.list .he .message .content[data-v-16204693]:before{position:absolute;top:20px;content:"";width:10px;height:10px;transform:rotate(45deg)}.list .me[data-v-16204693]{display:flex;flex-direction:row-reverse}.list .me .message .content[data-v-16204693]{margin:0 12px 0 40px;background:#a8f7a7}.list .me .message .content[data-v-16204693]:before{right:-5px;background-color:#a8f7a7}.list .he[data-v-16204693]{display:flex}.list .he .message .content[data-v-16204693]{margin:0 40px 0 12px;background:#fff}.list .he .message .content[data-v-16204693]:before{left:-5px;background-color:#fff}.inputbox[data-v-16204693]{position:fixed;display:flex;width:100%;height:50px;padding:6px 0;background-color:#f7f7f7;border-top:1px solid #f1f1f1}.inputbox input[data-v-16204693]{flex:1;background-color:#fff;border-radius:10px;border:none}.inputbox button[data-v-16204693]{width:38px;height:38px;border-radius:50px;background:#fff;margin:0 10px;border:1px solid #efefef}.inputbox button i[data-v-16204693]{font-size:18px}.fade-in-enter-from[data-v-16204693]{opacity:0}.fade-in-enter-active[data-v-16204693]{transition:opacity .2s ease}
-`, zt = /* @__PURE__ */ x(Nt, [["styles", [jt]], ["__scopeId", "data-v-16204693"]]), It = O({
-  message: {
-    en: "Message",
-    zh: "\u6D88\u606F"
-  },
-  system: {
-    en: "System Notification",
-    zh: "\u7CFB\u7EDF\u901A\u77E5"
-  },
-  logistics: {
-    en: "Logistics",
-    zh: "\u4EA4\u6613\u7269\u6D41"
-  }
-}), D = z([]);
-k.get("/view-ui/api/message/index.json").then((e) => {
-  k.get("/view-ui/api/user.json").then((i) => {
-    const a = {};
-    for (const s of i)
-      a[s.id] = s;
-    for (const s of e)
-      s.user = a[s.uid], D.push(s);
-  });
-});
-const St = {
-  pages: { chat: zt, system: Q },
-  setup() {
-    return { langs: It, list: D };
-  },
-  mounted() {
-    U.add({ title: "Message", time: 3e3 });
-  }
-}, Dt = `.message .list .item[data-v-5f26c467]{display:flex;height:75px;cursor:pointer}.message .list .item .avatar[data-v-5f26c467]{display:flex;justify-content:center;align-items:center;width:50px;height:50px;margin:10px 0 0 10px;background:#efefef;border-radius:50px;font-size:30px}.message .list .item .right[data-v-5f26c467]{flex:1;margin-left:10px;border-bottom:1px solid #f1f1f1;padding:0 5px}.message .list .item .right .title[data-v-5f26c467]{display:flex;justify-content:space-between;padding:12px 10px 0 0;height:30px}.message .list .item .right .title .name[data-v-5f26c467]{font-size:14px;font-weight:700}.message .list .item .right .title .time[data-v-5f26c467]{font-size:13px;color:#aaa}.message .list .item .right .content[data-v-5f26c467]{color:#888;padding:12px 12px 12px 0}
-`, Mt = (e) => (w("data-v-5f26c467"), e = e(), C(), e), Tt = { class: "message" }, At = { class: "navbar-center" }, Et = /* @__PURE__ */ Mt(() => /* @__PURE__ */ t("div", { class: "navbar-right" }, [
-  /* @__PURE__ */ t("i", { class: "ficon-gengduo" })
-], -1)), Ft = { class: "list" }, Bt = ["onClick"], Lt = { class: "avatar" }, Vt = { class: "right" }, Kt = { class: "title" }, Gt = { class: "name" }, Ot = { class: "time" }, Ut = { class: "content" };
-function qt(e, i, a, s, f, u) {
-  const l = g("Navbar");
-  return d(), r("div", Tt, [
-    m(l, null, {
-      default: b(() => [
-        t("div", At, o(s.langs.message), 1),
-        Et
-      ]),
-      _: 1
-    }),
-    t("div", Ft, [
-      (d(!0), r(h, null, I(s.list, ({ id: $, type: p, user: c, time: _, content: v }, n) => (d(), r("div", {
-        key: n,
-        class: "item",
-        onClick: (y) => e.$router.open(`message/${p}`, { id: $, user: c })
-      }, [
-        t("div", Lt, o(c.avatar), 1),
-        t("div", Vt, [
-          t("div", Kt, [
-            t("div", Gt, o(c.name), 1),
-            t("div", Ot, o(_), 1)
+}), De = `.list[data-v-cc8b288d]{padding-bottom:50px}.list .me[data-v-cc8b288d],.list .he[data-v-cc8b288d]{padding:15px 10px}.list .me .avatar[data-v-cc8b288d],.list .he .avatar[data-v-cc8b288d]{display:flex;justify-content:center;align-items:center;width:50px;height:50px;border-radius:50px;font-size:30px;background:#fff;cursor:pointer}.list .me .message[data-v-cc8b288d],.list .he .message[data-v-cc8b288d]{flex:1;max-width:600px}.list .me .message .content[data-v-cc8b288d],.list .he .message .content[data-v-cc8b288d]{min-height:45px;line-height:23px;padding:12px 15px;border-radius:10px;color:#333}.list .me .message .content[data-v-cc8b288d]:before,.list .he .message .content[data-v-cc8b288d]:before{position:absolute;top:20px;content:"";width:10px;height:10px;transform:rotate(45deg)}.list .me[data-v-cc8b288d]{display:flex;flex-direction:row-reverse}.list .me .message .content[data-v-cc8b288d]{margin:0 12px 0 40px;background:#a8f7a7}.list .me .message .content[data-v-cc8b288d]:before{right:-5px;background-color:#a8f7a7}.list .he[data-v-cc8b288d]{display:flex}.list .he .message .content[data-v-cc8b288d]{margin:0 40px 0 12px;background:#fff}.list .he .message .content[data-v-cc8b288d]:before{left:-5px;background-color:#fff}.inputbox[data-v-cc8b288d]{position:fixed;display:flex;width:100%;height:50px;padding:6px 0;background-color:#f7f7f7;border-top:1px solid #f1f1f1}.inputbox input[data-v-cc8b288d]{flex:1;background-color:#fff;border-radius:10px;border:none}.inputbox button[data-v-cc8b288d]{width:38px;height:38px;border-radius:50px;background:#fff;margin:0 10px;border:1px solid #efefef}.inputbox button i[data-v-cc8b288d]{font-size:18px}.fade-in-enter-from[data-v-cc8b288d]{opacity:0}.fade-in-enter-active[data-v-cc8b288d]{transition:opacity .2s ease}
+`, Ae = /* @__PURE__ */ $(Ee, [["styles", [De]], ["__scopeId", "data-v-cc8b288d"]]), Fe = (t) => (z("data-v-321060c2"), t = t(), C(), t), Me = { class: "message" }, Be = { class: "navbar-center" }, Le = /* @__PURE__ */ Fe(() => /* @__PURE__ */ e("div", { class: "navbar-right" }, [
+  /* @__PURE__ */ e("i", { class: "ficon-gengduo" })
+], -1)), Ve = { class: "list" }, Ke = ["onClick"], He = { class: "avatar" }, Oe = { class: "right" }, Ge = { class: "title" }, Ue = { class: "name" }, qe = { class: "time" }, Je = { class: "content" }, Pe = {
+  pages: { chat: Ae, system: Z }
+}, Qe = /* @__PURE__ */ E({
+  ...Pe,
+  __name: "index",
+  setup(t) {
+    const i = J({
+      message: {
+        en: "Message",
+        zh: "\u6D88\u606F"
+      },
+      system: {
+        en: "System Notification",
+        zh: "\u7CFB\u7EDF\u901A\u77E5"
+      },
+      logistics: {
+        en: "Logistics",
+        zh: "\u4EA4\u6613\u7269\u6D41"
+      }
+    }), s = A([]), o = D("router");
+    return j.get("/view-ui/api/message/index.json").then((u) => {
+      j.get("/view-ui/api/user.json").then((p) => {
+        const a = {};
+        for (const f of p)
+          a[f.id] = f;
+        for (const f of u)
+          f.user = a[f.uid], s.push(f);
+      });
+    }), U(() => {
+      P.add({ title: "Message", time: 3e3 });
+    }), (u, p) => {
+      const a = b("Navbar");
+      return r(), l("div", Me, [
+        m(a, null, {
+          default: w(() => [
+            e("div", Be, c(y(i).message), 1),
+            Le
           ]),
-          t("div", Ut, o(v), 1)
+          _: 1
+        }),
+        e("div", Ve, [
+          (r(!0), l(x, null, F(s, ({ id: f, type: k, user: h, time: d, content: _ }, v) => (r(), l("div", {
+            key: v,
+            class: "item",
+            onClick: (g) => y(o).open(`message/${k}`, { id: f, user: h })
+          }, [
+            e("div", He, c(h.avatar), 1),
+            e("div", Oe, [
+              e("div", Ge, [
+                e("div", Ue, c(h.name), 1),
+                e("div", qe, c(d), 1)
+              ]),
+              e("div", Je, c(_), 1)
+            ])
+          ], 8, Ke))), 128))
         ])
-      ], 8, Bt))), 128))
-    ])
-  ]);
-}
-const Wt = /* @__PURE__ */ x(St, [["render", qt], ["styles", [Dt]], ["__scopeId", "data-v-5f26c467"]]);
+      ]);
+    };
+  }
+}), Re = `.message .list .item[data-v-321060c2]{display:flex;height:75px;cursor:pointer}.message .list .item .avatar[data-v-321060c2]{display:flex;justify-content:center;align-items:center;width:50px;height:50px;margin:10px 0 0 10px;background:#efefef;border-radius:50px;font-size:30px}.message .list .item .right[data-v-321060c2]{flex:1;margin-left:10px;border-bottom:1px solid #f1f1f1;padding:0 5px}.message .list .item .right .title[data-v-321060c2]{display:flex;justify-content:space-between;padding:12px 10px 0 0;height:30px}.message .list .item .right .title .name[data-v-321060c2]{font-size:14px;font-weight:700}.message .list .item .right .title .time[data-v-321060c2]{font-size:13px;color:#aaa}.message .list .item .right .content[data-v-321060c2]{color:#888;padding:12px 12px 12px 0}
+`, tt = /* @__PURE__ */ $(Qe, [["styles", [Re]], ["__scopeId", "data-v-321060c2"]]);
 export {
-  Wt as default
+  tt as default
 };

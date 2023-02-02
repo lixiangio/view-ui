@@ -1,18 +1,18 @@
-import m, { instances as c, gap as E } from "/view-ui/libs/view.js";
-import { apps as L, appsState as g } from "/view-ui/libs/state.js";
-import { screenWidth as b } from "/view-ui/libs/pointer.js";
-const { MIN_SAFE_INTEGER: u, MAX_SAFE_INTEGER: a } = Number;
-function d() {
-  return window.innerWidth - m.initOptions.apps.right;
+import g, { instances as a } from "/view-ui/libs/view.js";
+import { apps as L, appsState as v } from "/view-ui/libs/state.js";
+import { screenWidth as E } from "/view-ui/libs/pointer.js";
+const { MIN_SAFE_INTEGER: u, MAX_SAFE_INTEGER: c } = Number;
+function M() {
+  return window.innerWidth - g.initOptions.apps.padding[1];
 }
-function O() {
-  const { left: v } = m.initOptions.apps, s = d();
-  let n = a, t = a, e, o;
-  for (const i in c) {
-    const f = c[i], { left: p, width: l } = f, h = v - p, r = Math.abs(h) - Math.abs(n);
+function b() {
+  const [m] = g.initOptions.apps.padding, s = M();
+  let n = c, t = c, e, o;
+  for (const i in a) {
+    const f = a[i], { left: p, width: l } = f, h = m - p, r = Math.abs(h) - Math.abs(n);
     (r < 0 || r === 0 && h > n) && (n = h, e = f);
-    const M = s - (p + l), w = Math.abs(M) - Math.abs(t);
-    (w < 0 || w === 0 && M < t) && (t = M, o = f);
+    const d = s - (p + l), w = Math.abs(d) - Math.abs(t);
+    (w < 0 || w === 0 && d < t) && (t = d, o = f);
   }
   return Math.abs(n) <= Math.abs(t) ? {
     move: n,
@@ -22,22 +22,22 @@ function O() {
     container: o
   };
 }
-class S {
+class O {
   el;
   constructor(s) {
     this.el = s;
   }
   move(s) {
-    for (const n in c) {
-      const t = c[n];
+    for (const n in a) {
+      const t = a[n];
       t.left += s;
       const { style: e } = t.$el;
       e.transition = "unset", e.transform = `translate3d(${t.left}px, 0, 0)`;
     }
   }
   scroll(s) {
-    for (const n in c) {
-      const t = c[n];
+    for (const n in a) {
+      const t = a[n];
       t.left += s;
       const { style: e } = t.$el;
       e.transition = "", e.transform = `translate3d(${t.left}px, 0, 0)`;
@@ -45,46 +45,46 @@ class S {
   }
   next() {
     if (L.length === 0) {
-      g.value = !1;
+      v.value = !1;
       return;
     }
-    const { left: s } = m.initOptions.apps, n = d();
-    let t = a, e = a, o = u;
-    for (const p in c) {
-      const { left: l, width: h } = c[p], r = l + h;
+    const [s] = g.initOptions.apps.padding, n = M();
+    let t = c, e = c, o = u;
+    for (const p in a) {
+      const { left: l, width: h } = a[p], r = l + h;
       r > o && (o = r), l > s && l < t && (t = l), r > n && r < e && (e = r);
     }
     const i = s - t, f = n - e;
-    t === a ? e === a ? (g.value = !1, this.scroll(s - o - E)) : this.scroll(f) : e === a ? this.scroll(i) : i > f ? this.scroll(i) : this.scroll(f);
+    t === c ? e === c ? (v.value = !1, this.scroll(s - o)) : this.scroll(f) : e === c ? this.scroll(i) : i > f ? this.scroll(i) : this.scroll(f);
   }
   previous() {
     if (L.length === 0) {
-      g.value = !1;
+      v.value = !1;
       return;
     }
-    const { left: s } = m.initOptions.apps, n = d();
-    let t = u, e = u, o = a;
-    for (const p in c) {
-      const { left: l, width: h } = c[p];
+    const [s] = g.initOptions.apps.padding, n = M();
+    let t = u, e = u, o = c;
+    for (const p in a) {
+      const { left: l, width: h } = a[p];
       l < o && (o = l), l < s && l > t && (t = l);
       const r = l + h;
       r < n && r > e && (e = r);
     }
     const i = s - t, f = n - e;
-    t === u ? e === u ? (g.value = !1, this.scroll(n - o)) : this.scroll(f) : e === u ? this.scroll(i) : i < f ? this.scroll(i) : this.scroll(f);
+    t === u ? e === u ? (v.value = !1, this.scroll(n - o)) : this.scroll(f) : e === u ? this.scroll(i) : i < f ? this.scroll(i) : this.scroll(f);
   }
   align() {
-    const { move: s } = O();
+    const { move: s } = b();
     requestAnimationFrame(() => this.scroll(s));
   }
 }
-function I(v, { inertia: s }) {
+function B(m, { inertia: s }) {
   const n = "level";
   return (t) => {
-    const e = new S(v);
-    m.swiper = e, t.on(n, (o) => {
+    const e = new O(m);
+    g.swiper = e, t.on(n, (o) => {
       const { screenX: i } = o;
-      i ? i === b ? e.move(16) : e.move(t.move) : e.move(-16);
+      i ? i === E ? e.move(20) : e.move(t.move) : e.move(-20);
     }), t.on("end", (o) => {
       if (t.gesture !== n || o.timeStamp - t.moveEvent.timeStamp > 10)
         return;
@@ -94,8 +94,8 @@ function I(v, { inertia: s }) {
   };
 }
 export {
-  S as Swiper,
-  I as default,
-  O as getMinMove,
-  d as getRightBaseLine
+  O as Swiper,
+  B as default,
+  b as getMinMove,
+  M as getRightBaseLine
 };

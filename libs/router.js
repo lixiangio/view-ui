@@ -1,4 +1,4 @@
-import { UrlParse as u, instances as f } from "/view-ui/libs/view.js";
+import { urlParse as u, instances as f } from "/view-ui/libs/view.js";
 function b(r) {
   const t = new Event("back", { bubbles: !0 });
   r.parentElement.dispatchEvent(t);

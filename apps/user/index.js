@@ -1,33 +1,43 @@
-import { openBlock as o, createElementBlock as c, defineComponent as _, createElementVNode as d, createVNode as s, unref as p, pushScopeId as f, popScopeId as l } from "/view-ui/libs/vue.js";
-import { Image as h } from "/view-ui/libs/viewui.js";
-const u = `.test[data-v-a5d67ddb]{font-size:20px;color:#fff;padding:8px;background-color:#858585}
-`, r = (e, t) => {
-  const a = e.__vccOpts || e;
-  for (const [n, i] of t)
-    a[n] = i;
-  return a;
-}, v = {}, m = { class: "test" };
-function x(e, t) {
-  return o(), c("div", m, "Setup style test");
+import { openBlock as n, createElementBlock as r, defineComponent as _, createElementVNode as s, createVNode as o, unref as l, pushScopeId as f, popScopeId as h } from "/view-ui/libs/vue.js";
+import { back as u } from "/view-ui/libs/router.js";
+import { Image as x } from "/view-ui/libs/viewui.js";
+const m = `.test[data-v-33c1af75]{font-size:20px;color:#666;padding:8px}
+`, i = (e, a) => {
+  const t = e.__vccOpts || e;
+  for (const [c, p] of a)
+    t[c] = p;
+  return t;
+}, v = {}, g = { class: "test" };
+function y(e, a) {
+  return n(), r("div", g, "Setup style test");
 }
-const g = /* @__PURE__ */ r(v, [["render", x], ["styles", [u]], ["__scopeId", "data-v-a5d67ddb"]]), b = (e) => (f("data-v-b63ce7a9"), e = e(), l(), e), y = { class: "user" }, k = { class: "header item" }, I = /* @__PURE__ */ b(() => /* @__PURE__ */ d("div", { class: "name" }, "View Ui", -1)), w = /* @__PURE__ */ _({
+const k = /* @__PURE__ */ i(v, [["render", y], ["styles", [m]], ["__scopeId", "data-v-33c1af75"]]), d = (e) => (f("data-v-a5aec116"), e = e(), h(), e), I = { class: "user" }, b = { class: "header item" }, w = /* @__PURE__ */ d(() => /* @__PURE__ */ s("div", { class: "name" }, "View Ui", -1)), S = /* @__PURE__ */ d(() => /* @__PURE__ */ s("i", { class: "ficon-cha" }, null, -1)), z = [
+  S
+], V = /* @__PURE__ */ _({
   __name: "index",
   setup(e) {
-    return (t, a) => (o(), c("div", y, [
-      d("div", k, [
-        s(p(h), {
+    function a(t) {
+      u(t.currentTarget);
+    }
+    return (t, c) => (n(), r("div", I, [
+      s("div", b, [
+        o(l(x), {
           class: "avatar",
           src: "image/avatar.png",
           read: "",
           round: ""
         }),
-        I
+        w
       ]),
-      s(g)
+      s("div", {
+        class: "close",
+        onClick: a
+      }, z),
+      o(k)
     ]));
   }
-}), S = `.user[data-v-b63ce7a9]{height:100%;background-color:#f5f5f5}.user .header[data-v-b63ce7a9]{height:80px;padding:10px;display:flex;align-items:center;background-color:#fff}.user .header .avatar[data-v-b63ce7a9]{width:50px;height:50px;border-radius:50px;overflow:hidden;margin:0 20px 0 10px}.user .header .name[data-v-b63ce7a9]{font-size:14px}
-`, z = /* @__PURE__ */ r(w, [["styles", [S]], ["__scopeId", "data-v-b63ce7a9"]]);
+}), $ = `.user[data-v-a5aec116]{height:100%;background-color:#f5f5f5}.user .header[data-v-a5aec116]{height:80px;padding:10px;display:flex;align-items:center;background-color:#fff}.user .header .avatar[data-v-a5aec116]{width:60px;height:60px;border-radius:60px;overflow:hidden;margin:0 20px 0 10px}.user .header .name[data-v-a5aec116]{font-size:14px}.user .close[data-v-a5aec116]{z-index:1;position:absolute;right:6px;top:6px;display:flex;justify-content:center;align-items:center;width:45px;height:45px;flex:none;cursor:pointer}
+`, N = /* @__PURE__ */ i(V, [["styles", [$]], ["__scopeId", "data-v-a5aec116"]]);
 export {
-  z as default
+  N as default
 };
