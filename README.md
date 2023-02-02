@@ -1,99 +1,101 @@
 # View UI
 
-轻量级的跨端、响应式微应用开发平台，通过在所有终端设备中统一使用移动端的交互逻辑，实现多端一致的设计、开发和使用体验。
+[简体中文](./README-ZH.md)
 
-以目前主流的传统竖屏手机作为适配基础，通过窗口层叠、平铺、伸缩等排版方式，实现对折叠屏、Pad、PC、头显等多种终端设备的广泛适配；
+Lightweight cross-end, responsive micro-application development platform, through the unified use of mobile interaction logic in all terminal devices, to achieve a consistent design, development and use experience of multiple ends.
 
-> 该项目处于早期实验、探索阶段，部分功能尚未稳定和完善，仅用作预览，暂不开放源码。
+Using the current mainstream traditional vertical screen cell phones as the basis for adaptation, and through window cascading, tiling, telescoping and other typesetting methods to achieve a wide range of adaptations for folding screens, pads, PCs, headsets and other terminal devices.
 
-## 特性
+> The project is in the early experimental and exploratory stage, some functions are not yet stable and perfect, only for preview, not open source for now.
 
-- 支持多应用分屏显示，通过在窗口中建立虚拟分区，同时显示多个应用，可充分发挥宽屏的显示优势；
+## Features
 
-- 宽屏模式下，应用窗口支持弹性伸缩和手势切换，最大化利用宽屏中的空闲可视区域；
+- Support multi-application split-screen display, by creating virtual partitions in the window to display multiple applications at the same time, which can give full play to the display advantages of widescreen.
 
-- 支持多应用分层显示，应用可以在主应用层（固定全屏）、子应用层（浮动、弹性分屏）或自定义层之间自由挂载；
+- Widescreen mode, the application window supports elastic scaling and gesture switching, maximizing the use of the free viewing area in the widescreen.
 
-- 使用可继承的动态应用注册表，继承可减少重复配置项，动态注册表可避免每次修改配置后都需要重新编译；
+- support multi-application layered display, applications can be freely mounted between the main application layer (fixed full-screen), sub-application layers (floating, elastic split-screen) or custom layers.
 
-- 支持动态注册和分包发布应用，无需预设路由，即可通过文件路径直接动态访问未注册的应用；
+- using inheritable dynamic application registry, inheritance can reduce duplicate configuration items, and dynamic registry can avoid the need to recompile after each configuration modification.
 
-- 支持不同终端环境的差异化渲染，通过可选的同构或异构模式匹配，实现局部差异化适配；
+- support for dynamic registration and sub-package release of applications, which can directly and dynamically access unregistered applications via file paths without pre-defined routing.
 
-- 支持鼠标手势操作，保持多终端一致的用户操作体验，避免产生不必要的学习和适应成本；
+- support for differential rendering of different terminal environments, with optional homogeneous or heterogeneous pattern matching to achieve localized differential adaptation.
 
-- 支持跨 IFrame 手势操作，保持整体交互行为的一致性（跨域无效）；
+- Support mouse gestures to maintain a consistent user experience across multiple terminals and avoid unnecessary learning and adaptation costs.
 
-- 基于事件的跨应用数据总线，实现多应用间的数据流转，降低系统耦合度（主要针对独立打包的应用）；
+- Support cross IFrame gesture operations to maintain the consistency of overall interaction behavior (not valid across domains).
 
-- 可搭配常规布局的应用或网站使用，在不破坏原项目主体布局的基础上，扩展新的交互界面。
+- Event-based cross-application data bus to realize data flow between multiple applications and reduce system coupling (mainly for independently packaged applications).
 
-- 针对不同应用场景，子应用支持左、右浮动和靠右固定三种排版方式；
+- Can be used with conventional layout applications or websites to extend new interactive interfaces without destroying the main layout of the original project.
 
-- 基于 Vite、TS 构建，主应用使用 Vue 3 开发，子应用默认加载为 Vue 组件；
+- for different application scenarios, the sub-application supports three types of layout: left, right floating and fixed to the right.
 
-- 支持 React、Solid 等框架开发子应用（仅提供用于自定义挂载的 DOM 节点）；
+- Built on Vite, TS, the main application is developed using Vue 3, and the sub-application is loaded as a Vue component by default.
 
-- 支持页面局部响应式布局，作为 CSS @container 特性广泛兼容前的过渡方案；
+- support for React, Solid and other frameworks to develop sub-applications (only provide DOM nodes for custom mounts).
 
-- 平台整体由应用基座、微应用和公共依赖三部分构成，三者均可独立构建和发布；
+- support for partially responsive layout of pages as a transition solution before the CSS @container feature is widely compatible.
 
-- 不同子应用之间公共组件、路由相互隔离，每个子应用均拥有独立的 Router、Navigator 实例；
+- the platform as a whole consists of three parts: application base, micro-application and public dependencies, all three of which can be built and released independently.
 
-- 内置简单、轻量级的子应用隔离方案， 支持 ES Component、Shadow DOM、IFrame 三种方案可选；
+- Isolation of public components and routing among different sub-applications, with each sub-application having independent Router and Navigator instances.
 
-- 集成 PWA 离线缓存，可安装至桌面；
+- Built-in simple and lightweight sub-application isolation scheme, supporting ES Component, Shadow DOM, IFrame three options.
 
-## 预览
+- Integrated PWA offline cache, installable to the desktop.
+
+## Preview
 
 <a href="https://lixiangio.github.io/view-ui/" target="_blank"><img src="./screenshot/01-42-44.png" alt="Screenshot"></a>
 
-## 传统的多端响应式布局存在什么问题？
+## What are the problems with traditional multi-terminal responsive layouts?
 
-在基于 CSS @media screen 的传统多端响应式布局中，通常会选择将 PC 或移动端中的一个作为主要适配目标，其它次要终端往往会选择折中处理，技术上很难做到真正的多端兼顾。
+In a traditional CSS @media screen based multi-end responsive layout, one of the PC or mobile endpoints is usually chosen as the primary adaptation target, while other secondary endpoints are often chosen as a compromise, making it technically difficult to achieve a true multi-endpoint balance.
 
-虽然传统响应式布局也能实现高度差异化的交互效果，但是这往往也伴随着代码的强耦合，以及大量的冗余代码，出现多端代码互相纠缠不清的局面，随着系统差异化和复杂度的持续增加，最终会产生难以维护的代码。
+Although the traditional responsive layout can also achieve highly differentiated interaction, it is often accompanied by strong coupling of code and a large amount of redundant code, resulting in a situation where the code of multiple ends is entangled with each other, and as the system differentiation and complexity continue to increase, it will eventually produce code that is difficult to maintain.
 
-在实际应用案例中，传统响应式布局主要还是应用于一些相对简单的跨平台差异化布局和交互场景中，面对复杂场景时依然存在明显的局限性。
+In the actual application cases, the traditional responsive layout is mainly used in some relatively simple cross-platform differentiated layout and interaction scenarios, and there are still obvious limitations in the face of complex scenarios.
 
-## View UI 如何解决多端适配的问题？
+## How can View UI solve the problem of multi-end adaptation?
 
-目前一套代码适配多端，主要面临的问题是如何实现对各种不同屏幕尺寸的差异化兼容，View UI 尝试解决以上问题的思路是为多端环境制定具有统一标准的通用虚拟窗口（使用具有相同最小尺寸和交互逻辑的虚拟屏），不用或少用差异化代码，来保持应用行为的整体一致性和可靠性，在简少应用层代码量的同时也降低了系统复杂度。
+View UI tries to solve the above problem by developing a common virtual window with unified standard for multi-end environment (using virtual screens with the same minimum size and interaction logic) and using no or less differentiated code to maintain the overall consistency and reliability of application behavior, which reduce the amount of application layer code while also reducing the complexity of the system.
 
-其次，是要统一不同输入设备间存在的交互行为差异。一致的屏幕尺寸需要匹配一致的输入行为，才能产生跨端一致的使用体验，View UI 提供 Pointer 模块作为统一的输入事件代理层，用于抹平鼠标、触屏等不同类型指针设备的行为差异。
+Second, it is to unify the differences in interaction behaviors that exist between different input devices. The consistent screen size needs to match the consistent input behavior to produce a consistent experience across ends. View UI provides the Pointer module as a unified input event proxy layer to smooth out the behavioral differences between different types of pointer devices such as mouse and touch screen.
 
-该项目虽然是基于 WEB 平台开发，但是多端适配的思路并不局限于 WEB 环境，因此，对于其它应用平台的开发者也同样适用。
+Although this project is based on WEB platform, the idea of multi-end adaptation is not limited to WEB environment, so it is also applicable to developers of other application platforms.
 
-## 公共依赖库
+## Public Dependency Libraries
 
-> 所有 api 均以 npm 模块的方式导入，可按需扩展。
+> All api's are imported as npm modules and can be extended as needed.
 
 ### vue
 
-vue 的原始 npm 模块
+The original npm module for vue
 
 ### components
 
-公共基础组件资源库
+Public base component repository
 
 ### helper
 
-公共工具函数
+Public tool functions
 
 ### network
 
-网络服务，基于 axios 封装
+Network services, based on axios wrapper
 
 ### state
 
-全局响应式状态管理
+Global responsive state management
 
 ### navigator
 
-全局导航相关属性、方法
+Global navigation-related properties, methods
 
-## 路由
+## routing
 
-View UI 使用定制的轻量级、扁平化、动态路由方案（由于 Vue 官方路由与该项目中的诸多应用场景和需求不匹配，因此定制路由是更合理的选择）。
+View UI uses a custom lightweight, flat, dynamic routing scheme (since the official Vue routing did not match the many application scenarios and requirements in this project, custom routing was the more logical choice).
 
-### 动态参数处理
+### Dynamic parameter handling
