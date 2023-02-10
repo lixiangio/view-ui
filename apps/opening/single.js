@@ -1,5 +1,5 @@
-import { closeMask as a } from "/view-ui/libs/state.js";
-import { openBlock as d, createElementBlock as r, createElementVNode as t, toDisplayString as l, pushScopeId as p, popScopeId as _ } from "/view-ui/libs/vue.js";
+import { closeMask as a } from "/libs/state.js";
+import { openBlock as d, createElementBlock as r, createElementVNode as t, toDisplayString as l, pushScopeId as p, popScopeId as _ } from "/libs/vue.js";
 setTimeout(a, 1e3);
 const { brand: f } = VIEW.initOptions, u = {
   setup() {

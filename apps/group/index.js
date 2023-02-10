@@ -1,6 +1,6 @@
-import { defineComponent as S, reactive as C, resolveComponent as g, openBlock as a, createElementBlock as l, Fragment as _, createVNode as m, unref as j, createElementVNode as o, renderList as x, withCtx as h, toDisplayString as v, normalizeClass as E, normalizeStyle as I, pushScopeId as N, popScopeId as A } from "/view-ui/libs/vue.js";
-import B from "/view-ui/libs/network.js";
-import { Langs as L, urls as b } from "/view-ui/libs/view.js";
+import { defineComponent as S, reactive as C, resolveComponent as g, openBlock as a, createElementBlock as l, Fragment as _, createVNode as m, unref as j, createElementVNode as o, renderList as x, withCtx as h, toDisplayString as v, normalizeClass as E, normalizeStyle as I, pushScopeId as N, popScopeId as A } from "/libs/vue.js";
+import B from "/libs/network.js";
+import { Langs as L, urls as b } from "/libs/view.js";
 const V = (e) => (N("data-v-016b0889"), e = e(), A(), e), D = { class: "groups" }, F = { class: "header item" }, G = { class: "name" }, O = /* @__PURE__ */ V(() => /* @__PURE__ */ o("i", { class: "ficon-xinchuangkou" }, null, -1)), $ = { class: "name" }, q = /* @__PURE__ */ S({
   __name: "index",
   setup(e) {
@@ -10,7 +10,7 @@ const V = (e) => (N("data-v-016b0889"), e = e(), A(), e), D = { class: "groups" 
         zh: "\u5E94\u7528\u7EC4"
       }
     }), t = C({});
-    return B.get("/view-ui/api/group.json").then((i) => {
+    return B.get("/api/group.json").then((i) => {
       for (const n of i) {
         const p = b[n], { apps: s } = p;
         if (s) {

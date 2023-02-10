@@ -1,7 +1,7 @@
-import { defineComponent as O, ref as x, reactive as S, defineAsyncComponent as V, openBlock as r, createElementBlock as l, Fragment as _, normalizeStyle as g, unref as s, createElementVNode as e, renderList as y, normalizeClass as k, createCommentVNode as C, createVNode as $, Transition as q, withCtx as L, createBlock as Q, pushScopeId as R, popScopeId as A } from "/view-ui/libs/vue.js";
-import F, { urls as w, getParentOptions as P, Lang as T, importComponent as U } from "/view-ui/libs/view.js";
-import { historys as W } from "/view-ui/libs/state.js";
-import { open as z } from "/view-ui/libs/navigator.js";
+import { defineComponent as O, ref as x, reactive as S, defineAsyncComponent as V, openBlock as r, createElementBlock as l, Fragment as _, normalizeStyle as g, unref as s, createElementVNode as e, renderList as y, normalizeClass as k, createCommentVNode as C, createVNode as $, Transition as q, withCtx as L, createBlock as Q, pushScopeId as R, popScopeId as A } from "/libs/vue.js";
+import F, { urls as w, getParentOptions as P, Lang as T, importComponent as U } from "/libs/view.js";
+import { historys as W } from "/libs/state.js";
+import { open as z } from "/libs/navigator.js";
 const m = (o) => (R("data-v-ac13bf38"), o = o(), A(), o), j = { class: "left" }, D = ["title", "onClick"], G = /* @__PURE__ */ m(() => /* @__PURE__ */ e("div", { class: "drag" }, null, -1)), H = { class: "right" }, J = ["title", "onClick"], K = ["title"], M = /* @__PURE__ */ m(() => /* @__PURE__ */ e("i", { class: "ficon-erweima" }, null, -1)), X = [
   M
 ], Y = /* @__PURE__ */ m(() => /* @__PURE__ */ e("i", { class: "ficon-reload" }, null, -1)), Z = [

@@ -1,7 +1,7 @@
-import { resolveComponent as b, openBlock as _, createElementBlock as u, Fragment as m, createVNode as d, withCtx as p, createElementVNode as e, toDisplayString as o, normalizeClass as F, normalizeStyle as z, unref as i, pushScopeId as k, popScopeId as x, defineComponent as I, inject as P, renderList as w, createTextVNode as r } from "/view-ui/libs/vue.js";
-import { Lang as E, Langs as L, urls as B, languages as U, language as G } from "/view-ui/libs/view.js";
-import { open as M, pushState as Q } from "/view-ui/libs/navigator.js";
-import { confirm as S, message as V } from "/view-ui/libs/viewui.js";
+import { resolveComponent as b, openBlock as _, createElementBlock as u, Fragment as m, createVNode as d, withCtx as p, createElementVNode as e, toDisplayString as o, normalizeClass as F, normalizeStyle as z, unref as i, pushScopeId as k, popScopeId as x, defineComponent as I, inject as P, renderList as w, createTextVNode as r } from "/libs/vue.js";
+import { Lang as E, Langs as L, urls as B, languages as U, language as G } from "/libs/view.js";
+import { open as M, pushState as Q } from "/libs/navigator.js";
+import { confirm as S, message as V } from "/libs/viewui.js";
 const D = E({
   en: "This feature is temporarily unavailable!",
   zh: "\u8BE5\u529F\u80FD\u6682\u4E0D\u53EF\u7528\uFF01"

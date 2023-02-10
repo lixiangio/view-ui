@@ -1,7 +1,7 @@
-import { defineComponent as s, ref as f, onMounted as l, openBlock as p, createElementBlock as c, withModifiers as d, unref as a, renderSlot as u } from "/view-ui/libs/vue.js";
-import m from "/view-ui/libs/view.js";
-import _ from "/view-ui/libs/pointer.js";
-import { appsState as v, controllerSwitch as i } from "/view-ui/libs/state.js";
+import { defineComponent as s, ref as f, onMounted as l, openBlock as p, createElementBlock as c, withModifiers as d, unref as a, renderSlot as u } from "/libs/vue.js";
+import m from "/libs/view.js";
+import _ from "/libs/pointer.js";
+import { appsState as v, controllerSwitch as i } from "/libs/state.js";
 const b = /* @__PURE__ */ s({
   __name: "float",
   setup(n) {

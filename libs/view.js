@@ -26,7 +26,7 @@ let u = S;
 const $ = w / 2;
 for (let n = 100; n <= 500; n += 50)
   f[n] = u, u = u + $;
-const j = window.innerWidth < 850 ? "single" : "multi", p = location.hash || "/", V = `${location.origin}`, q = "/view-ui/apps/", { path: C, query: A } = E(`${p}${location.search}`), c = {}, D = {}, d = sessionStorage[p], M = d ? d.split(",") : void 0, { userAgent: r } = navigator;
+const j = window.innerWidth < 850 ? "single" : "multi", p = location.hash || "/", V = `${location.origin}`, q = "/apps/", { path: C, query: A } = E(`${p}${location.search}`), c = {}, D = {}, d = sessionStorage[p], M = d ? d.split(",") : void 0, { userAgent: r } = navigator;
 let l;
 r.indexOf("Chrome") > -1 ? l = "Chrome" : r.indexOf("Safari") > -1 ? l = "Safari" : r.indexOf("Firefox") > -1 ? l = "Firefox" : r.indexOf("MSIE") > -1 && (l = "IE");
 const m = document.querySelector('meta[name="theme-color"]');

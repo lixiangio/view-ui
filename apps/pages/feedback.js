@@ -1,5 +1,5 @@
-import { Langs as r } from "/view-ui/libs/view.js";
-import { defineComponent as p, resolveComponent as d, openBlock as l, createElementBlock as _, Fragment as m, createVNode as u, pushScopeId as i, popScopeId as f, createElementVNode as v } from "/view-ui/libs/vue.js";
+import { Langs as r } from "/libs/view.js";
+import { defineComponent as p, resolveComponent as d, openBlock as l, createElementBlock as _, Fragment as m, createVNode as u, pushScopeId as i, popScopeId as f, createElementVNode as v } from "/libs/vue.js";
 const c = r({
   name: {
     en: "Question Feedback",

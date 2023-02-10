@@ -1,7 +1,7 @@
-import { defineComponent as c, ref as l, onMounted as d, openBlock as i, createElementBlock as _, withModifiers as f, unref as s, renderSlot as u, createBlock as m, withCtx as v, pushScopeId as h, popScopeId as y, createElementVNode as b } from "/view-ui/libs/vue.js";
-import x from "/view-ui/libs/view.js";
-import w from "/view-ui/libs/pointer.js";
-import { appsState as g, controllerSwitch as a } from "/view-ui/libs/state.js";
+import { defineComponent as c, ref as l, onMounted as d, openBlock as i, createElementBlock as _, withModifiers as f, unref as s, renderSlot as u, createBlock as m, withCtx as v, pushScopeId as h, popScopeId as y, createElementVNode as b } from "/libs/vue.js";
+import x from "/libs/view.js";
+import w from "/libs/pointer.js";
+import { appsState as g, controllerSwitch as a } from "/libs/state.js";
 const k = /* @__PURE__ */ c({
   __name: "float",
   setup(t) {

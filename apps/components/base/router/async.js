@@ -1,7 +1,7 @@
-import { resolveComponent as c, openBlock as v, createElementBlock as a, Fragment as i, createVNode as t, createStaticVNode as e } from "/view-ui/libs/vue.js";
+import { resolveComponent as c, openBlock as v, createElementBlock as a, Fragment as i, createVNode as t, createStaticVNode as e } from "/libs/vue.js";
 import { _ as o } from "../../index2.js";
-import "/view-ui/libs/view.js";
-import "/view-ui/libs/navigator.js";
+import "/libs/view.js";
+import "/libs/navigator.js";
 const n = `.test[data-v-edc7c4c1]{font-size:15px}
 `, s = {
   app: {}

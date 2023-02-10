@@ -1,5 +1,5 @@
-import { Lang as l } from "/view-ui/libs/view.js";
-import { defineComponent as m, resolveComponent as c, openBlock as u, createElementBlock as d, Fragment as i, createVNode as s, createElementVNode as f } from "/view-ui/libs/vue.js";
+import { Lang as l } from "/libs/view.js";
+import { defineComponent as m, resolveComponent as c, openBlock as u, createElementBlock as d, Fragment as i, createVNode as s, createElementVNode as f } from "/libs/vue.js";
 const a = l({
   en: "Share",
   zh: "\u5206\u4EAB"

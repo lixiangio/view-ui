@@ -1,20 +1,20 @@
-import { resolveComponent as b, openBlock as r, createElementBlock as l, Fragment as x, createVNode as m, createStaticVNode as L, createElementVNode as e, toDisplayString as c, pushScopeId as z, popScopeId as C, unref as y, defineComponent as E, inject as D, reactive as A, ref as S, watch as V, withCtx as w, TransitionGroup as K, renderList as F, withDirectives as H, withKeys as O, vModelText as G, nextTick as T, onMounted as U } from "/view-ui/libs/vue.js";
-import { Lang as q, Langs as J } from "/view-ui/libs/view.js";
-import j from "/view-ui/libs/network.js";
-import { notification as P } from "/view-ui/libs/viewui.js";
-import { back as Q } from "/view-ui/libs/router.js";
+import { resolveComponent as b, openBlock as r, createElementBlock as l, Fragment as x, createVNode as v, createStaticVNode as L, createElementVNode as e, toDisplayString as c, pushScopeId as z, popScopeId as C, unref as y, defineComponent as E, inject as D, reactive as A, ref as S, watch as V, withCtx as w, TransitionGroup as K, renderList as F, withDirectives as H, withKeys as O, vModelText as G, nextTick as T, onMounted as U } from "/libs/vue.js";
+import { Lang as q, Langs as J } from "/libs/view.js";
+import j from "/libs/network.js";
+import { notification as P } from "/libs/viewui.js";
+import { back as Q } from "/libs/router.js";
 const R = "", $ = (t, i) => {
   const s = t.__vccOpts || t;
-  for (const [o, u] of i)
-    s[o] = u;
+  for (const [o, _] of i)
+    s[o] = _;
   return s;
 }, W = {
   props: ["user"]
 }, X = /* @__PURE__ */ L('<div class="system"><div class="items"><div class="item"> A: 1 </div><div class="item"> B: 2 </div><div class="item"> C: 3 </div></div></div>', 1);
-function Y(t, i, s, o, u, p) {
+function Y(t, i, s, o, _, p) {
   const a = b("Navbar");
   return r(), l(x, null, [
-    m(a, {
+    v(a, {
       title: s.user.name
     }, null, 8, ["title"]),
     X
@@ -34,7 +34,7 @@ const Z = /* @__PURE__ */ $(W, [["render", Y], ["styles", [R]]]), ee = `.userinf
 }, se = (t) => (z("data-v-dc46cc65"), t = t(), C(), t), ae = { class: "userinfo" }, ne = { class: "header" }, ie = { class: "header-left" }, oe = { class: "avatar" }, ce = { class: "user-name" }, de = /* @__PURE__ */ se(() => /* @__PURE__ */ e("i", { class: "ficon-cha" }, null, -1)), re = [
   de
 ];
-function le(t, i, s, o, u, p) {
+function le(t, i, s, o, _, p) {
   return r(), l("div", ae, [
     e("div", ne, [
       e("div", ie, [
@@ -49,25 +49,25 @@ function le(t, i, s, o, u, p) {
   ]);
 }
 const pe = /* @__PURE__ */ $(te, [["render", le], ["styles", [ee]], ["__scopeId", "data-v-dc46cc65"]]), fe = `.setting .header[data-v-4c0d827f]{display:flex;justify-content:space-between;align-items:center;padding:5px 14px 10px}.setting .header .title[data-v-4c0d827f]{width:50px;height:50px}
-`, ue = { class: "setting" }, M = q({
+`, _e = { class: "setting" }, M = q({
   en: "Setting",
   zh: "\u8BBE\u7F6E"
-}), _e = {
+}), ue = {
   app: {
     name: M,
     style: { flex: "none" }
   }
-}, ve = /* @__PURE__ */ Object.assign(_e, {
+}, he = /* @__PURE__ */ Object.assign(ue, {
   __name: "setting",
   setup(t) {
     return (i, s) => {
       const o = b("Navbar");
-      return r(), l("div", ue, [
-        m(o, { title: y(M) }, null, 8, ["title"])
+      return r(), l("div", _e, [
+        v(o, { title: y(M) }, null, 8, ["title"])
       ]);
     };
   }
-}), he = /* @__PURE__ */ $(ve, [["styles", [fe]], ["__scopeId", "data-v-4c0d827f"]]), N = (t) => (z("data-v-cc8b288d"), t = t(), C(), t), me = { class: "navbar-center" }, ge = /* @__PURE__ */ N(() => /* @__PURE__ */ e("i", { class: "ficon-gengduo" }, null, -1)), xe = {
+}), me = /* @__PURE__ */ $(he, [["styles", [fe]], ["__scopeId", "data-v-4c0d827f"]]), N = (t) => (z("data-v-cc8b288d"), t = t(), C(), t), ve = { class: "navbar-center" }, ge = /* @__PURE__ */ N(() => /* @__PURE__ */ e("i", { class: "ficon-gengduo" }, null, -1)), xe = {
   key: 0,
   class: "me"
 }, be = ["onClick"], ye = { class: "message" }, $e = { class: "content" }, ke = {
@@ -85,14 +85,14 @@ const pe = /* @__PURE__ */ $(te, [["render", le], ["styles", [ee]], ["__scopeId"
       flex: 1
     }
   },
-  pages: { userinfo: pe, setting: he }
+  pages: { userinfo: pe, setting: me }
 }, Ee = /* @__PURE__ */ E({
   ...Te,
   __name: "index",
   props: ["id", "user"],
   setup(t) {
     const i = t, s = D("router"), o = A([]);
-    let u;
+    let _;
     const p = S(), a = S("");
     function f() {
       a.value !== "" && (o.push({
@@ -111,32 +111,32 @@ const pe = /* @__PURE__ */ $(te, [["render", le], ["styles", [ee]], ["__scopeId"
     }
     function k(d) {
       if (d.length) {
-        const _ = d.shift();
-        _ && (o.push(_), T(() => {
-          const { parentElement: v } = p.value;
-          v.scrollTo(0, v.scrollHeight), u = setTimeout(() => k(d), 1500);
+        const u = d.shift();
+        u && (o.push(u), T(() => {
+          const { parentElement: h } = p.value;
+          h.scrollTo(0, h.scrollHeight), _ = setTimeout(() => k(d), 1500);
         }));
       }
     }
-    function h(d) {
-      j.get(`/view-ui/api/message/${d}.json`).then(({ users: _, list: v }) => {
+    function m(d) {
+      j.get(`/api/message/${d}.json`).then(({ users: u, list: h }) => {
         const g = {};
-        for (const n of _)
+        for (const n of u)
           g[n.id] = n;
-        for (const n of v)
+        for (const n of h)
           n.user = g[n.uid];
-        k(v);
+        k(h);
       });
     }
-    return h(i.id), V(i, () => {
-      o.splice(0), clearTimeout(u), h(i.id);
-    }), (d, _) => {
-      const v = b("A"), g = b("Navbar");
+    return m(i.id), V(i, () => {
+      o.splice(0), clearTimeout(_), m(i.id);
+    }), (d, u) => {
+      const h = b("A"), g = b("Navbar");
       return r(), l(x, null, [
-        m(g, null, {
+        v(g, null, {
           default: w(() => [
-            e("div", me, c(t.user.name), 1),
-            m(v, {
+            e("div", ve, c(t.user.name), 1),
+            v(h, {
               class: "navbar-right",
               href: "message/chat/setting"
             }, {
@@ -153,7 +153,7 @@ const pe = /* @__PURE__ */ $(te, [["render", le], ["styles", [ee]], ["__scopeId"
           ref_key: "$list",
           ref: p
         }, [
-          m(K, { name: "fade-in" }, {
+          v(K, { name: "fade-in" }, {
             default: w(() => [
               (r(!0), l(x, null, F(o, ({ user: n, content: I }) => (r(), l(x, null, [
                 n.me ? (r(), l("div", xe, [
@@ -182,7 +182,7 @@ const pe = /* @__PURE__ */ $(te, [["render", le], ["styles", [ee]], ["__scopeId"
           Ne,
           H(e("input", {
             type: "text",
-            "onUpdate:modelValue": _[0] || (_[0] = (n) => a.value = n),
+            "onUpdate:modelValue": u[0] || (u[0] = (n) => a.value = n),
             onKeyup: O(f, ["enter"])
           }, null, 40, Ie), [
             [G, a.value]
@@ -215,20 +215,20 @@ const pe = /* @__PURE__ */ $(te, [["render", le], ["styles", [ee]], ["__scopeId"
         zh: "\u4EA4\u6613\u7269\u6D41"
       }
     }), s = A([]), o = D("router");
-    return j.get("/view-ui/api/message/index.json").then((u) => {
-      j.get("/view-ui/api/user.json").then((p) => {
+    return j.get("/api/message/index.json").then((_) => {
+      j.get("/api/user.json").then((p) => {
         const a = {};
         for (const f of p)
           a[f.id] = f;
-        for (const f of u)
+        for (const f of _)
           f.user = a[f.uid], s.push(f);
       });
     }), U(() => {
       P.add({ title: "Message", time: 3e3 });
-    }), (u, p) => {
+    }), (_, p) => {
       const a = b("Navbar");
       return r(), l("div", Me, [
-        m(a, null, {
+        v(a, null, {
           default: w(() => [
             e("div", Be, c(y(i).message), 1),
             Le
@@ -236,18 +236,18 @@ const pe = /* @__PURE__ */ $(te, [["render", le], ["styles", [ee]], ["__scopeId"
           _: 1
         }),
         e("div", Ve, [
-          (r(!0), l(x, null, F(s, ({ id: f, type: k, user: h, time: d, content: _ }, v) => (r(), l("div", {
-            key: v,
+          (r(!0), l(x, null, F(s, ({ id: f, type: k, user: m, time: d, content: u }, h) => (r(), l("div", {
+            key: h,
             class: "item",
-            onClick: (g) => y(o).open(`message/${k}`, { id: f, user: h })
+            onClick: (g) => y(o).open(`message/${k}`, { id: f, user: m })
           }, [
-            e("div", He, c(h.avatar), 1),
+            e("div", He, c(m.avatar), 1),
             e("div", Oe, [
               e("div", Ge, [
-                e("div", Ue, c(h.name), 1),
+                e("div", Ue, c(m.name), 1),
                 e("div", qe, c(d), 1)
               ]),
-              e("div", Je, c(_), 1)
+              e("div", Je, c(u), 1)
             ])
           ], 8, Ke))), 128))
         ])

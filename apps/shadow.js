@@ -1,4 +1,4 @@
-import { defineCustomElement as n, openBlock as a, createElementBlock as r, createElementVNode as d } from "/view-ui/libs/vue.js";
+import { defineCustomElement as n, openBlock as a, createElementBlock as r, createElementVNode as d } from "/libs/vue.js";
 const _ = `.shadow{width:100%;padding:5px}.shadow .title{color:#fc0000;text-align:center}
 `, l = (t, o) => {
   const e = t.__vccOpts || t;

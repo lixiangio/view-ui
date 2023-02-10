@@ -1,9 +1,9 @@
-import { openBlock as u, createElementBlock as p, withModifiers as N, renderSlot as g, Fragment as E, createElementVNode as m, mergeProps as Y, toDisplayString as C, createCommentVNode as P, pushScopeId as T, popScopeId as M, normalizeStyle as L, ref as S, resolveComponent as b, createVNode as w, defineAsyncComponent as A } from "/view-ui/libs/vue.js";
-import B, { UA as W, language as D } from "/view-ui/libs/view.js";
-import { open as V } from "/view-ui/libs/navigator.js";
-import { back as H } from "/view-ui/libs/router.js";
-import x, { screenWidth as O, screenHeight as j, isTouch as z, switchPointer as v, MaskStyle as I } from "/view-ui/libs/pointer.js";
-import { controllerSwitch as U } from "/view-ui/libs/state.js";
+import { openBlock as u, createElementBlock as p, withModifiers as N, renderSlot as g, Fragment as E, createElementVNode as m, mergeProps as Y, toDisplayString as C, createCommentVNode as P, pushScopeId as T, popScopeId as M, normalizeStyle as L, ref as S, resolveComponent as b, createVNode as w, defineAsyncComponent as A } from "/libs/vue.js";
+import B, { UA as W, language as D } from "/libs/view.js";
+import { open as V } from "/libs/navigator.js";
+import { back as H } from "/libs/router.js";
+import x, { screenWidth as O, screenHeight as j, isTouch as z, switchPointer as v, MaskStyle as I } from "/libs/pointer.js";
+import { controllerSwitch as U } from "/libs/state.js";
 const _ = (t, o) => {
   const e = t.__vccOpts || t;
   for (const [r, a] of o)

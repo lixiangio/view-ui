@@ -1,10 +1,10 @@
-import { openBlock as s, createElementBlock as o, Fragment as p, createElementVNode as i, createStaticVNode as f, normalizeStyle as g, pushScopeId as _, popScopeId as y, ref as F, resolveComponent as x, createVNode as m, createTextVNode as A, toDisplayString as b, renderList as I, withModifiers as j, normalizeClass as B, Transition as T, withCtx as D, createBlock as N, createCommentVNode as V } from "/view-ui/libs/vue.js";
-import L from "/view-ui/libs/network.js";
-import { Langs as u, setThemeColor as k, urls as M } from "/view-ui/libs/view.js";
-import { openBlank as P, open as O } from "/view-ui/libs/navigator.js";
-import { menu as r, historys as q } from "/view-ui/libs/state.js";
-import { message as G } from "/view-ui/libs/viewui.js";
-import { back as H } from "/view-ui/libs/router.js";
+import { openBlock as s, createElementBlock as o, Fragment as p, createElementVNode as i, createStaticVNode as f, normalizeStyle as g, pushScopeId as _, popScopeId as y, ref as F, resolveComponent as x, createVNode as m, createTextVNode as A, toDisplayString as b, renderList as I, withModifiers as j, normalizeClass as B, Transition as T, withCtx as D, createBlock as N, createCommentVNode as V } from "/libs/vue.js";
+import L from "/libs/network.js";
+import { Langs as u, setThemeColor as k, urls as M } from "/libs/view.js";
+import { openBlank as P, open as O } from "/libs/navigator.js";
+import { menu as r, historys as q } from "/libs/state.js";
+import { message as G } from "/libs/viewui.js";
+import { back as H } from "/libs/router.js";
 const J = `.search-input[data-v-d39c5933]{position:fixed;left:0;right:0;top:0;z-index:1;display:flex;height:50px;background-color:#f5f5f5}.search-input input[data-v-d39c5933]{flex:1;height:38px;margin:8px 0 8px 10px;background-color:#fff;border-radius:10px;border:unset;font-size:14px}.search-input .close[data-v-d39c5933]{width:50px;font-size:15px;color:#000;cursor:pointer}.search-list[data-v-d39c5933]{background-color:#f5f5f5;padding:50px 10px 10px}.search-list h4[data-v-d39c5933]{font-size:14px;line-height:30px}.search-list ul li[data-v-d39c5933]{display:inline-block;background-color:#fff;margin:5px 12px 5px 3px;padding:6px 12px;border-radius:10px}
 `, h = (d, a) => {
   const t = d.__vccOpts || d;
@@ -82,7 +82,7 @@ const sd = /* @__PURE__ */ h(dd, [["render", ed], ["styles", [ad]], ["__scopeId"
   }
 });
 G.warning(w.warning, 6e3);
-L.get("/view-ui/api/menu.json").then((d) => {
+L.get("/api/menu.json").then((d) => {
   if (!r.lock) {
     r.lock = !0;
     for (const a of d) {

@@ -1,4 +1,4 @@
-import { resolveComponent as n, openBlock as r, createElementBlock as l, createElementVNode as a, createVNode as s, pushScopeId as _, popScopeId as h } from "/view-ui/libs/vue.js";
+import { resolveComponent as n, openBlock as r, createElementBlock as l, createElementVNode as a, createVNode as s, pushScopeId as _, popScopeId as h } from "/libs/vue.js";
 const f = (c, o) => {
   const p = c.__vccOpts || c;
   for (const [e, i] of o)

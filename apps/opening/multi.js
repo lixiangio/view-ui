@@ -1,4 +1,4 @@
-import { defineComponent as l, ref as d, openBlock as c, createBlock as r, Transition as p, withCtx as f, createElementBlock as g, createElementVNode as e, toDisplayString as u, unref as h, createCommentVNode as _, pushScopeId as m, popScopeId as v } from "/view-ui/libs/vue.js";
+import { defineComponent as l, ref as d, openBlock as c, createBlock as r, Transition as p, withCtx as f, createElementBlock as g, createElementVNode as e, toDisplayString as u, unref as h, createCommentVNode as _, pushScopeId as m, popScopeId as v } from "/libs/vue.js";
 const i = (t) => (m("data-v-76ea6041"), t = t(), v(), t), x = {
   key: 0,
   class: "opening col full"

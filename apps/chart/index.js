@@ -1,4 +1,4 @@
-import { openBlock as n, createElementBlock as r } from "/view-ui/libs/vue.js";
+import { openBlock as n, createElementBlock as r } from "/libs/vue.js";
 const a = `.chart[data-v-de85635c]{height:100vh;background-color:#bdffff}
 `, _ = (t, e) => {
   const c = t.__vccOpts || t;

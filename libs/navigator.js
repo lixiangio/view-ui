@@ -1,5 +1,5 @@
-import { openApp as u, components as r } from "/view-ui/libs/state.js";
-import f, { instances as i, urlParse as a, getAppOptions as m, events as c, importComponent as d, urls as h } from "/view-ui/libs/view.js";
+import { openApp as u, components as r } from "/libs/state.js";
+import f, { instances as i, urlParse as a, getAppOptions as m, events as c, importComponent as d, urls as h } from "/libs/view.js";
 function O(n) {
   const { path: t, query: e } = a(n), o = m(t);
   if (o.app) {

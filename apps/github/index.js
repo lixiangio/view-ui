@@ -1,5 +1,5 @@
-import { resolveComponent as f, openBlock as l, createElementBlock as d, Fragment as p, createVNode as m, withCtx as u, createElementVNode as e, renderList as _, createTextVNode as b, toDisplayString as h, pushScopeId as v, popScopeId as x } from "/view-ui/libs/vue.js";
-import { Lang as a } from "/view-ui/libs/view.js";
+import { resolveComponent as f, openBlock as l, createElementBlock as d, Fragment as p, createVNode as m, withCtx as u, createElementVNode as e, renderList as _, createTextVNode as b, toDisplayString as h, pushScopeId as v, popScopeId as x } from "/libs/vue.js";
+import { Lang as a } from "/libs/view.js";
 const k = `.navbar-github a[data-v-4a2655a3]{display:flex;justify-content:center;align-items:center}.navbar-github a i[data-v-4a2655a3]{font-size:24px;color:#fff}.links a[data-v-4a2655a3]{display:block;padding:15px;margin:10px;border-radius:6px;border:1px solid #e7e7e7}.links a h3 i[data-v-4a2655a3]{float:right;font-size:13px}.links a .description[data-v-4a2655a3]{margin-top:14px;line-height:24px;font-size:14px}
 `, y = (t, i) => {
   const o = t.__vccOpts || t;

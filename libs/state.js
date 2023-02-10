@@ -1,4 +1,4 @@
-import { ref as t, shallowReactive as r, reactive as c } from "/view-ui/libs/vue.js";
+import { ref as t, shallowReactive as r, reactive as c } from "/libs/vue.js";
 const l = t(!1), u = r({}), a = t(!0), p = t(!1), o = t(!1);
 function v() {
   a.value === !0 && (o.value = !o.value);

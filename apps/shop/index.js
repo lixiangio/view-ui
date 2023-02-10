@@ -1,9 +1,9 @@
-import { defineComponent as g, reactive as v, ref as y, onMounted as b, openBlock as t, createElementBlock as n, createVNode as a, unref as c, withCtx as d, Fragment as p, renderList as f, toDisplayString as u, pushScopeId as k, popScopeId as F, createElementVNode as m } from "/view-ui/libs/vue.js";
-import { Scroll as x } from "/view-ui/libs/components.js";
-import { Lang as w } from "/view-ui/libs/view.js";
-import { message as X } from "/view-ui/libs/viewui.js";
-import E, { isTouch as z } from "/view-ui/libs/pointer.js";
-import { appsState as _ } from "/view-ui/libs/state.js";
+import { defineComponent as g, reactive as v, ref as y, onMounted as b, openBlock as t, createElementBlock as n, createVNode as a, unref as c, withCtx as d, Fragment as p, renderList as f, toDisplayString as u, pushScopeId as k, popScopeId as F, createElementVNode as m } from "/libs/vue.js";
+import { Scroll as x } from "/libs/components.js";
+import { Lang as w } from "/libs/view.js";
+import { message as X } from "/libs/viewui.js";
+import E, { isTouch as z } from "/libs/pointer.js";
+import { appsState as _ } from "/libs/state.js";
 const h = (o) => (k("data-v-d1b1337c"), o = o(), F(), o), C = /* @__PURE__ */ h(() => /* @__PURE__ */ m("div", {
   class: "header center",
   center: ""

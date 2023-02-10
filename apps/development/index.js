@@ -1,6 +1,6 @@
-import { inject as _, resolveComponent as m, openBlock as v, createElementBlock as f, Fragment as h, createVNode as r, withCtx as i, createElementVNode as t, toDisplayString as d, unref as o, createTextVNode as g, pushScopeId as x, popScopeId as b } from "/view-ui/libs/vue.js";
-import { Lang as a, Langs as y } from "/view-ui/libs/view.js";
-import { Alert as F } from "/view-ui/libs/viewui.js";
+import { inject as _, resolveComponent as m, openBlock as v, createElementBlock as f, Fragment as h, createVNode as r, withCtx as i, createElementVNode as t, toDisplayString as d, unref as o, createTextVNode as g, pushScopeId as x, popScopeId as b } from "/libs/vue.js";
+import { Lang as a, Langs as y } from "/libs/view.js";
+import { Alert as F } from "/libs/viewui.js";
 const z = a({
   en: "This feature is temporarily unavailable!",
   zh: "\u8BE5\u529F\u80FD\u6682\u4E0D\u53EF\u7528\uFF01"

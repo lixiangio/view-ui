@@ -1,5 +1,5 @@
-import { open as _ } from "/view-ui/libs/navigator.js";
-import { resolveComponent as c, openBlock as l, createElementBlock as m, Fragment as p, createVNode as a, withCtx as i, createElementVNode as f, toDisplayString as u, createTextVNode as y } from "/view-ui/libs/vue.js";
+import { open as _ } from "/libs/navigator.js";
+import { resolveComponent as c, openBlock as l, createElementBlock as m, Fragment as p, createVNode as a, withCtx as i, createElementVNode as f, toDisplayString as u, createTextVNode as y } from "/libs/vue.js";
 const g = "", v = (e, n) => {
   const o = e.__vccOpts || e;
   for (const [r, t] of n)

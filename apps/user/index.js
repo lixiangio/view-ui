@@ -1,6 +1,6 @@
-import { openBlock as n, createElementBlock as r, defineComponent as _, createElementVNode as s, createVNode as o, unref as l, pushScopeId as f, popScopeId as h } from "/view-ui/libs/vue.js";
-import { back as u } from "/view-ui/libs/router.js";
-import { Image as x } from "/view-ui/libs/viewui.js";
+import { openBlock as n, createElementBlock as r, defineComponent as _, createElementVNode as s, createVNode as o, unref as l, pushScopeId as f, popScopeId as h } from "/libs/vue.js";
+import { back as u } from "/libs/router.js";
+import { Image as x } from "/libs/viewui.js";
 const m = `.test[data-v-33c1af75]{font-size:20px;color:#666;padding:8px}
 `, i = (e, a) => {
   const t = e.__vccOpts || e;

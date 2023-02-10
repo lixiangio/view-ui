@@ -1,6 +1,6 @@
-import g, { instances as a } from "/view-ui/libs/view.js";
-import { apps as L, appsState as v } from "/view-ui/libs/state.js";
-import { screenWidth as E } from "/view-ui/libs/pointer.js";
+import g, { instances as a } from "/libs/view.js";
+import { apps as L, appsState as v } from "/libs/state.js";
+import { screenWidth as E } from "/libs/pointer.js";
 const { MIN_SAFE_INTEGER: u, MAX_SAFE_INTEGER: c } = Number;
 function M() {
   return window.innerWidth - g.initOptions.apps.padding[1];

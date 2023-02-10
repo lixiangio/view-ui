@@ -1,4 +1,6 @@
-<a href="https://lixiangio.github.io/view-ui/" target="_blank"><img src="./screenshot/01-42-44.png" alt="Screenshot"></a>
+<a href="https://lixiangio.github.io/view-ui/" target="_blank">
+  <img src="./screenshot/01-42-44.png" alt="Screenshot">
+</a>
 
 English | [简体中文](./README-ZH.md)
 
