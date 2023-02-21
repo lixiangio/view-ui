@@ -1,13 +1,13 @@
-import { openBlock as u, createElementBlock as p, withModifiers as N, renderSlot as g, Fragment as E, createElementVNode as m, mergeProps as Y, toDisplayString as C, createCommentVNode as P, pushScopeId as T, popScopeId as M, normalizeStyle as L, ref as S, resolveComponent as b, createVNode as w, defineAsyncComponent as A } from "/libs/vue.js";
+import { openBlock as f, createElementBlock as u, withModifiers as N, renderSlot as g, Fragment as F, createElementVNode as p, mergeProps as Y, normalizeStyle as $, toDisplayString as C, createCommentVNode as P, pushScopeId as T, popScopeId as M, ref as w, resolveComponent as x, createVNode as I, defineAsyncComponent as A } from "/libs/vue.js";
 import B, { UA as W, language as D } from "/libs/view.js";
 import { open as V } from "/libs/navigator.js";
 import { back as H } from "/libs/router.js";
-import x, { screenWidth as O, screenHeight as j, isTouch as z, switchPointer as v, MaskStyle as I } from "/libs/pointer.js";
+import E, { screenWidth as O, screenHeight as j, isTouch as z, switchPointer as m, MaskStyle as L } from "/libs/pointer.js";
 import { controllerSwitch as U } from "/libs/state.js";
-const _ = (t, o) => {
+const v = (t, o) => {
   const e = t.__vccOpts || t;
-  for (const [r, a] of o)
-    e[r] = a;
+  for (const [r, c] of o)
+    e[r] = c;
   return e;
 }, q = {
   inject: ["router"],
@@ -23,15 +23,15 @@ const _ = (t, o) => {
     }
   }
 }, G = ["href"];
-function J(t, o, e, r, a, s) {
-  return u(), p("a", {
+function J(t, o, e, r, c, s) {
+  return f(), u("a", {
     href: r.$href,
     onClick: o[0] || (o[0] = N((d) => s.open(e.href), ["prevent"]))
   }, [
     g(t.$slots, "default")
   ], 8, G);
 }
-const K = /* @__PURE__ */ _(q, [["render", J]]);
+const K = /* @__PURE__ */ v(q, [["render", J]]);
 const Q = {
   props: { title: String },
   methods: {
@@ -39,27 +39,35 @@ const Q = {
       H(this.$el);
     }
   }
-}, F = (t) => (T("data-v-42e986ea"), t = t(), M(), t), R = {
+}, k = (t) => (T("data-v-3e39faf0"), t = t(), M(), t), R = /* @__PURE__ */ k(() => /* @__PURE__ */ p("use", { "xlink:href": "#ficon-left" }, null, -1)), Z = [
+  R
+], ee = {
   key: 0,
   class: "navbar-center"
-}, Z = /* @__PURE__ */ F(() => /* @__PURE__ */ m("div", { class: "navbar-right" }, null, -1)), ee = /* @__PURE__ */ F(() => /* @__PURE__ */ m("div", { class: "filling" }, null, -1));
-function te(t, o, e, r, a, s) {
-  return u(), p(E, null, [
-    m("div", Y({ class: "navbar" }, t.$attrs), [
-      m("div", {
-        class: "navbar-left center ficon-left",
+}, te = /* @__PURE__ */ k(() => /* @__PURE__ */ p("div", { class: "navbar-right" }, null, -1)), ne = /* @__PURE__ */ k(() => /* @__PURE__ */ p("div", { class: "filling" }, null, -1));
+function oe(t, o, e, r, c, s) {
+  return f(), u(F, null, [
+    p("div", Y({ class: "navbar" }, t.$attrs), [
+      p("div", {
+        class: "navbar-left center",
         onClick: o[0] || (o[0] = (...d) => s.onback && s.onback(...d))
-      }),
+      }, [
+        (f(), u("svg", {
+          class: "ficon",
+          "aria-hidden": "true",
+          style: $({ color: t.color })
+        }, Z, 4))
+      ]),
       g(t.$slots, "default", {}, () => [
-        e.title ? (u(), p("div", R, C(e.title), 1)) : P("", !0),
-        Z
+        e.title ? (f(), u("div", ee, C(e.title), 1)) : P("", !0),
+        te
       ], !0)
     ], 16),
-    ee
+    ne
   ], 64);
 }
-const ne = /* @__PURE__ */ _(Q, [["render", te], ["__scopeId", "data-v-42e986ea"]]);
-const oe = {
+const re = /* @__PURE__ */ v(Q, [["render", oe], ["__scopeId", "data-v-3e39faf0"]]);
+const se = {
   name: "Scroll",
   emits: ["start", "level", "vertical"],
   props: {
@@ -71,120 +79,120 @@ const oe = {
   mounted() {
     const { direction: t, $el: o } = this;
     if (t === "X") {
-      const e = new x(o, { angle: 30 });
+      const e = new E(o, { angle: 30 });
       e.on("lock", () => {
         if (e.dir === "X") {
           if (e.trend > 0)
             o.scrollLeft === 0 && e.parent();
           else if (e.trend < 0) {
-            const { scrollLeft: r, clientWidth: a, scrollWidth: s } = o;
-            r + a === s && e.parent();
+            const { scrollLeft: r, clientWidth: c, scrollWidth: s } = o;
+            r + c === s && e.parent();
           }
         } else
           e.parent();
       }), e.on("level", (r) => {
-        const { screenX: a } = r;
+        const { screenX: c } = r;
         let { move: s } = e;
-        a ? a === O && (s = 12) : s = -12, o.scrollBy(-s, 0);
+        c ? c === O && (s = 12) : s = -12, o.scrollBy(-s, 0);
       });
     } else if (t === "Y") {
-      const e = new x(o, { angle: 60 });
+      const e = new E(o, { angle: 60 });
       e.on("lock", () => {
         if (e.dir === "Y") {
           if (e.trend > 0)
             o.scrollTop === 0 && e.parent();
           else if (e.trend < 0) {
-            const { scrollTop: r, clientHeight: a, scrollHeight: s } = o;
-            r + a === s && e.parent();
+            const { scrollTop: r, clientHeight: c, scrollHeight: s } = o;
+            r + c === s && e.parent();
           }
         } else
           e.parent();
       }), e.on("vertical", (r) => {
-        const { screenY: a } = r;
+        const { screenY: c } = r;
         let { move: s } = e;
-        a ? a === j && (s = 12) : s = -12, o.scrollBy(0, -s);
+        c ? c === j && (s = 12) : s = -12, o.scrollBy(0, -s);
       });
     }
   }
 };
-function re(t, o, e, r, a, s) {
-  return u(), p("div", {
+function ie(t, o, e, r, c, s) {
+  return f(), u("div", {
     class: "scroll",
-    style: L({ ["overflow" + e.direction]: "auto" })
+    style: $({ ["overflow" + e.direction]: "auto" })
   }, [
     g(t.$slots, "default", {}, void 0, !0)
   ], 4);
 }
-const se = /* @__PURE__ */ _(oe, [["render", re], ["__scopeId", "data-v-9d54a56f"]]);
-const ie = ["src"], ae = {
+const ce = /* @__PURE__ */ v(se, [["render", ie], ["__scopeId", "data-v-9d54a56f"]]);
+const le = ["src"], ae = {
   __name: "IFrame",
   props: { src: String, gesture: Boolean },
   emits: ["load"],
   setup(t, { emit: o }) {
     const e = t;
     let r;
-    const a = S();
-    function s(l) {
+    const c = w();
+    function s(a) {
       const { appsPointer: i } = B;
-      function $(n) {
-        const [c] = n.touches;
-        return n.clientX = c.clientX + r.left, n.clientY = c.clientY + i.el.offsetTop, n.screenX = c.screenX, n.screenY = c.screenY, n;
+      function S(n) {
+        const [l] = n.touches;
+        return n.clientX = l.clientX + r.left, n.clientY = l.clientY + i.el.offsetTop, n.screenX = l.screenX, n.screenY = l.screenY, n;
       }
-      function k(n) {
+      function b(n) {
         return new Proxy(n, {
-          get(f, y) {
-            return y === "clientX" ? f.clientX + r.left : y === "clientY" ? f.clientY + i.el.offsetTop : f[y];
+          get(_, y) {
+            return y === "clientX" ? _.clientX + r.left : y === "clientY" ? _.clientY + i.el.offsetTop : _[y];
           }
         });
       }
       if (z)
-        l.addEventListener("touchstart", (n) => {
-          "validity" in n.target || (n.preventDefault(), v(i), i.onstart($(n)));
-        }), l.addEventListener(
+        a.addEventListener("touchstart", (n) => {
+          "validity" in n.target || (n.preventDefault(), m(i), i.onstart(S(n)));
+        }), a.addEventListener(
           "touchmove",
-          (n) => i.onmove($(n))
-        ), l.addEventListener("touchend", (n) => i.onend(n));
+          (n) => i.onmove(S(n))
+        ), a.addEventListener("touchend", (n) => i.onend(n));
       else {
         let n = 0;
-        if (l.addEventListener("mousedown", (c) => {
-          c.button === 0 && ("validity" in c.target ? c.stopPropagation() : (n = 1, c.isIFrame = !0, c.preventDefault()));
+        if (a.addEventListener("mousedown", (l) => {
+          l.button === 0 && ("validity" in l.target ? l.stopPropagation() : (n = 1, l.isIFrame = !0, l.preventDefault()));
         }), W === "Firefox") {
-          const c = a.value;
-          l.addEventListener("mousemove", (f) => {
-            n > 0 && (n === 1 ? (f.isIFrame = !0, v(i), i.onstart(k(f))) : n === 2 && (I.display = "", c.style.display = "none"), n++);
-          }), c.addEventListener("mouseout", () => c.style.display = "");
+          const l = c.value;
+          a.addEventListener("mousemove", (_) => {
+            n > 0 && (n === 1 ? (_.isIFrame = !0, m(i), i.onstart(b(_))) : n === 2 && (L.display = "", l.style.display = "none"), n++);
+          }), l.addEventListener("mouseout", () => l.style.display = "");
         } else
-          l.addEventListener("mousemove", (c) => {
-            n > 0 && (n === 1 ? (c.isIFrame = !0, v(i), i.onstart(k(c))) : n === 2 && (I.display = ""), n++);
+          a.addEventListener("mousemove", (l) => {
+            n > 0 && (n === 1 ? (l.isIFrame = !0, m(i), i.onstart(b(l))) : n === 2 && (L.display = ""), n++);
           });
-        l.addEventListener("mouseup", () => {
-          n = 0, v(void 0);
+        a.addEventListener("mouseup", () => {
+          n = 0, m(void 0);
         });
       }
     }
-    const d = S(!0);
+    const d = w(!0);
     function h() {
       d.value = !1, o("load", (i) => r = i);
-      const { contentWindow: l } = a.value;
-      if (l.addEventListener("contextmenu", (i) => {
+      const { contentWindow: a } = c.value;
+      if (a.addEventListener("contextmenu", (i) => {
         "validity" in i.target || (i.preventDefault(), U());
       }), e.gesture === !0) {
-        const { document: i } = l;
+        const { document: i } = a;
         i.compatMode === "CSS1Compat" ? s(i.documentElement) : s(i.body);
       }
     }
     return setTimeout(() => {
-      d.value === !0 && (d.value = !1, o("load", (l) => r = l));
-    }, 3e3), (l, i) => (u(), p("iframe", {
+      d.value === !0 && (d.value = !1, o("load", (a) => r = a));
+    }, 3e3), (a, i) => (f(), u("iframe", {
       src: e.src,
-      style: L({ "pointer-events": d.value ? "none" : "all" }),
+      style: $({ "pointer-events": d.value ? "none" : "all" }),
       frameborder: "0",
       ref_key: "iframe",
-      ref: a,
+      ref: c,
       onLoad: h
-    }, null, 44, ie));
+    }, null, 44, le));
   }
-}, ye = /* @__PURE__ */ _(ae, [["__scopeId", "data-v-ef65ffa1"]]);
+}, $e = /* @__PURE__ */ v(ae, [["__scopeId", "data-v-ef65ffa1"]]);
 const X = {
   markdown(t, o) {
     return {
@@ -201,28 +209,28 @@ const X = {
       ...o
     };
   }
-}, ce = X;
-function le(t, o, e, r, a, s) {
-  const d = b("Navbar"), h = b("Markdown");
-  return u(), p(E, null, [
-    w(d, { title: t.title }, null, 8, ["title"]),
-    w(h, { class: "markdown" })
+}, de = X;
+function fe(t, o, e, r, c, s) {
+  const d = x("Navbar"), h = x("Markdown");
+  return f(), u(F, null, [
+    I(d, { title: t.title }, null, 8, ["title"]),
+    I(h, { class: "markdown" })
   ], 64);
 }
-const de = /* @__PURE__ */ _(ce, [["render", le], ["__scopeId", "data-v-08a70f5f"]]), { markdown: fe } = de;
-function ge(t) {
+const ue = /* @__PURE__ */ v(de, [["render", fe], ["__scopeId", "data-v-08a70f5f"]]), { markdown: _e } = ue;
+function ke(t) {
   const o = t[D];
-  return A(() => o().then((e) => fe(e.default, { level: 200 })));
+  return A(() => o().then((e) => _e(e.default, { level: 200 })));
 }
-function $e(t) {
-  t.component("A", K), t.component("Navbar", ne), t.component("Scroll", se);
+function Se(t) {
+  t.component("A", K), t.component("Navbar", re), t.component("Scroll", ce);
 }
 export {
   K as A,
-  ye as IFrame,
-  ne as Navbar,
-  se as Scroll,
-  $e as default,
-  ge as defineAsyncMarkdown,
-  fe as markdown
+  $e as IFrame,
+  re as Navbar,
+  ce as Scroll,
+  Se as default,
+  ke as defineAsyncMarkdown,
+  _e as markdown
 };

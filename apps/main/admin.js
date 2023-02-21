@@ -1,44 +1,44 @@
-import { defineComponent as c, ref as l, onMounted as d, openBlock as i, createElementBlock as _, withModifiers as f, unref as s, renderSlot as u, createBlock as m, withCtx as v, pushScopeId as h, popScopeId as y, createElementVNode as b } from "/libs/vue.js";
-import x from "/libs/view.js";
-import w from "/libs/pointer.js";
-import { appsState as g, controllerSwitch as a } from "/libs/state.js";
-const k = /* @__PURE__ */ c({
+import { defineComponent as c, ref as d, onMounted as _, openBlock as l, createElementBlock as u, withModifiers as f, unref as s, renderSlot as m, createBlock as v, withCtx as h, pushScopeId as y, popScopeId as w, createElementVNode as x } from "/libs/vue.js";
+import k, { events as S } from "/libs/view.js";
+import I, { MaskStyle as b } from "/libs/pointer.js";
+import { appsState as a, overview as g, controllerSwitch as i } from "/libs/state.js";
+const B = /* @__PURE__ */ c({
   __name: "float",
   setup(t) {
-    const o = l();
-    return d(() => {
-      const e = new w(o.value);
+    const o = d();
+    return _(() => {
+      const e = new I(o.value);
       e.on("lock", () => {
-        e.dir === "X" && (g.value = !0, e.switch(x.appsPointer));
+        e.dir === "X" ? a.value = !0 : a.value === !0 && (g.value = !0, b.cursor = "col-resize", S.emit("sidebar.switch", !1)), e.switch(k.appsPointer);
       });
-    }), (e, n) => (i(), _("main", {
-      ref_key: "defaultPage",
+    }), (e, n) => (l(), u("main", {
+      ref_key: "el",
       ref: o,
       onContextmenu: n[0] || (n[0] = f(
-        (...r) => s(a) && s(a)(...r),
+        (...r) => s(i) && s(i)(...r),
         ["prevent"]
       ))
     }, [
-      u(e.$slots, "default", {}, void 0, !0)
+      m(e.$slots, "default", {}, void 0, !0)
     ], 544));
   }
-}), I = `main[data-v-c3b0b9f6]{position:fixed;top:0;bottom:0;left:0;right:0;padding-top:env(titlebar-area-height,0);display:flex;flex-direction:column;justify-content:space-between;user-select:none}
+}), C = `main[data-v-e537a4d2]{position:fixed;top:0;bottom:0;left:0;right:0;padding-top:env(titlebar-area-height,0);display:flex;flex-direction:column;justify-content:space-between;user-select:none}
 `, p = (t, o) => {
   const e = t.__vccOpts || t;
   for (const [n, r] of o)
     e[n] = r;
   return e;
-}, S = /* @__PURE__ */ p(k, [["styles", [I]], ["__scopeId", "data-v-c3b0b9f6"]]), P = (t) => (h("data-v-2361d6e5"), t = t(), y(), t), B = /* @__PURE__ */ P(() => /* @__PURE__ */ b("div", { class: "body" }, "...", -1)), C = /* @__PURE__ */ c({
+}, E = /* @__PURE__ */ p(B, [["styles", [C]], ["__scopeId", "data-v-e537a4d2"]]), M = (t) => (y("data-v-2361d6e5"), t = t(), w(), t), $ = /* @__PURE__ */ M(() => /* @__PURE__ */ x("div", { class: "body" }, "...", -1)), P = /* @__PURE__ */ c({
   __name: "admin",
   setup(t) {
-    return (o, e) => (i(), m(S, null, {
-      default: v(() => [
-        B
+    return (o, e) => (l(), v(E, null, {
+      default: h(() => [
+        $
       ]),
       _: 1
     }));
   }
-}), E = "", F = /* @__PURE__ */ p(C, [["styles", [E]], ["__scopeId", "data-v-2361d6e5"]]);
+}), V = "", O = /* @__PURE__ */ p(P, [["styles", [V]], ["__scopeId", "data-v-2361d6e5"]]);
 export {
-  F as default
+  O as default
 };

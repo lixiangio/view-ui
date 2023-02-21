@@ -1,10 +1,10 @@
-import { reactive as V, defineComponent as A, resolveComponent as j, openBlock as l, createElementBlock as p, Fragment as $, createElementVNode as t, normalizeStyle as c, withModifiers as E, createVNode as f, TransitionGroup as D, withCtx as h, renderList as M, normalizeClass as d, toDisplayString as v, createTextVNode as T, createCommentVNode as O, pushScopeId as F, popScopeId as K } from "/libs/vue.js";
-import r, { Langs as P, urls as G } from "/libs/view.js";
-import { appsState as s, apps as U } from "/libs/state.js";
+import { reactive as V, defineComponent as A, resolveComponent as j, openBlock as s, createElementBlock as a, Fragment as $, createElementVNode as e, normalizeStyle as r, withModifiers as E, createVNode as b, TransitionGroup as D, withCtx as f, renderList as M, normalizeClass as h, toDisplayString as v, createTextVNode as T, createCommentVNode as O, pushScopeId as F, popScopeId as K } from "/libs/vue.js";
+import c, { Langs as P, urls as G } from "/libs/view.js";
+import { appsState as l, apps as U } from "/libs/state.js";
 import { close as W, openBlank as X, open as q } from "/libs/navigator.js";
 import H from "/libs/pointer.js";
 import { Tip as J } from "/libs/viewui.js";
-const x = V([]), Q = P({
+const w = V([]), Q = P({
   appsMenu: {
     en: "Switch apps",
     zh: "\u5207\u6362\u5E94\u7528\u5C42"
@@ -17,122 +17,129 @@ const x = V([]), Q = P({
     en: "Close app",
     zh: "\u5173\u95ED\u5E94\u7528"
   }
-}), m = 5, { initOptions: L } = r, { multi: R, apps: k } = L, { sidebar: g } = R;
+}), m = 5, { initOptions: L } = c, { multi: R, apps: k } = L, { sidebar: g } = R;
 let B = {};
 if (g) {
   B = g.style;
-  const { urls: e } = g;
-  if (e)
-    for (const i of e) {
+  const { urls: t } = g;
+  if (t)
+    for (const i of t) {
       let o = G[i];
       if (o === void 0) {
         if (!(i.split("/").length > 1))
           continue;
         continue;
       }
-      o.shortcut = !0, x.includes(o) === !1 && x.push(o);
+      o.shortcut = !0, w.includes(o) === !1 && w.push(o);
     }
 }
-const [w] = k.padding, Y = A({
+const [x] = k.padding, Y = A({
   components: { Tip: J },
   setup() {
-    const { name: e, icon: i, color: o } = L;
+    const { name: t, icon: i, color: o } = L;
     return {
       langs: Q,
-      appbar: x,
-      appsState: s,
+      appbar: w,
+      appsState: l,
       style: B,
-      name: e,
+      name: t,
       icon: i,
       color: o
     };
   },
   methods: {
     close: W,
-    open(e, i) {
-      i === "blank" ? X(e) : q(e);
+    open(t, i) {
+      i === "blank" ? X(t) : q(t);
     },
     switchLayer() {
-      s.value === !0 ? s.value = !1 : U.length && (s.value = !0);
+      l.value === !0 ? l.value = !1 : U.length && (l.value = !0);
     },
     expand() {
-      k.padding[0] = w, r.swiper.scroll(w - m);
+      k.padding[0] = x, c.swiper.scroll(x - m);
     },
     collapse() {
-      k.padding[0] = m, r.swiper.scroll(-(w - m));
+      k.padding[0] = m, c.swiper.scroll(-(x - m));
     }
   },
   mounted() {
-    const e = new H(this.$el.nextElementSibling, { angle: 40 });
-    e.on("lock", () => {
-      e.dir === "X" && (console.log(e.trend), e.trend < 0 && (s.value = !0, e.switch(r.appsPointer)));
+    const t = new H(this.$el.nextElementSibling, { angle: 40 });
+    t.on("lock", () => {
+      t.dir === "X" && (console.log(t.trend), t.trend < 0 && (l.value = !0, t.switch(c.appsPointer)));
     });
   }
 }), Z = `.v-tip.menu-tip .v-bubble-content{padding:0;width:160px}.v-tip.menu-tip .v-bubble-content .tip-title{display:flex;justify-content:space-between;font-size:14px}.v-tip.menu-tip .v-bubble-content .tip-title .tip-name{flex:1;padding:14px;font-weight:700;color:#555;cursor:pointer}.v-tip.menu-tip .v-bubble-content .tip-title .new-tab{flex:none;width:36px;padding:13px 10px;cursor:pointer}.v-tip.menu-tip .v-bubble-content .tip-title .new-tab i{color:#666;font-size:14px}.v-tip.menu-tip .v-bubble-content .link{display:flex;justify-content:space-between;padding:12px 14px;font-size:13px;cursor:pointer;border-top:1px solid #f0f0f0}.v-tip.menu-tip .v-bubble-content .link i{font-size:13px}.v-tip.menu-tip .v-bubble-content .link.close{color:#e44343}
-`, ee = `.sidebar[data-v-9d9c0d3e]{position:fixed;top:env(titlebar-area-height,0);right:0;bottom:0;z-index:100000;width:50px;transition:background-color .3s;background:rgba(131,131,131,.11);backdrop-filter:blur(10px)}.sidebar .scroll[data-v-9d9c0d3e]{overflow-x:hidden;overflow-y:auto;touch-action:pan-x pan-y;scrollbar-width:none;height:100%}.sidebar .scroll[data-v-9d9c0d3e]::-webkit-scrollbar{display:none}.sidebar .scroll .item[data-v-9d9c0d3e]{width:100%;padding:5px 0;transition:all .4s}.sidebar .scroll .item .link[data-v-9d9c0d3e]{height:50px;cursor:pointer}.sidebar .scroll .item .link i[data-v-9d9c0d3e]{display:flex;justify-content:center;align-items:center;width:36px;height:36px;border-radius:40px;font-size:20px;transition:all .25s ease}.sidebar .scroll .item .link i[data-v-9d9c0d3e]:hover{background-color:#666}.sidebar .scroll .item.active .link i[data-v-9d9c0d3e]{background-color:var(--active)!important}.sidebar .scroll .bottom-padding[data-v-9d9c0d3e]{height:60px}.switch[data-v-9d9c0d3e]{position:fixed;right:8px;bottom:8px;z-index:110000;width:38px;height:38px;border-radius:38px;transition:all .3s;background-color:#00000030;cursor:pointer}.switch i[data-v-9d9c0d3e]{color:#fff;transition:all .3s}.switch .round[data-v-9d9c0d3e]{position:absolute;transition:all .3s;width:6px;height:6px;border-radius:6px;border:2px solid #ffffff;opacity:0}.switch.appsActive i[data-v-9d9c0d3e]{opacity:0}.switch.appsActive .round[data-v-9d9c0d3e]{opacity:1;transform:scale(3)}.switch.appsActive .tip-name[data-v-9d9c0d3e]{display:block}.shortcutKey[data-v-9d9c0d3e]{border:1px solid #2c2c2c;border-radius:3px;padding:0 3px}
-`, te = (e, i) => {
-  const o = e.__vccOpts || e;
-  for (const [u, y] of i)
-    o[u] = y;
+`, tt = `.sidebar[data-v-22a5780b]{position:fixed;top:env(titlebar-area-height,0);right:0;bottom:0;z-index:100000;width:50px;transition:background-color .3s;background:rgba(131,131,131,.11);backdrop-filter:blur(10px)}.sidebar .scroll[data-v-22a5780b]{overflow-x:hidden;overflow-y:auto;touch-action:pan-x pan-y;scrollbar-width:none;height:100%}.sidebar .scroll[data-v-22a5780b]::-webkit-scrollbar{display:none}.sidebar .scroll .item[data-v-22a5780b]{width:100%;padding:5px 0;transition:all .4s}.sidebar .scroll .item .link[data-v-22a5780b]{height:50px;cursor:pointer}.sidebar .scroll .item .link .icon[data-v-22a5780b]{display:flex;justify-content:center;align-items:center;width:38px;height:38px;border-radius:40px;font-size:20px;transition:all .25s ease}.sidebar .scroll .item .link .icon .ficon[data-v-22a5780b]{width:22px;height:22px}.sidebar .scroll .item .link .icon[data-v-22a5780b]:hover{background-color:#666}.sidebar .scroll .item.active .link .icon[data-v-22a5780b]{background-color:var(--active)!important}.sidebar .scroll .bottom-padding[data-v-22a5780b]{height:60px}.switch[data-v-22a5780b]{position:fixed;right:8px;bottom:8px;z-index:110000;width:38px;height:38px;border-radius:38px;transition:all .3s;background-color:#00000030;cursor:pointer}.switch i[data-v-22a5780b]{color:#fff;transition:all .3s}.switch .round[data-v-22a5780b]{position:absolute;transition:all .3s;width:6px;height:6px;border-radius:6px;border:2px solid #ffffff;opacity:0}.switch.appsActive i[data-v-22a5780b]{opacity:0}.switch.appsActive .round[data-v-22a5780b]{opacity:1;transform:scale(3)}.switch.appsActive .tip-name[data-v-22a5780b]{display:block}.shortcutKey[data-v-22a5780b]{border:1px solid #2c2c2c;border-radius:3px;padding:0 3px}
+`, et = (t, i) => {
+  const o = t.__vccOpts || t;
+  for (const [d, y] of i)
+    o[d] = y;
   return o;
-}, a = (e) => (F("data-v-9d9c0d3e"), e = e(), K(), e), ie = {
+}, p = (t) => (F("data-v-22a5780b"), t = t(), K(), t), it = {
   class: "scroll apps",
   ref: "scroll"
-}, oe = ["href", "onClick"], ne = { class: "tip-title" }, se = ["onClick"], ae = ["title", "onClick"], le = /* @__PURE__ */ a(() => /* @__PURE__ */ t("i", { class: "ficon-xinchuangkou" }, null, -1)), pe = [
-  le
-], ce = ["onClick"], de = /* @__PURE__ */ a(() => /* @__PURE__ */ t("i", { class: "ficon-cha" }, null, -1)), re = /* @__PURE__ */ a(() => /* @__PURE__ */ t("div", { class: "bottom-padding" }, null, -1)), ue = /* @__PURE__ */ a(() => /* @__PURE__ */ t("div", { class: "round" }, null, -1)), be = /* @__PURE__ */ a(() => /* @__PURE__ */ t("span", { class: "shortcutKey" }, "S", -1));
-function fe(e, i, o, u, y, he) {
+}, ot = ["href", "onClick"], nt = { class: "icon" }, st = ["xlink:href"], at = { class: "tip-title" }, lt = ["onClick"], pt = ["title", "onClick"], rt = /* @__PURE__ */ p(() => /* @__PURE__ */ e("i", { class: "ficon-xinchuangkou" }, null, -1)), ct = [
+  rt
+], dt = ["onClick"], ut = /* @__PURE__ */ p(() => /* @__PURE__ */ e("i", { class: "ficon-cha" }, null, -1)), bt = /* @__PURE__ */ p(() => /* @__PURE__ */ e("div", { class: "bottom-padding" }, null, -1)), ft = /* @__PURE__ */ p(() => /* @__PURE__ */ e("div", { class: "round" }, null, -1)), ht = /* @__PURE__ */ p(() => /* @__PURE__ */ e("span", { class: "shortcutKey" }, "S", -1));
+function vt(t, i, o, d, y, mt) {
   const _ = j("Tip");
-  return l(), p($, null, [
-    t("section", {
+  return s(), a($, null, [
+    e("section", {
       class: "sidebar",
-      style: c(e.style),
+      style: r(t.style),
       onContextmenu: i[0] || (i[0] = E(() => {
       }, ["prevent", "stop"]))
     }, [
-      t("div", ie, [
-        f(D, { name: "scale" }, {
-          default: h(() => [
-            (l(!0), p($, null, M(e.appbar, ({ url: n, active: C, name: I, color: z, icon: N, target: S }) => (l(), p("div", {
-              class: d(["item center", { active: C }]),
+      e("div", it, [
+        b(D, { name: "scale" }, {
+          default: f(() => [
+            (s(!0), a($, null, M(t.appbar, ({ url: n, active: C, name: I, color: z, icon: N, target: S }) => (s(), a("div", {
+              class: h(["item center", { active: C }]),
               key: n
             }, [
-              t("a", {
+              e("a", {
                 class: "link center",
                 href: n,
-                onClick: E((b) => e.open(n, S), ["prevent"])
+                onClick: E((u) => t.open(n, S), ["prevent"])
               }, [
-                t("i", {
-                  class: d(N),
-                  style: c({ color: z })
-                }, null, 6)
-              ], 8, oe),
-              f(_, {
+                e("div", nt, [
+                  (s(), a("svg", {
+                    class: "ficon",
+                    "aria-hidden": "true",
+                    style: r({ color: z })
+                  }, [
+                    e("use", {
+                      "xlink:href": "#" + N
+                    }, null, 8, st)
+                  ], 4))
+                ])
+              ], 8, ot),
+              b(_, {
                 class: "menu-tip",
                 placement: "left",
                 gap: -10
               }, {
-                default: h(() => [
-                  t("div", ne, [
-                    t("div", {
+                default: f(() => [
+                  e("div", at, [
+                    e("div", {
                       class: "tip-name",
-                      style: c({ color: z }),
-                      onClick: (b) => e.open(n, S)
-                    }, v(I), 13, se),
-                    t("div", {
+                      style: r({ color: z }),
+                      onClick: (u) => t.open(n, S)
+                    }, v(I), 13, lt),
+                    e("div", {
                       class: "new-tab",
-                      title: e.langs.newTab,
-                      onClick: (b) => e.open(n, "blank")
-                    }, pe, 8, ae)
+                      title: t.langs.newTab,
+                      onClick: (u) => t.open(n, "blank")
+                    }, ct, 8, pt)
                   ]),
-                  C ? (l(), p("div", {
+                  C ? (s(), a("div", {
                     key: 0,
                     class: "link close",
-                    onClick: (b) => e.close(n)
+                    onClick: (u) => t.close(n)
                   }, [
-                    T(v(e.langs.close) + " ", 1),
-                    de
-                  ], 8, ce)) : O("", !0)
+                    T(v(t.langs.close) + " ", 1),
+                    ut
+                  ], 8, dt)) : O("", !0)
                 ]),
                 _: 2
               }, 1024)
@@ -140,30 +147,30 @@ function fe(e, i, o, u, y, he) {
           ]),
           _: 1
         }),
-        re
+        bt
       ], 512)
     ], 36),
-    t("div", {
-      class: d(["switch center", { appsActive: !e.appsState }]),
+    e("div", {
+      class: h(["switch center", { appsActive: !t.appsState }]),
       ref: "switch",
-      onClick: i[1] || (i[1] = (...n) => e.switchLayer && e.switchLayer(...n))
+      onClick: i[1] || (i[1] = (...n) => t.switchLayer && t.switchLayer(...n))
     }, [
-      t("i", {
-        class: d(e.icon),
-        style: c({ color: e.color })
+      e("i", {
+        class: h(t.icon),
+        style: r({ color: t.color })
       }, null, 6),
-      ue,
-      f(_, { placement: "left" }, {
-        default: h(() => [
-          be,
-          T(" / " + v(e.langs.appsMenu), 1)
+      ft,
+      b(_, { placement: "left" }, {
+        default: f(() => [
+          ht,
+          T(" / " + v(t.langs.appsMenu), 1)
         ]),
         _: 1
       })
     ], 2)
   ], 64);
 }
-const ye = /* @__PURE__ */ te(Y, [["render", fe], ["styles", [Z, ee]], ["__scopeId", "data-v-9d9c0d3e"]]);
+const Ct = /* @__PURE__ */ et(Y, [["render", vt], ["styles", [Z, tt]], ["__scopeId", "data-v-22a5780b"]]);
 export {
-  ye as default
+  Ct as default
 };

@@ -1,8 +1,8 @@
 @font-face {
   font-family: "ficon"; /* Project id 2622036 */
-  src: url('iconfont.woff2?t=1674539569143') format('woff2'),
-       url('iconfont.woff?t=1674539569143') format('woff'),
-       url('iconfont.ttf?t=1674539569143') format('truetype');
+  src: url('iconfont.woff2?t=1676914621670') format('woff2'),
+       url('iconfont.woff?t=1676914621670') format('woff'),
+       url('iconfont.ttf?t=1676914621670') format('truetype');
 }
 
 .ficon {
@@ -11,6 +11,26 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.ficon-touxiang1:before {
+  content: "\e6c0";
+}
+
+.ficon-shenjing:before {
+  content: "\e761";
+}
+
+.ficon-tubiaozhizuomoban-:before {
+  content: "\e606";
+}
+
+.ficon-Vue:before {
+  content: "\e799";
+}
+
+.ficon-konglong1:before {
+  content: "\e6eb";
 }
 
 .ficon-code:before {
@@ -37,20 +57,12 @@
   content: "\e628";
 }
 
-.ficon-meiyoushuju:before {
-  content: "\e60d";
-}
-
 .ficon-rengongzhinengdanao:before {
   content: "\e610";
 }
 
 .ficon-xiangsu_xiaoya:before {
   content: "\ed1a";
-}
-
-.ficon-konglong:before {
-  content: "\e61a";
 }
 
 .ficon-wanggekai:before {
@@ -245,10 +257,6 @@
   content: "\e99c";
 }
 
-.ficon-menu-home-normal1:before {
-  content: "\e605";
-}
-
 .ficon-guding4:before {
   content: "\e685";
 }
@@ -295,10 +303,6 @@
 
 .ficon-TypeScript:before {
   content: "\e67e";
-}
-
-.ficon-vue:before {
-  content: "\e617";
 }
 
 .ficon-redis:before {
@@ -439,10 +443,6 @@
 
 .ficon-zhuti:before {
   content: "\e67f";
-}
-
-.ficon-shangdian211:before {
-  content: "\e62e";
 }
 
 .ficon-chexiao:before {

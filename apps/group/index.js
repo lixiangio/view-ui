@@ -1,59 +1,69 @@
-import { defineComponent as S, reactive as C, resolveComponent as g, openBlock as a, createElementBlock as l, Fragment as _, createVNode as m, unref as j, createElementVNode as o, renderList as x, withCtx as h, toDisplayString as v, normalizeClass as E, normalizeStyle as I, pushScopeId as N, popScopeId as A } from "/libs/vue.js";
+import { defineComponent as j, reactive as C, resolveComponent as u, openBlock as t, createElementBlock as n, Fragment as x, createVNode as f, unref as E, createElementVNode as e, renderList as v, withCtx as m, toDisplayString as y, normalizeStyle as I, pushScopeId as N, popScopeId as A } from "/libs/vue.js";
 import B from "/libs/network.js";
-import { Langs as L, urls as b } from "/libs/view.js";
-const V = (e) => (N("data-v-016b0889"), e = e(), A(), e), D = { class: "groups" }, F = { class: "header item" }, G = { class: "name" }, O = /* @__PURE__ */ V(() => /* @__PURE__ */ o("i", { class: "ficon-xinchuangkou" }, null, -1)), $ = { class: "name" }, q = /* @__PURE__ */ S({
+import { Langs as L, urls as k } from "/libs/view.js";
+const V = (o) => (N("data-v-6f3d39d4"), o = o(), A(), o), D = { class: "groups" }, F = { class: "header item" }, G = { class: "name" }, O = /* @__PURE__ */ V(() => /* @__PURE__ */ e("i", { class: "ficon-xinchuangkou" }, null, -1)), $ = ["xlink:href"], q = { class: "name" }, H = /* @__PURE__ */ j({
   __name: "index",
-  setup(e) {
-    const d = L({
+  setup(o) {
+    const g = L({
       group: {
         en: "Group",
         zh: "\u5E94\u7528\u7EC4"
       }
-    }), t = C({});
-    return B.get("/api/group.json").then((i) => {
-      for (const n of i) {
-        const p = b[n], { apps: s } = p;
-        if (s) {
-          const c = { name: p.name };
-          t[n] = c;
-          const u = [];
-          if (s.urls)
-            for (const f of s.urls) {
-              const r = b[f];
-              r && u.push(r);
+    }), s = C({});
+    return B.get("/api/group.json").then((l) => {
+      for (const r of l) {
+        const a = k[r], { apps: i } = a;
+        if (i) {
+          const d = { name: a.name };
+          s[r] = d;
+          const p = [];
+          if (i.urls)
+            for (const _ of i.urls) {
+              const c = k[_];
+              c && p.push(c);
             }
-          c.items = u;
+          d.items = p;
         }
       }
-    }), (i, n) => {
-      const p = g("Navbar"), s = g("Scroll"), c = g("A");
-      return a(), l(_, null, [
-        m(p, {
-          title: j(d).group
+    }), (l, r) => {
+      const a = u("Navbar"), i = u("icon"), d = u("Scroll"), p = u("A");
+      return t(), n(x, null, [
+        f(a, {
+          title: E(g).group
         }, null, 8, ["title"]),
-        o("div", D, [
-          (a(!0), l(_, null, x(t, ({ name: u, items: f }, r) => (a(), l("div", {
+        e("div", D, [
+          (t(!0), n(x, null, v(s, ({ name: _, items: c }, h) => (t(), n("div", {
             class: "group",
-            key: r
+            key: h
           }, [
-            m(c, {
-              href: r,
+            f(p, {
+              href: h,
               target: "_blank"
             }, {
-              default: h(() => [
-                o("div", F, [
-                  o("div", G, v(u), 1),
+              default: m(() => [
+                e("div", F, [
+                  e("div", G, y(_), 1),
                   O
                 ]),
-                m(s, null, {
-                  default: h(() => [
-                    o("ul", null, [
-                      (a(!0), l(_, null, x(f, ({ name: y, icon: k, color: w }, z) => (a(), l("li", { key: z }, [
-                        o("i", {
-                          class: E(k),
-                          style: I({ color: w })
-                        }, null, 6),
-                        o("div", $, v(y), 1)
+                f(d, null, {
+                  default: m(() => [
+                    e("ul", null, [
+                      (t(!0), n(x, null, v(c, ({ name: b, icon: w, color: z }, S) => (t(), n("li", { key: S }, [
+                        f(i, null, {
+                          default: m(() => [
+                            (t(), n("svg", {
+                              class: "ficon",
+                              "aria-hidden": "true",
+                              style: I({ color: z })
+                            }, [
+                              e("use", {
+                                "xlink:href": "#" + w
+                              }, null, 8, $)
+                            ], 4))
+                          ]),
+                          _: 2
+                        }, 1024),
+                        e("div", q, y(b), 1)
                       ]))), 128))
                     ])
                   ]),
@@ -67,13 +77,13 @@ const V = (e) => (N("data-v-016b0889"), e = e(), A(), e), D = { class: "groups" 
       ], 64);
     };
   }
-}), H = `.groups .group[data-v-016b0889]{display:block;margin:10px;padding:8px 3px;background:#f3f3f3c7;border-radius:10px}.groups .group .header[data-v-016b0889]{display:flex;justify-content:space-between;padding:10px 12px}.groups .group .header .name[data-v-016b0889]{font-size:15px;color:#444;font-weight:700}.groups .group .header i[data-v-016b0889]{font-size:12px;color:#666;font-size:14px}.groups .group ul[data-v-016b0889]{display:flex}.groups .group ul li[data-v-016b0889]{display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;margin:0 4px;flex:none;list-style:none;width:75px;height:100px}.groups .group ul li i[data-v-016b0889]{display:flex;flex-direction:column;align-items:center;justify-content:center;background-color:#efefef;width:66px;height:66px;border-radius:18px;font-size:24px}.groups .group ul li .name[data-v-016b0889]{margin-top:8px;font-size:12px}
-`, J = (e, d) => {
-  const t = e.__vccOpts || e;
-  for (const [i, n] of d)
-    t[i] = n;
-  return t;
-}, Q = /* @__PURE__ */ J(q, [["styles", [H]], ["__scopeId", "data-v-016b0889"]]);
+}), J = `.groups .group[data-v-6f3d39d4]{display:block;margin:10px;padding:8px 3px;background:#f3f3f3c7;border-radius:10px}.groups .group .header[data-v-6f3d39d4]{display:flex;justify-content:space-between;padding:10px 12px}.groups .group .header .name[data-v-6f3d39d4]{font-size:15px;color:#444;font-weight:700}.groups .group .header i[data-v-6f3d39d4]{font-size:12px;color:#666;font-size:14px}.groups .group ul[data-v-6f3d39d4]{display:flex}.groups .group ul li[data-v-6f3d39d4]{display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;margin:0 4px;flex:none;list-style:none;width:75px;height:100px}.groups .group ul li icon[data-v-6f3d39d4]{display:flex;flex-direction:column;align-items:center;justify-content:center;background-color:#efefef;width:66px;height:66px;border-radius:18px;font-size:24px}.groups .group ul li icon .ficon[data-v-6f3d39d4]{width:32px;height:32px}.groups .group ul li .name[data-v-6f3d39d4]{margin-top:8px;font-size:12px}
+`, K = (o, g) => {
+  const s = o.__vccOpts || o;
+  for (const [l, r] of g)
+    s[l] = r;
+  return s;
+}, R = /* @__PURE__ */ K(H, [["styles", [J]], ["__scopeId", "data-v-6f3d39d4"]]);
 export {
-  Q as default
+  R as default
 };

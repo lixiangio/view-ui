@@ -1,34 +1,34 @@
-import { defineComponent as s, ref as f, onMounted as l, openBlock as p, createElementBlock as c, withModifiers as d, unref as a, renderSlot as u } from "/libs/vue.js";
-import m from "/libs/view.js";
-import _ from "/libs/pointer.js";
-import { appsState as v, controllerSwitch as i } from "/libs/state.js";
-const b = /* @__PURE__ */ s({
+import { defineComponent as l, ref as c, onMounted as f, openBlock as p, createElementBlock as u, withModifiers as d, unref as s, renderSlot as m } from "/libs/vue.js";
+import v, { events as _ } from "/libs/view.js";
+import w, { MaskStyle as y } from "/libs/pointer.js";
+import { appsState as i, overview as h, controllerSwitch as a } from "/libs/state.js";
+const k = /* @__PURE__ */ l({
   __name: "float",
-  setup(n) {
-    const e = f();
-    return l(() => {
-      const t = new _(e.value);
-      t.on("lock", () => {
-        t.dir === "X" && (v.value = !0, t.switch(m.appsPointer));
+  setup(r) {
+    const t = c();
+    return f(() => {
+      const e = new w(t.value);
+      e.on("lock", () => {
+        e.dir === "X" ? i.value = !0 : i.value === !0 && (h.value = !0, y.cursor = "col-resize", _.emit("sidebar.switch", !1)), e.switch(v.appsPointer);
       });
-    }), (t, o) => (p(), c("main", {
-      ref_key: "defaultPage",
-      ref: e,
+    }), (e, o) => (p(), u("main", {
+      ref_key: "el",
+      ref: t,
       onContextmenu: o[0] || (o[0] = d(
-        (...r) => a(i) && a(i)(...r),
+        (...n) => s(a) && s(a)(...n),
         ["prevent"]
       ))
     }, [
-      u(t.$slots, "default", {}, void 0, !0)
+      m(e.$slots, "default", {}, void 0, !0)
     ], 544));
   }
-}), g = `main[data-v-c3b0b9f6]{position:fixed;top:0;bottom:0;left:0;right:0;padding-top:env(titlebar-area-height,0);display:flex;flex-direction:column;justify-content:space-between;user-select:none}
-`, x = (n, e) => {
-  const t = n.__vccOpts || n;
-  for (const [o, r] of e)
-    t[o] = r;
-  return t;
-}, P = /* @__PURE__ */ x(b, [["styles", [g]], ["__scopeId", "data-v-c3b0b9f6"]]);
+}), x = `main[data-v-e537a4d2]{position:fixed;top:0;bottom:0;left:0;right:0;padding-top:env(titlebar-area-height,0);display:flex;flex-direction:column;justify-content:space-between;user-select:none}
+`, b = (r, t) => {
+  const e = r.__vccOpts || r;
+  for (const [o, n] of t)
+    e[o] = n;
+  return e;
+}, C = /* @__PURE__ */ b(k, [["styles", [x]], ["__scopeId", "data-v-e537a4d2"]]);
 export {
-  P as default
+  C as default
 };
